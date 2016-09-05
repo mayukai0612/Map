@@ -20,7 +20,10 @@ class TimePopUpView: UIViewController,UIActionSheetDelegate{
     
     var datePicker: UIDatePicker?
     var selectedTimeLable: UILabel?
-    
+
+    var delegate: updateTripParameterDelegate?
+    var departureTime: String?
+    var returnTime:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +36,13 @@ class TimePopUpView: UIViewController,UIActionSheetDelegate{
 
         self.showAnimate()
         
-        // Do any additional setup after loading the view.
         
         
         
         addActionToDepartDatePicker()
+        
+        //load initial views
+         loadInitialViews()
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,6 +85,18 @@ class TimePopUpView: UIViewController,UIActionSheetDelegate{
     
     @IBAction func donnBtnAction(sender: AnyObject) {
         
+        if let departTime = self.departureTime
+        {
+            delegate?.updateTrip(departTime,paraIdentifier: "departure")
+   
+        }
+        
+        if let backTime = self.returnTime
+        {
+            delegate?.updateTrip(backTime,paraIdentifier: "return")
+            
+        }
+        
         self.view.removeFromSuperview()
 
     }
@@ -96,6 +113,30 @@ class TimePopUpView: UIViewController,UIActionSheetDelegate{
         self.view.removeFromSuperview()
         
     }
+    
+    func loadInitialViews()
+    {
+        if(self.departureTime != nil)
+        {
+            if(self.departureTime != "")
+            {
+                self.departureTimeLable.text = self.departureTime
+            }
+        
+        }
+        
+        if(self.returnTime != nil)
+        {
+            if(self.returnTime != "")
+            {
+                self.returnTimeLable.text = self.returnTime
+            }
+            
+        }
+    
+    
+    }
+    
     
     func createDatePickerViewWithAlertController()
     {
@@ -173,9 +214,12 @@ class TimePopUpView: UIViewController,UIActionSheetDelegate{
         if(self.selectedTimeLable ==  self.departureTimeLable)
         {
             self.departureTimeLable.text =  selectedDate
+            departureTime = selectedDate
         }else if (self.selectedTimeLable == self.returnTimeLable)
         {
             self.returnTimeLable.text =  selectedDate
+            returnTime = selectedDate
+
         }
         
         
@@ -190,7 +234,7 @@ class TimePopUpView: UIViewController,UIActionSheetDelegate{
     func dateformatterDateTime(date: NSDate) -> NSString
     {
         var dateFormatter: NSDateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy h:mm a"
+        dateFormatter.dateFormat = "dd-MM-yyyy h:mm a"
         return dateFormatter.stringFromDate(date)
     }
     
@@ -231,7 +275,7 @@ class TimePopUpView: UIViewController,UIActionSheetDelegate{
         var validated: Bool = false
         
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy h:mm a"
+        dateFormatter.dateFormat = "dd-MM-yyyy h:mm a"
        // let date = dateFormatter.dateFromString(/*your_date_string*/)
         guard let departDate = dateFormatter.dateFromString(departureTimeLable.text!)
         else{

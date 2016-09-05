@@ -8,20 +8,31 @@
 
 import UIKit
 
-protocol  addChildViewDelegate {
-    func addChildView(popUpView: UIViewController)
+protocol passTripParaDelegate {
+    func passTripPara(tripPara:String,paraIdentifier:String)
 }
 
-class TripCategoryView: UIView {
+protocol  addChildViewDelegate {
+    func addChildView(popUpView: UIViewController,viewIdentifier:String)
+}
+
+class TripCategoryView: UIView ,updateTripParameterDelegate{
     
    
     var delegate: addChildViewDelegate?
+    var passParaDelegate: passTripParaDelegate?
+    var category:String?
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
             
             let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("categoryPopUp") as! CategoryPopupView
-            delegate?.addChildView(popOverVC)
+            popOverVC.delegate = self
+            //pass category value to pop up view
+            if (self.category != nil){
+            popOverVC.category = self.category!
+            }
+            delegate?.addChildView(popOverVC,viewIdentifier: "category")
 
         }
     }
@@ -60,12 +71,18 @@ class TripCategoryView: UIView {
         //create title
         let title = UILabel(frame:titleFrame)
         title.text = "Group"
-        title.font = UIFont (name: "AmericanTypewriter-Bold", size: 15)
-        title.textColor = UIColor.blackColor()
+        title.font = UIFont (name: "AppleSDGothicNeo-SemiBold", size: 18)
+        let textColor = UIColor(red: 89, green: 45, blue: 23)
+        title.textColor = textColor
         
         self.addSubview(imageView)
         self.addSubview(title)
     }
   
+    func updateTrip(tripPara:String,paraIdentifier:String) {
+        
+        passParaDelegate?.passTripPara(tripPara,paraIdentifier: paraIdentifier)
+        
+    }
 
 }

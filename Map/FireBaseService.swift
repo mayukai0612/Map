@@ -10,7 +10,7 @@
 //import Firebase
 //
 //let BASE_URL = "https://amber-torch-9110.firebaseio.com/"
-//let FIREBASE_REF = Firebase(url: BASE_URL)
+//var FIREBASE_REF = Firebase(url: BASE_URL)
 //var CURRENT_USER: Firebase {
 //    let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
 //    let currentUser = Firebase(url: "\(FIREBASE_REF)").childByAppendingPath("users").childByAppendingPath(userID)

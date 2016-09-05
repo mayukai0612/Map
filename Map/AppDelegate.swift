@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.swift
 //  ToDoList
@@ -8,12 +9,16 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
+    override init() {
+        FIRApp.configure()
+    }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -28,7 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      //   UINavigationBar.appearance().translucent = true
         //set title color
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
-
+        
+        //change tab bar tint color
+        let tabbarTintColor = UIColor(red: 86, green: 171, blue: 59)
+        UITabBar.appearance().tintColor = tabbarTintColor
 
         return true
     }

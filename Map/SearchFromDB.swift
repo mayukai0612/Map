@@ -200,14 +200,14 @@ class SearchFromDB: NSObject, MKMapViewDelegate{
             //                pointAnnoation.pinCustomImageName = (incomeLevel["value"] as! String)
             //            }
             
-            pointAnnoation.pinCustomImageName = "Ping"
+            pointAnnoation.pinCustomImageName = "AnimalSign"
             
             pointAnnoation.animalInfoArray = animalArray
             
             pointAnnoation.coordinate = animal.coordinate!
             
             //Title of annotation
-            pointAnnoation.title = "There are  \(animalArray.count)   records."
+            pointAnnoation.title = "\(animalArray.count)   records."
             
             //calculate distance between current loc and animal loc
             let distance = calculateDistanceInKM(currentLoc!,secondLocation: animal.coordinate!)

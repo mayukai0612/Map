@@ -61,6 +61,8 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
         addSearchViews()
         
         self.selectedSearchBar = "animalSearch"
+        //remove the space between tableview and edge
+        self.automaticallyAdjustsScrollViewInsets = false;
 
     }
     
@@ -82,7 +84,7 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
     {
     
         //add table view to main view
-        let tableViewFrame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - 300)
+        let tableViewFrame = CGRect(x: 0, y: 110, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - 340)
         
         self.tableView = UITableView(frame: tableViewFrame, style: UITableViewStyle.Plain)
         self.tableView!.delegate = self
@@ -115,6 +117,8 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
         
         self.locationSearchBar = UISearchBar(frame: locationSearchBarFrame)
         self.locationSearchBar!.placeholder  = "Current Location                                                "
+        let locimage: UIImage = UIImage(named: "Ping")!
+        self.locationSearchBar!.setImage(locimage, forSearchBarIcon: UISearchBarIcon.Search, state: UIControlState.Normal)
         self.locationSearchBar!.delegate = self
         self.locationSearchBar?.accessibilityIdentifier = "locationSearch"
         

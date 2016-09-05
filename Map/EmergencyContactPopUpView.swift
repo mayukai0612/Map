@@ -9,9 +9,21 @@
 import UIKit
 
 class EmergencyContactPopUpView: UIViewController {
+    
+    @IBOutlet weak var nameLabel: UITextField!
+    
+    @IBOutlet weak var contactLable: UITextField!
+    
+    @IBOutlet weak var emailLable: UITextField!
+    
     @IBOutlet weak var closeBtn: UIImageView!
     
     @IBOutlet weak var displayedView: UIView!
+
+    var delegate: updateTripParameterDelegate?
+    var emergencyName:String = ""
+    var emergencyPhone:String = ""
+    var emergencyEmail:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +37,15 @@ class EmergencyContactPopUpView: UIViewController {
         self.showAnimate()
         
         // Do any additional setup after loading the view.
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EmergencyContactPopUpView.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(EmergencyContactPopUpView.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(EmergencyContactPopUpView.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        loadInitialViews()
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,8 +62,30 @@ class EmergencyContactPopUpView: UIViewController {
     
   
     @IBAction func doneBtnAction(sender: AnyObject) {
+        if let emergencyContactName = nameLabel.text
+        {
+            delegate?.updateTrip(emergencyContactName,paraIdentifier: "emergencyContactName")
+
+        }
+        if let emergencyContactPhone = contactLable.text
+        {
+            delegate?.updateTrip(emergencyContactPhone,paraIdentifier: "emergencyContactPhone")
+
+        }
+        if let emergencyContactEmail = emailLable.text
+        {
+            delegate?.updateTrip(emergencyContactEmail,paraIdentifier: "emergencyContactEmail")
+        }
+        
         self.view.removeFromSuperview()
 
+    }
+    
+    func loadInitialViews()
+    {
+        nameLabel.text = self.emergencyName
+        contactLable.text = self.emergencyPhone
+        emailLable.text = self.emergencyEmail
     }
     
     func showAnimate()
@@ -80,6 +123,35 @@ class EmergencyContactPopUpView: UIViewController {
     {
         self.view.removeFromSuperview()
         
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            if view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height/2 - 10
+            }
+            else {
+                
+            }
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            if view.frame.origin.y != 0 {
+                self.view.frame.origin.y += keyboardSize.height/2 - 10
+            }
+            else {
+                print("bug")
+            }
+        }
     }
     
 

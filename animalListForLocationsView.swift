@@ -21,6 +21,7 @@ class animalListForLocationsView: UIViewController,UITableViewDelegate,UITableVi
         self.navigationItem.setHidesBackButton(true, animated: false)
         removeSubViewsFromNavBar()
         addListViews()
+        self.automaticallyAdjustsScrollViewInsets = false
         
     }
     
@@ -83,9 +84,12 @@ class animalListForLocationsView: UIViewController,UITableViewDelegate,UITableVi
         
         
             tableView = UITableView(frame: tableViewFrame, style: UITableViewStyle.Plain)
+         //tableView!.contentInset = UIEdgeInsetsMake(-50, 0, -50, 0);
+
             tableView!.delegate = self
             tableView!.dataSource = self
             tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TableCell")
+
             self.view.addSubview(self.tableView!)
         
         
@@ -122,7 +126,11 @@ class animalListForLocationsView: UIViewController,UITableViewDelegate,UITableVi
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-      
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
         
     }
+    
+//    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 0.1
+//    }
 }

@@ -9,7 +9,11 @@
 import UIKit
 import MapKit
 
-class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITableViewDataSource {
+protocol  showLocationDelegate {
+    func showLocationOnMap()
+}
+
+class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITableViewDataSource,MKMapViewDelegate {
     
     
     @IBOutlet weak var displayedView: UIView!
@@ -19,9 +23,17 @@ class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegat
     @IBOutlet weak var locationSearchBar: UISearchBar!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var showLocDelegate: showLocationDelegate?
+    
     var matchingItems:[MKMapItem] = []
-    var selectedLocation: String?
+ //   var selectedLocation: String?
     var mapView: MKMapView?
+    
+    var selectedLocation: CLLocationCoordinate2D?
+
+    var delegate: updateTripParameterDelegate?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +45,24 @@ class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegat
         addActionOnCloseBtn()
         self.tableView.delegate  = self
         self.tableView.dataSource = self
+        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+
         self.locationSearchBar.delegate = self
         self.showAnimate()
-        self.mapView = MKMapView(frame:UIScreen.mainScreen().bounds)
+       // self.mapView = MKMapView(frame:UIScreen.mainScreen().bounds)
 
-        // Do any additional setup after loading the view.
+//        // tap view to dismiss keyboard
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LocationPopUpView.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
+        
+        //Move view with keyboard
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LocationPopUpView.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LocationPopUpView.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        
+        self.mapView!.delegate = self
+
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,16 +77,42 @@ class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegat
     //    }
     //
     
-    @IBAction func ClosePopUp(sender: AnyObject) {
-        self.view.removeFromSuperview()
-        
-    }
+  
     
     @IBAction func doneBtnAction(sender: AnyObject) {
         
-        self.view.removeFromSuperview()
+//        delegate?.updateTrip(departTime,paraIdentifier: "departure")
 
+        if(self.selectedLocation == nil)
+        {
+            //alert
+            let alertController = UIAlertController(title: "iOScreator", message: "Please select the location from the list!", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return
+            
+        }
+            
+        else{
+            if(self.selectedLocation != nil){
+            
+                let lat = String(format:"%f", self.selectedLocation!.latitude )
+                let lgt = String(format:"%f", self.selectedLocation!.longitude )
+
+                delegate?.updateTrip(lat,paraIdentifier: "lat")
+                delegate?.updateTrip(lgt,paraIdentifier: "lgt")
+            }
+
+
+            self.view.removeFromSuperview()
+            self.showLocDelegate!.showLocationOnMap()
+        }
+      
+        
     }
+    
     func showAnimate()
     {
         self.view.transform = CGAffineTransformMakeScale(1.3, 1.3)
@@ -99,7 +150,7 @@ class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegat
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TableCell")! as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
        
             let selectedItem = matchingItems[indexPath.row].placemark
             cell.textLabel?.text = selectedItem.name
@@ -112,13 +163,10 @@ class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegat
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     //    var count:Int?
         
-        guard let count:Int =  matchingItems.count
-                else{
-                    return 0
-        }
+       return matchingItems.count
+      
     
-        
-        return count
+      
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -127,9 +175,7 @@ class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegat
        
             let selectedItem = matchingItems[indexPath.row].placemark
             self.locationSearchBar?.text = self.parseAddress(selectedItem)
-          //  self.selectedLocation = selectedItem.coordinate
-            print(self.parseAddress(selectedItem))
-        
+            self.selectedLocation = selectedItem.coordinate
         
     }
     
@@ -161,6 +207,7 @@ class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegat
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar)
     {
+       
         
     }
     
@@ -201,5 +248,35 @@ class LocationPopUpView: UIViewController,UITableViewDelegate,UISearchBarDelegat
         
     }
 
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            if view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height/2 - 10
+            }
+            else {
+                
+            }
+        }
+        
+    }
     
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            if view.frame.origin.y != 0 {
+                self.view.frame.origin.y += keyboardSize.height/2 - 10
+            }
+            else {
+                
+            }
+        }
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+ 
+        
 }

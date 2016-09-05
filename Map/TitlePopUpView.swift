@@ -8,18 +8,31 @@
 
 import UIKit
 
-class TitlePopUpView: UIViewController {
+class TitlePopUpView: UIViewController ,UITextViewDelegate{
+    
+    var delegate: updateTripParameterDelegate?
+    var tripTitle:String = ""
+    
+    @IBOutlet weak var titleTextView: UITextView!
     
     @IBOutlet weak var displayedView: UIView!
 
     @IBAction func doneBtnAction(sender: AnyObject) {
         
+        if let inputTitle = titleTextView.text{
+            delegate?.updateTrip(inputTitle,paraIdentifier: "title")
+        }
+        
+
         self.view.removeFromSuperview()
 
     }
     
 
     @IBOutlet weak var closeBtn: UIImageView!
+    
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +45,22 @@ class TitlePopUpView: UIViewController {
 
         self.showAnimate()
         
-        // Do any additional setup after loading the view.
+        //set palceholder for textview
+        titleTextView.text = "Enter your main topic here"
+        titleTextView.textColor = UIColor.lightGrayColor()
+        titleTextView.delegate = self
+        
+        // tap view to dismiss keyboard
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TitlePopUpView.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
+        //oberser keyboard
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TitlePopUpView.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TitlePopUpView.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        
+        //load initial views
+        loadIntialViews()
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,16 +69,21 @@ class TitlePopUpView: UIViewController {
     }
     
     
-    //    @IBAction func ClosePopUpWindow(sender: AnyObject) {
-    //        self.removeAnimate()
-    //        //self.view.removeFromSuperview()
-    //    }
-    //
+ 
     
     @IBAction func ClosePopUp(sender: AnyObject) {
         self.view.removeFromSuperview()
         
     }
+    
+    func loadIntialViews()
+    {
+        if(self.tripTitle != "")
+        {
+            titleTextView.text = self.tripTitle
+        }
+    }
+    
     
     func showAnimate()
     {
@@ -89,4 +122,48 @@ class TitlePopUpView: UIViewController {
         
     }
     
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            if view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height/2 - 10
+            }
+            else {
+                
+            }
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            if view.frame.origin.y != 0 {
+                self.view.frame.origin.y += keyboardSize.height/2 - 10
+            }
+            else {
+                
+            }
+        }
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.textColor == UIColor.lightGrayColor() {
+            if(self.tripTitle == ""){
+            textView.text = nil
+            }
+            textView.textColor = UIColor.blackColor()
+        }
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Enter you main topic here.."
+            textView.textColor = UIColor.lightGrayColor()
+        }
+    }
 }

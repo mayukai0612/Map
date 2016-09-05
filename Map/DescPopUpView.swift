@@ -8,11 +8,15 @@
 
 import UIKit
 
-class DescPopUpView: UIViewController {
+class DescPopUpView: UIViewController ,UITextViewDelegate{
     
     @IBOutlet weak var closeBtn: UIImageView!
     @IBOutlet weak var displayedView: UIView!
+
     
+    @IBOutlet weak var descTextView: UITextView!
+    var delegate: updateTripParameterDelegate?
+    var desc :String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +28,22 @@ class DescPopUpView: UIViewController {
 
         self.showAnimate()
         
-        // Do any additional setup after loading the view.
+        
+        //set palceholder for textview
+        descTextView.text = "Enter your description here.."
+        descTextView.textColor = UIColor.lightGrayColor()
+        descTextView.delegate = self
+        
+
+        // tap view to dismiss keyboard
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DescPopUpView.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        //oberser keyboard
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DescPopUpView.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DescPopUpView.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        loadInitialViews()
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,9 +55,21 @@ class DescPopUpView: UIViewController {
   
     
     @IBAction func doneBtnClost(sender: AnyObject) {
+        
+        if let desc  = descTextView.text {
+            delegate?.updateTrip(desc,paraIdentifier: "desc")
+        }
         self.view.removeFromSuperview()
 
     }
+    
+    func loadInitialViews()
+    {
+        if(self.desc != ""){
+        descTextView.text = self.desc
+        }
+    }
+    
     func showAnimate()
     {
         self.view.transform = CGAffineTransformMakeScale(1.3, 1.3)
@@ -76,5 +107,49 @@ class DescPopUpView: UIViewController {
         
     }
     
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            if view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height/2 - 10
+            }
+            else {
+                
+            }
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+            if view.frame.origin.y != 0 {
+                self.view.frame.origin.y += keyboardSize.height/2 - 10
+            }
+            else {
+                
+            }
+        }
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.textColor == UIColor.lightGrayColor() {
+            if (self.desc == ""){
+            textView.text = nil
+            }
+            textView.textColor = UIColor.blackColor()
+        }
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Enter you main topic here.."
+            textView.textColor = UIColor.lightGrayColor()
+        }
+    }
 
 }

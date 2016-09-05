@@ -8,15 +8,20 @@
 
 import UIKit
 
-class TripTitleView: UIView {
+class TripTitleView: UIView,updateTripParameterDelegate{
     
     var delegate: addChildViewDelegate?
+    var passParaDelegate: passTripParaDelegate?
+    var tripTitle:String = ""
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
             
             let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("titlePopUp") as! TitlePopUpView
-            delegate?.addChildView(popOverVC)
+            popOverVC.delegate = self
+            //pass trip title value to pop up view
+            popOverVC.tripTitle = self.tripTitle
+            delegate?.addChildView(popOverVC,viewIdentifier: "tripTitle")
             
         }
     }
@@ -39,24 +44,29 @@ class TripTitleView: UIView {
     {
         let imageFrame = CGRect(x:155/2 - 15, y: 20 , width: 30, height: 30)
         //title frame
-        let titleFrame = CGRect(x: 155/2 - 50, y: 50, width: 100, height: 40)
+        let titleFrame = CGRect(x: 155/2 - 50, y: 50, width: 105, height: 40)
         
         //crearte image view
         let imageView = UIImageView(frame: imageFrame)
         imageView.contentMode = .ScaleAspectFit
-        let image = UIImage(named: "Group")
+        let image = UIImage(named: "QuestionMark")
         imageView.image = image
         
         //create title
         let title = UILabel(frame:titleFrame)
         title.text = "What's about"
-        title.font = UIFont (name: "AmericanTypewriter-Bold", size: 15)
-        title.textColor = UIColor.blackColor()
+        title.font = UIFont (name: "AppleSDGothicNeo-SemiBold", size: 18)
+        let textColor = UIColor(red: 89, green: 45, blue: 23)
+        title.textColor = textColor
         
         self.addSubview(imageView)
         self.addSubview(title)
     }
     
-    
+    func updateTrip(tripPara:String,paraIdentifier:String) {
+        
+        passParaDelegate?.passTripPara(tripPara,paraIdentifier: paraIdentifier)
+        
+    }
 
 }

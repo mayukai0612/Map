@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol updateTripParameterDelegate {
+    func updateTrip(tripPara:String,paraIdentifier:String)
+}
+
 class CategoryPopupView: UIViewController {
     
     @IBOutlet weak var displayedView: UIView!
@@ -18,6 +22,10 @@ class CategoryPopupView: UIViewController {
     @IBOutlet weak var groupOption: UIImageView!
     
     @IBOutlet weak var personalOption: UIImageView!
+    
+    var choosedCategory: String?
+    var delegate: updateTripParameterDelegate?
+    var category:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +39,7 @@ class CategoryPopupView: UIViewController {
         makeRoundCornerForOptions()
         
         self.showAnimate()
-        
+        loadInitialView()
         // Do any additional setup after loading the view.
     }
     
@@ -42,8 +50,12 @@ class CategoryPopupView: UIViewController {
     
 
     @IBAction func ClosePopUp(sender: AnyObject) {
-      self.view.removeFromSuperview()
-
+        //update category
+        if let category = self.choosedCategory{
+            delegate?.updateTrip(category,paraIdentifier: "category")
+        }
+        
+        self.view.removeFromSuperview()
     }
     
     func showAnimate()
@@ -106,6 +118,7 @@ class CategoryPopupView: UIViewController {
 
         let newSwiftColor = UIColor(red: 130, green: 170, blue: 180)
         personalOption.backgroundColor  = newSwiftColor
+        choosedCategory = "personal"
         
     }
     
@@ -115,6 +128,7 @@ class CategoryPopupView: UIViewController {
 
         let newSwiftColor = UIColor(red: 130, green: 170, blue: 180)
         groupOption.backgroundColor  = newSwiftColor
+        choosedCategory = "group"
         
     }
     
@@ -123,6 +137,7 @@ class CategoryPopupView: UIViewController {
         clearBackgroundOfOptions()
         let newSwiftColor = UIColor(red: 130, green: 170, blue: 180)
         pathFindingOption.backgroundColor  = newSwiftColor
+        choosedCategory = "pathFinding"
         
     }
     
@@ -152,6 +167,30 @@ class CategoryPopupView: UIViewController {
         groupOption.layer.masksToBounds = true
         pathFindingOption.layer.cornerRadius = 5
         pathFindingOption.layer.masksToBounds = true
+    }
+    
+    func loadInitialView()
+    {
+        
+        
+        let newSwiftColor = UIColor(red: 130, green: 170, blue: 180)
+
+            switch self.category {
+            case "personal":
+                personalOption.backgroundColor  = newSwiftColor
+                choosedCategory = "personal"
+            case "group":
+                groupOption.backgroundColor  = newSwiftColor
+                choosedCategory = "group"
+            case "pathFinding":
+                pathFindingOption.backgroundColor  = newSwiftColor
+                choosedCategory = "pathFinding"
+            default:
+                  clearBackgroundOfOptions()
+        
+        
+        }
+    
     }
     
 }

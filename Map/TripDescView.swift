@@ -8,14 +8,20 @@
 
 import UIKit
 
-class TripDescView: UIView {
+class TripDescView: UIView ,updateTripParameterDelegate{
     var delegate: addChildViewDelegate?
+    var passParaDelegate:passTripParaDelegate?
+    var tripdesc:String =  ""
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
             
             let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("descPopUp") as! DescPopUpView
-            delegate?.addChildView(popOverVC)
+            popOverVC.delegate = self
+            
+            popOverVC.desc = self.tripdesc
+
+            delegate?.addChildView(popOverVC,viewIdentifier: "tripdesc")
             
         }
     }
@@ -49,12 +55,17 @@ class TripDescView: UIView {
         //create title
         let title = UILabel(frame:titleFrame)
         title.text = "Description"
-        title.font = UIFont (name: "AmericanTypewriter-Bold", size: 15)
-        title.textColor = UIColor.blackColor()
+        title.font = UIFont (name: "AppleSDGothicNeo-SemiBold", size: 18)
+        let textColor = UIColor(red: 89, green: 45, blue: 23)
+        title.textColor = textColor
         
         //self.addSubview(imageView)
         self.addSubview(title)
     }
-    
+    func updateTrip(tripPara: String, paraIdentifier: String) {
+        passParaDelegate?.passTripPara(tripPara,paraIdentifier: paraIdentifier)
+        
+    }
+
     
 }

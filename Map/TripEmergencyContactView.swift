@@ -8,14 +8,27 @@
 
 import UIKit
 
-class TripEmergencyContactView: UIView {
+class TripEmergencyContactView: UIView,updateTripParameterDelegate {
     var delegate: addChildViewDelegate?
+    var passParaDelegate:passTripParaDelegate?
+  
+    var emergencyContactName:String = ""
+    var emergencyContactPhone:String = ""
+    var emergencyContactEmail:String = ""
+
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
             
             let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("emergencyPopUp") as! EmergencyContactPopUpView
-            delegate?.addChildView(popOverVC)
+            popOverVC.delegate = self
+            
+            //pass emergency value to pop up view
+            popOverVC.emergencyName = self.emergencyContactName
+            popOverVC.emergencyEmail = self.emergencyContactPhone
+            popOverVC.emergencyPhone = self.emergencyContactEmail
+
+            delegate?.addChildView(popOverVC,viewIdentifier: "tripEmergency")
             
         }
     }
@@ -50,11 +63,16 @@ class TripEmergencyContactView: UIView {
         title.lineBreakMode = NSLineBreakMode.ByWordWrapping
         title.numberOfLines = 2
         title.text = "Emergency Contact"
-        title.font = UIFont (name: "AmericanTypewriter-Bold", size: 15)
-        title.textColor = UIColor.blackColor()
+        title.font = UIFont (name: "AppleSDGothicNeo-SemiBold", size: 18)
+        let textColor = UIColor(red: 89, green: 45, blue: 23)
+        title.textColor = textColor
         
         self.addSubview(imageView)
         self.addSubview(title)
     }
     
+    func updateTrip(tripPara: String, paraIdentifier: String) {
+        passParaDelegate?.passTripPara(tripPara,paraIdentifier: paraIdentifier)
+
+    }
 }

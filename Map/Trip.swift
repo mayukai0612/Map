@@ -12,39 +12,71 @@ import Firebase
 
 class Trip: NSObject {
 
-    var tripID: Int?
-    var userID: Int?
+
+    var tripID: String?
+    var userID: String?
     var category: String?
+    var tripTitle:String?
     var departTime: String?
     var returnTime: String?
-    var tripLoc: String?
-    var emergencyContact: String?
-    var tripDesc: String?
-    var photoUrl: String?
-    var whatsAbout: String?
-    var photoCoordinate: CLLocationCoordinate2D?
+    var lat: String?
+    var lgt: String?
+    var emergencyContactName: String?
+    var emergencyContactPhone: String?
+    var emergencyContactEmail: String?
+    var desc: String?
+    var imagefilename:String?
+    var tripImage:UIImage?
     
-    init(tripID: Int,userID: Int,category: String,departTime: String,returnTime: String,tripLoc: String,emergencyContact: String,tripDesc: String,photoUrl: String, whatsAbout: String,photoCoordinate:CLLocationCoordinate2D?)
-    {
-        self.category = category
-        self.departTime = departTime
-        self.tripID = tripID
-        self.emergencyContact = emergencyContact
-        self.photoUrl = photoUrl
-        self.photoCoordinate = photoCoordinate
-        self.returnTime = returnTime
-        self.whatsAbout = whatsAbout
-        self.tripLoc = tripLoc
-        self.tripDesc = tripDesc
-        
+    override init() {
         
     }
     
+    init(category: String,tripTitle: String,departTime: String) {
+        self.category = category
+        self.tripTitle = tripTitle
+        self.departTime = departTime
+        
+    }
+    init(tripID: String,userID: String,category: String,tripTitle: String,departTime: String,returnTime: String,lat:String,lgt:String,emergencyContactName: String,emergencyContactPhone: String,emergencyContactEmail: String,desc: String,imagefilename: String)
+    {
+        self.tripID = tripID
+        self.userID = userID
+        
+        self.category = category
+        self.tripTitle = tripTitle
+        self.departTime = departTime
+        self.returnTime  = returnTime
+        self.lat = lat
+        self.lgt = lgt
+        self.emergencyContactName = emergencyContactName
+        self.emergencyContactPhone = emergencyContactPhone
+        self.emergencyContactEmail = emergencyContactEmail
+        self.desc = desc
+        self.imagefilename = imagefilename
+    }
+    
+    init(category: String,tripTitle: String,departTime: String,returnTime: String,lat:String,lgt:String,emergencyContactName: String,emergencyContactPhone: String,emergencyContactEmail: String,desc: String,imagefilename: String)
+    {
+      
+        self.category = category
+        self.tripTitle = tripTitle
+        self.departTime = departTime
+        self.returnTime  = returnTime
+        self.lat = lat
+        self.lgt = lgt
+        self.emergencyContactName = emergencyContactName
+        self.emergencyContactPhone = emergencyContactPhone
+        self.emergencyContactEmail = emergencyContactEmail
+        self.desc = desc
+        self.imagefilename = imagefilename
+    }
+
     init(departTime:String,whatsAbout:String,tripLoc:String) {
         
         self.departTime = departTime
-        self.whatsAbout = whatsAbout
-        self.tripLoc = tripLoc
+        self.tripTitle = whatsAbout
+        self.lat = tripLoc
         
     }
     

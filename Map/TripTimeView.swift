@@ -8,15 +8,22 @@
 
 import UIKit
 
-class TripTimeView: UIView {
+class TripTimeView: UIView,updateTripParameterDelegate{
 
     var delegate: addChildViewDelegate?
+    var passParaDelegate:passTripParaDelegate?
+    var departtime:String?
+    var returntime:String?
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first {
             
             let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("timePopUp") as! TimePopUpView
-            delegate?.addChildView(popOverVC)
+            popOverVC.delegate = self
+            //pass time value to pop up view
+            popOverVC.departureTime = self.departtime
+            popOverVC.returnTime = self.returntime
+            delegate?.addChildView(popOverVC,viewIdentifier: "triptime")
             
         }
     }
@@ -50,12 +57,18 @@ class TripTimeView: UIView {
         //create title
         let title = UILabel(frame:titleFrame)
         title.text = "Date&Time"
-        title.font = UIFont (name: "AmericanTypewriter-Bold", size: 15)
-        title.textColor = UIColor.blackColor()
+        title.font = UIFont (name: "AppleSDGothicNeo-SemiBold", size: 18)
+        let textColor = UIColor(red: 89, green: 45, blue: 23)
+        title.textColor = textColor
         
         self.addSubview(imageView)
         self.addSubview(title)
     }
     
+    func updateTrip(tripPara: String, paraIdentifier: String) {
+        
+        passParaDelegate?.passTripPara(tripPara,paraIdentifier: paraIdentifier)
+
+    }
     
 }
