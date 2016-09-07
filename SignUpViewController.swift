@@ -22,6 +22,11 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //change background color of view
+        let backGroundColor = UIColor(red: 86, green: 171, blue: 59)
+        self.view.backgroundColor = backGroundColor
+
+        
         //dimiss keyboard when tapping on view
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -48,12 +53,13 @@ class SignUpViewController: UIViewController {
                 
                 if( emailInUseError ==  "true"){
                     print( emailInUseError)
+                    self.errorAlert("Email in use",msg: "Please retry another email.")
                     print("Emial in user error!!")
                 }
                 
                 if( invalidEmailError == "true")
                 {
-                
+                    self.errorAlert("Email invalid",msg: "Please enter a valid email.")
                     print("invalid email error!")
                 }
                 
@@ -70,9 +76,34 @@ class SignUpViewController: UIViewController {
     
     func login()
     {
+        //validate input
+        if( !checkUserInput())
+        {
+            return
+        }
+        
         FIRAuth.auth()?.signInWithEmail(emailLabel.text!, password: passwordLabel.text!, completion: { (user, error) in
             
             if error != nil{
+                //detect wrong password
+                if(error?.code == 17009)
+                {
+                    self.errorAlert("Invalid password", msg: "Please retry your password")
+                }
+                
+                //detect no this username exists
+                if(error?.code == 17011)
+                {
+                    self.errorAlert("No user exists", msg: "Please change an email!")
+                }
+                
+                //detect no this username exists
+                if(error?.code == 17999)
+                {
+                    self.errorAlert("Error", msg: "Please input correct information!")
+                }
+                
+                print(error)
                 print("incorrect")
             
             }
@@ -109,119 +140,31 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-     This method will save user's information into the Firebase
-     and record user's login state.
-     */
-    
-//    @IBAction func signUpAction(sender: AnyObject) {
-//        let name = self.userNameTextField.text
-//        let password = self.passwordTextField.text
-//        let confirmPassword = self.confirmPasswordTextField.text
-//        let mobilePhone = self.mobilePhoneTextField.text
-//        let email = self.emailTextField.text
-//        
-//        if password != confirmPassword {
-//            self.alertConfirmPassword()
-//        } else if name != "" && password != "" && confirmPassword != "" && mobilePhone != "" && email != "" {
-//            FIREBASE_REF.createUser(email, password: password, withValueCompletionBlock: { (error, result) -> Void in
-//                if error == nil {
-//                    FIREBASE_REF.authUser(email, password: password, withCompletionBlock: { (error, authData) -> Void in
-//                        if error == nil {
-//                            // Record user's login state.
-//                            NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
-//                            // Retrieve current user's user ID.
-//                            let uid = result["uid"] as? String
-//                            // Append user's information to Firebase.
-//                            let userInfo = ["name" : name!, "password" : password!, "address" : address!, "mobilePhone" : mobilePhone!, "email" : email!]
-//                            FIREBASE_REF.childByAppendingPath("users/\(uid!)/info").setValue(userInfo)
-//                            // Append user's order index
-//                            let index = 0
-//                            let orderIndex = ["index": index]
-//                            FIREBASE_REF.childByAppendingPath("users/\(uid!)/count").setValue(orderIndex)
-//                            // Remind user that they have registered successfully.
-//                            self.alertRegisterSuccessfully()
-//                            print("Account registered successfully with the userID: \(uid!)")
-//                        } else {
-//                            print(error)
-//                        }
-//                    })
-//                } else {
-//                    print(error)
-//                    self.checkRegisterInput(error.description)
-//                }
-//            })
-//        } else {
-//            self.alertIfHasEmptyInput()
-//        }
-//        
-//    }
-    
-    
-//    //get userid
-//    func getUserid() -> String{
-//           var userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")
-//            if(userid != nil){
-//                    return userid!
-//                 }else{
-//                    var uuid_ref = CFUUIDCreate(nil)
-//                var uuid_string_ref = CFUUIDCreateString(nil , uuid_ref)
-//                    var uuid:String = NSString(format: uuid_string_ref)
-//                  NSUserDefaults.standardUserDefaults().setObject(uuid, forKey: "hangge")
-//                   return uuid
-//            }
-//   }
-//   
-    /*
-     When password doesn't match the confirmPassword, call this method.
-     The method will show an alert to remind users.
-     */
-    func alertConfirmPassword() -> Void {
-        let alert = UIAlertController(title: "Sorry", message: "Confirm Password Incorrectly...", preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
-        alert.addAction(action)
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    /*
-     When users don't fill all the TextFields, call this method.
-     The method will show an alert to remind users.
-     */
-    func alertIfHasEmptyInput() -> Void {
-        let alert = UIAlertController(title: "Sorry", message: "Empty input cannot be accepted...", preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
-        alert.addAction(action)
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    /*
-     When user register successfully, system will popup an alert to remind users.
-     */
-    func alertRegisterSuccessfully() -> Void {
-        let alert = UIAlertController(title: "Congratulations", message: "You've registered successfully!", preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
-        alert.addAction(action)
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    func checkRegisterInput(error: String) -> Void {
-        if error.rangeOfString("-9") != nil {
-            let alert = UIAlertController(title: "Sorry", message: "The specified email address is already in use...", preferredStyle: .Alert)
-            let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
-            alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
+
+    func checkUserInput() -> Bool{
+        var result = true
+        
+        if(emailLabel.text?.trim() == "" || passwordLabel.text?.trim() == "")
+        {
+            errorAlert("Invalid input", msg: "Please do not leave blank!")
+            result  = false
         }
+        return result
     }
     
+    
     /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
+     When some error happen or prompt needed, call this method.
+     The method will show an alert to remind users.
      */
+    func errorAlert(title:String,msg:String){
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+
     
 }
 
@@ -229,7 +172,13 @@ class SignUpViewController: UIViewController {
 
 
 
-
+extension String
+{
+    func trim() -> String
+    {
+        return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+    }
+}
 
 
 

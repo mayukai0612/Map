@@ -90,10 +90,10 @@ class TripPhotoView: UIView {
         self.imageView!.contentMode = .ScaleAspectFill
         
         let tripDB = TripDB()
-        
-        tripDB.loadImageFromUrl(url, view: self.imageView!)
-      //  imageView?.image = image
         self.addSubview(imageView!)
+        tripDB.loadImageFromUrl(url, view: self.imageView!)
+
+      //  imageView?.image = image
     }
     
     

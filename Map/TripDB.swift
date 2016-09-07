@@ -203,7 +203,7 @@
         request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
         
         
-        
+       
         //myActivityIndicator.startAnimating();
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
@@ -449,6 +449,7 @@
                 // execute in UI thread
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     view.image = UIImage(data: data)
+                   // uiView.addSubview(view)
                 })
             }
         }
