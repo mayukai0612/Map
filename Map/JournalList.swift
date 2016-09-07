@@ -18,18 +18,19 @@ class JournalList: UIViewController,UITableViewDelegate,UITableViewDataSource,ad
         let vc = self.storyboard!.instantiateViewControllerWithIdentifier("addTrip") as! AddTrip
         vc.delegate = self
         vc.editOrCreateFlag = "add"
+        vc.tripList = self.tripList
         self.navigationController!.pushViewController(vc, animated: true)
 
         
         
     }
+    
     var tripList = [Trip]()
+    var userid:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        let trip  = Trip(departTime:"2016-8-20",whatsAbout:"Plant Collection",tripLoc:"Clayton")
-//        tripList.addObject(trip)
+
         tripTableView.delegate = self
         tripTableView.dataSource = self
         tripTableView.tableFooterView = UIView()
@@ -50,8 +51,8 @@ class JournalList: UIViewController,UITableViewDelegate,UITableViewDataSource,ad
         self.navigationController?.navigationBar.backgroundColor = navBarColor
         self.navigationController?.navigationBar.tintColor = navBarColor
         
-        
-        let userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")
+        //get userid
+        userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")
 
         
         //load data
@@ -107,6 +108,11 @@ class JournalList: UIViewController,UITableViewDelegate,UITableViewDataSource,ad
     
     func reloadtable(trip:Trip)
     {
+//        //load trips
+//        let loadTrips = TripDB()
+//        loadTrips.delegate = self
+//        loadTrips.loadJournal(self.userid!)
+        
         var findSameTrip: Bool = false
         
         //check if the trip is used to update
@@ -126,6 +132,8 @@ class JournalList: UIViewController,UITableViewDelegate,UITableViewDataSource,ad
         
         self.tripTableView.reloadData()
     }
+    
+  
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

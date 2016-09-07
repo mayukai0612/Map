@@ -41,7 +41,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     var userid: String?
     
     var tripDB:TripDB = TripDB()
-    
+    var tripList = [Trip]()
     var editOrCreateFlag: String?
     
     override func viewDidLoad() {
@@ -158,8 +158,8 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
 
       
         
-        //set tripid to 1 which will be validated and changed in server side
-        self.trip?.tripID = "0"
+        //set tripid to be maxid (in list) + 1
+        setTripID(self.trip!)
         
             if(self.trip?.tripImage == nil)
             {
@@ -205,6 +205,23 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         self.navigationController?.popViewControllerAnimated(true)
         delegate?.reloadtable(self.trip!)
 
+    }
+    
+    //set tripid of one trip
+    func setTripID(trip:Trip)
+    {
+        var maxid:Int = 0
+        
+        for oneTrip in tripList
+        {
+            if(Int(oneTrip.tripID!)! > maxid)
+            {
+                maxid = Int(oneTrip.tripID!)!
+            }
+        
+        }
+        
+        trip.tripID = String(maxid + 1)
     }
     
     

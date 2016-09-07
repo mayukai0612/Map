@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-
+import FirebaseDatabase
 class SignUpViewController: UIViewController {
 
     let roofRef = FIRDatabase.database().reference()
