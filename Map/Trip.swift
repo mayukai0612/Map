@@ -21,11 +21,8 @@ class Trip: NSObject {
     var returnTime: String?
     var lat: String?
     var lgt: String?
-    var emergencyContactName: String?
-    var emergencyContactPhone: String?
-    var emergencyContactEmail: String?
-    var desc: String?
-    var imagefilename:String?
+
+    var imagefilename = [String]()
     var tripImage:UIImage?
     
     override init() {
@@ -38,7 +35,7 @@ class Trip: NSObject {
         self.departTime = departTime
         
     }
-    init(tripID: String,userID: String,category: String,tripTitle: String,departTime: String,returnTime: String,lat:String,lgt:String,emergencyContactName: String,emergencyContactPhone: String,emergencyContactEmail: String,desc: String,imagefilename: String)
+    init(tripID: String,userID: String,category: String,tripTitle: String,departTime: String,returnTime: String,lat:String,lgt:String,imagefilename: [String])
     {
         self.tripID = tripID
         self.userID = userID
@@ -49,14 +46,11 @@ class Trip: NSObject {
         self.returnTime  = returnTime
         self.lat = lat
         self.lgt = lgt
-        self.emergencyContactName = emergencyContactName
-        self.emergencyContactPhone = emergencyContactPhone
-        self.emergencyContactEmail = emergencyContactEmail
-        self.desc = desc
+    
         self.imagefilename = imagefilename
     }
     
-    init(category: String,tripTitle: String,departTime: String,returnTime: String,lat:String,lgt:String,emergencyContactName: String,emergencyContactPhone: String,emergencyContactEmail: String,desc: String,imagefilename: String)
+    init(category: String,tripTitle: String,departTime: String,returnTime: String,lat:String,lgt:String,imagefilename: [String])
     {
       
         self.category = category
@@ -65,10 +59,7 @@ class Trip: NSObject {
         self.returnTime  = returnTime
         self.lat = lat
         self.lgt = lgt
-        self.emergencyContactName = emergencyContactName
-        self.emergencyContactPhone = emergencyContactPhone
-        self.emergencyContactEmail = emergencyContactEmail
-        self.desc = desc
+       
         self.imagefilename = imagefilename
     }
 

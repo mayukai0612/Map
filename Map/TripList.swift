@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JournalList: UIViewController,UITableViewDelegate,UITableViewDataSource,addTripsDelegate,reloadTableDelegate{
+class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addTripsDelegate,reloadTableDelegate{
     @IBOutlet weak var createTripBtn: UIButton!
 
     @IBOutlet weak var tripTableView: UITableView!
@@ -59,7 +59,7 @@ class JournalList: UIViewController,UITableViewDelegate,UITableViewDataSource,ad
         
         let loadTrips = TripDB()
         loadTrips.delegate = self
-        loadTrips.loadJournal(userid!)
+        loadTrips.loadTrips(userid!)
         
 
     }
@@ -67,7 +67,7 @@ class JournalList: UIViewController,UITableViewDelegate,UITableViewDataSource,ad
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -148,6 +148,10 @@ class JournalList: UIViewController,UITableViewDelegate,UITableViewDataSource,ad
         destination.trip = selectedTrip
         destination.delegate = self
         destination.editOrCreateFlag = "edit"
+        
+        //when a cell selected, it turns grey.Using deselect to turn it back to normal
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
         navigationController?.pushViewController(destination, animated: true)
       
     }

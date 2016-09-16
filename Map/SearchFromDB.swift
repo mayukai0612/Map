@@ -127,6 +127,8 @@ class SearchFromDB: NSObject, MKMapViewDelegate{
         
     }
     
+    //The structure of classified data is 
+    //that the same animals are put in the same array
     func classifyDataByLocation(animalInformations:NSMutableArray)
     {
         
@@ -179,12 +181,7 @@ class SearchFromDB: NSObject, MKMapViewDelegate{
     {
         var annotationView:MKPinAnnotationView!
         var pointAnnoation:CustomPointAnnotation!
-        
-        //Remove annotations on map
-        //dispatch_async(dispatch_get_main_queue()) {
-            //self.Map!.removeAnnotations(self.Map!.annotations)
-     //   }
-
+     
         
         //covert animalInformations to annotations
         
@@ -193,12 +190,6 @@ class SearchFromDB: NSObject, MKMapViewDelegate{
             let animal = animalArray[0]as! AnimalInformation
             
             pointAnnoation = CustomPointAnnotation()
-            
-            //            if incomeLevelValue == "High income: OECD" || incomeLevelValue == "High income: nonOECD"{
-            //                pointAnnoation.pinCustomImageName = "High income"
-            //            }else{
-            //                pointAnnoation.pinCustomImageName = (incomeLevel["value"] as! String)
-            //            }
             
             pointAnnoation.pinCustomImageName = "AnimalSign"
             

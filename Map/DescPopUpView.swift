@@ -39,7 +39,7 @@ class DescPopUpView: UIViewController ,UITextViewDelegate{
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DescPopUpView.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        //oberser keyboard
+        //keyboard
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DescPopUpView.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DescPopUpView.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         

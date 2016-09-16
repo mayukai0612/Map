@@ -325,6 +325,8 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         
         let reuseIdentifier = "pin"
         
+        
+        //create a annotationn view using identifier
         var v = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseIdentifier)
         if v == nil {
             v = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
@@ -333,7 +335,7 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         else {
             v!.annotation = annotation
         }
-        
+        //set img for call out
         let btn = UIButton(type: .DetailDisclosure)
         v!.rightCalloutAccessoryView = btn
         
@@ -394,24 +396,7 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         print("Error" + error.localizedDescription)
     }
 
-//    func dropPinZoomIn(coordinates:CLLocationCoordinate2D){
-//        // cache the pin
-//        //selectedPin = placemark
-//        // clear existing pins
-//        Map.removeAnnotations(Map.annotations)
-//        let annotation = MKPointAnnotation()
-//        annotation.coordinate = placemark.coordinate
-//        annotation.title = placemark.name
-//        if let city = placemark.locality,
-//            let state = placemark.administrativeArea {
-//            annotation.subtitle = city + " , " + state
-//        }
-//        Map.addAnnotation(annotation)
-//        let span = MKCoordinateSpanMake(0.05, 0.05)
-//        let region = MKCoordinateRegionMake(placemark.coordinate, span)
-//        Map.setRegion(region, animated: true)
-//    }
-   
+
 
 }
 

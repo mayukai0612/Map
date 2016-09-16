@@ -6,7 +6,7 @@ protocol  reloadTableDelegate {
     func reloadtable(trip:Trip)
 }
 
-class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,cameraAndPicLibDelegate,passTripParaDelegate{
+class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,passTripParaDelegate,cameraAndPicLibDelegate,PassPhotosDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
     
     @IBOutlet weak var categoryView: TripCategoryView!
 
@@ -16,14 +16,19 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     
     @IBOutlet weak var locationView: TripLocationView!
     
-    
-    @IBOutlet weak var contactView: TripEmergencyContactView!
-    
-    @IBOutlet weak var descView: TripDescView!
-    
-    
     @IBOutlet weak var photoView: TripPhotoView!
     
+    //collection view
+    let themeGreenColor = UIColor(red: 86, green: 171, blue: 59)
+    let SCREEN_WIDTH:CGFloat = UIScreen.mainScreen().bounds.size.width
+    let SCREEN_HEIGHT:CGFloat = UIScreen.mainScreen().bounds.size.height
+    
+    var collectionView:UICollectionView?
+    var imageArray:[GalleryImage] = []
+    var imagesToBeSaved:[UIImage] = []
+    var fileNames = [String]()
+
+    //trip
     var delegate:reloadTableDelegate?
     var category:String?
     var tripTitle:String?
@@ -31,10 +36,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     var returnTime:String?
     var lat:String?
     var lgt:String?
-    var emergencyContactName:String?
-    var emergencyContactPhone:String?
-    var emergencyContactEmail:String?
-    var desc:String?
+
     var imageStr:String?
     
     var trip: Trip? = Trip()
@@ -59,12 +61,18 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     makeRoundCorners()
         
     loadViews()
+        
+    initCollectionViews()
+
 
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+       //reload collection view
+        self.collectionView!.reloadData()
+
         
     }
     
@@ -73,6 +81,58 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         // Dispose of any resources that can be recreated.
     }
     
+    //collection views
+    
+    func initCollectionViews(){
+        //get images
+      //  tripDB.
+       // tripDB.loadImagesFromUrls(<#T##fileName: [String]##[String]#>, view: UIImageView)
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection =  UICollectionViewScrollDirection.Vertical
+        let itemWidth = SCREEN_WIDTH/4 - 1.5
+        let itemHeight:CGFloat = SCREEN_WIDTH/4 - 1.5
+        flowLayout.itemSize = CGSize(width: itemWidth , height: itemHeight)
+        flowLayout.minimumLineSpacing = 0.5 //上下间隔
+        flowLayout.minimumInteritemSpacing = 0.5 //左右间隔
+        //define screen height
+        let screenHeight = (itemWidth * 2) + 0.5
+        self.collectionView = UICollectionView(frame: CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT),collectionViewLayout:flowLayout)
+        
+        self.view.addSubview(self.collectionView!)
+        self.collectionView!.backgroundColor = UIColor.clearColor()
+        //register
+        self.collectionView!.registerClass(GetImageCell.self,forCellWithReuseIdentifier:"cell")
+        //set delegate
+        self.collectionView!.delegate = self
+        self.collectionView!.dataSource = self
+        
+        
+    }
+    
+   
+    
+    
+    func passPhotos(selected: [GalleryImage]) {
+        imageArray = selected
+        
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        return imageArray.count
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        print(collectionView)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! GetImageCell;
+        cell.update(imageArray[indexPath.row])
+        return cell;
+        
+    }
+
     func makeRoundCorners(){
         categoryView.layer.cornerRadius = 5
         categoryView.layer.masksToBounds = true
@@ -82,10 +142,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         timeView.layer.masksToBounds = true
         locationView.layer.cornerRadius = 5
         locationView.layer.masksToBounds = true
-        contactView.layer.cornerRadius = 5
-        contactView.layer.masksToBounds = true
-        descView.layer.cornerRadius = 5
-        descView.layer.masksToBounds = true
+      
         photoView.layer.cornerRadius = 5
         photoView.layer.masksToBounds = true
         
@@ -110,16 +167,14 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         titleView.delegate = self
         timeView.delegate = self
         locationView.delegate = self
-        contactView.delegate = self
-        descView.delegate = self
+ 
         photoView.delegate = self
         
         categoryView.passParaDelegate = self
         titleView.passParaDelegate = self
         timeView.passParaDelegate = self
         locationView.passParaDelegate = self
-        contactView.passParaDelegate = self
-        descView.passParaDelegate = self
+      
 //        photoView.delegate = self
     
     }
@@ -130,16 +185,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         titleView.loadViews()
         timeView.loadViews()
         locationView.loadViews()
-        contactView.loadViews()
-        descView.loadViews()
-        if(self.trip?.imagefilename != "" && self.trip?.imagefilename != nil)
-        {
-            let url = "http://173.255.245.239/DangerousAnimals/Images/" + (self.trip?.imagefilename)!
-        photoView.loadImage(url)
-        }else
-        {
         photoView.loadViews()
-        }
 
     }
 
@@ -152,60 +198,82 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     
     func saveTrip(trip:Trip)
     {
-        if(self.editOrCreateFlag == "add"){
-        
-        checkTripAttributes()
+        convertGalleryImageToUIImage(self.imageArray)
 
-      
-        
-        //set tripid to be maxid (in list) + 1
+        getFileNames()
+        //convert
+        //save images to server
         setTripID(self.trip!)
+        tripDB.uploadPhotos(self.imagesToBeSaved,trip:self.trip!)
         
-            if(self.trip?.tripImage == nil)
-            {
-                tripDB.saveTrip(self.trip!)
-            }
-            else{
-                
-                //define picture file name: userid + timestamp
-                let date = NSDate()
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "yyyyMMddHHmmss"
-                let timeStamp = dateFormatter.stringFromDate(date)
-                let filename = userid! + "_" + timeStamp + ".jpg"
-                self.trip!.imagefilename = filename
-                
-                //save tirp and image to database
-                tripDB.myImageUploadRequest( self.trip!.tripImage!, trip:self.trip!)
-            }
-        }
-        else if (editOrCreateFlag == "edit")
-        {
-            if(self.trip?.tripImage == nil)
-            {
-                tripDB.updateTrip(self.trip!)
-            }
-            else{
-                //save tirp and image to database
-                //tripDB.myImageUploadRequest( self.trip!.tripImage!, trip:self.trip!)
-                
-                //define picture file name: userid + timestamp
-                let date = NSDate()
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "yyyyMMddHHmmss"
-                let timeStamp = dateFormatter.stringFromDate(date)
-                let filename = userid! + "_" + timeStamp + ".jpg"
-                self.trip!.imagefilename = filename
-                
-                tripDB.updateImageUploadRequest((self.trip?.tripImage)!, trip: self.trip!)
-                
-            }
-        }
-        
-        self.navigationController?.popViewControllerAnimated(true)
-        delegate?.reloadtable(self.trip!)
+
+//        if(self.editOrCreateFlag == "add"){
+//
+//        checkTripAttributes()
+//
+//      
+//        
+//        //set tripid to be maxid (in list) + 1
+//        setTripID(self.trip!)
+//        
+//            if(self.imagesToBeSaved.count == 0)
+//            {
+//                tripDB.saveTrip(self.trip!)
+//            }
+//            else{
+//                
+//                //define picture file name: userid + index
+//                getFileNames()
+//                
+//                
+//                //convert
+//                convertGalleryImageToUIImage(self.imageArray)
+//                //save images to server
+//                tripDB.uploadPhotos(self.imagesToBeSaved,trip:self.trip!)
+//                
+//                //save tirp and image to database
+//               // tripDB.uploadTrips( self.imagesToBeSaved, trip:self.trip!)
+//            }
+//        }
+//        else if (editOrCreateFlag == "edit")
+//        {
+//            if(self.trip?.tripImage == nil)
+//            {
+//                tripDB.updateTrip(self.trip!)
+//            }
+//            else{
+//                //save tirp and image to database
+//                //tripDB.myImageUploadRequest( self.trip!.tripImage!, trip:self.trip!)
+//                
+//                //define picture file name: userid + timestamp
+//                getFileNames()
+//                tripDB.updateImageUploadRequest(self.imagesToBeSaved, trip: self.trip!)
+//                
+//            }
+//        }
+//        
+//        self.navigationController?.popViewControllerAnimated(true)
+//        delegate?.reloadtable(self.trip!)
 
     }
+    
+//    func passUImages(images: [UIImage]) {
+//       self.
+//    }
+//    
+    func convertGalleryImageToUIImage(imageArray:[GalleryImage])
+        
+    {
+        
+        for galleryImage in imageArray{
+            //convert GalleryImage type to UIImage type
+            let image = UIImage(CGImage: galleryImage.asset.aspectRatioThumbnail().takeUnretainedValue())
+            self.imagesToBeSaved.append(image)
+        }
+        
+    }
+    
+    
     
     //set tripid of one trip
     func setTripID(trip:Trip)
@@ -225,6 +293,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     }
     
     
+    //action sheet used to pick photos or take pictures using a camera
     func showActionSheet() {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
         
@@ -251,36 +320,19 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         
     }
     
+    
+    //go to photo library to pick photos
     func photoLibrary()
     {
         
-        let myPickerController = UIImagePickerController()
-        myPickerController.delegate = self;
-        myPickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        
-        self.presentViewController(myPickerController, animated: true, completion: nil)
-        
+        print("photoLibary")
+        let vc =  self.storyboard?.instantiateViewControllerWithIdentifier("PhotoLibary") as! PhotoLibary
+        vc.photoDelegate = self
+
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-        if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
-            photoView.updateImage(originalImage)
-            self.trip!.tripImage = originalImage
-            convertImageToBase64EncodedString(originalImage)
-        }
-    }
-    
-    func convertImageToBase64EncodedString(image: UIImage){
-        //covert pic to jpeg and compress to 0.3
-        let imageData = UIImageJPEGRepresentation(image, 0.3)
-        //encode image to base64 string
-        let imageStr = imageData?.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
-        
-      // self.trip!.tripImage= imageStr
-    }
-    
+
 
     func passTripPara(tripAttribute:String,paraIdentifier:String)
     {
@@ -297,14 +349,6 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
                 self.trip!.lat = tripAttribute;
             case "lgt":
                 self.trip!.lgt = tripAttribute;
-            case "emergencyContactName":
-                self.trip!.emergencyContactName = tripAttribute;
-            case "emergencyContactPhone":
-                self.trip!.emergencyContactPhone = tripAttribute;
-            case "emergencyContactEmail":
-                self.trip!.emergencyContactEmail = tripAttribute;
-            case "desc":
-                self.trip!.desc = tripAttribute;
             default:
                 print("nothing is delivered")
         }
@@ -339,22 +383,6 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         {
             self.trip!.lgt = ""
         }
-        if(self.trip!.emergencyContactName == nil)
-        {
-            self.trip!.emergencyContactName = ""
-        }
-        if (self.trip!.emergencyContactPhone == nil)
-        {
-            self.trip!.emergencyContactPhone = ""
-        }
-        if (self.trip!.emergencyContactEmail == nil)
-        {
-            self.trip!.emergencyContactEmail = ""
-        }
-        if(self.trip!.desc == nil)
-        {
-            self.trip!.desc = ""
-        }
     
     }
     
@@ -368,27 +396,30 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         timeView.returntime = self.trip?.returnTime
         locationView.lgt = self.trip?.lgt
         locationView.lat = self.trip?.lat
+    
+    }
+    
+    func getFileNames()
+    {
+        let count =   imagesToBeSaved.count
         
-         if(self.trip?.emergencyContactName != nil){
-        contactView.emergencyContactName = (self.trip?.emergencyContactName)!
+        //define picture file name: userid + timestamp + index
+        if count >= 1{
+        for var index in 1...count{
+        let date = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyyMMddHHmmss"
+        let timeStamp = dateFormatter.stringFromDate(date)
+        let stringOfIndex = String(index)
+        let filename = userid! + "_" + stringOfIndex + ".jpg"
+        fileNames.append(filename)
+            index += 1
         }
-        if(self.trip?.emergencyContactPhone != nil){
-        contactView.emergencyContactPhone = (self.trip?.emergencyContactPhone)!
-        }
-        if(self.trip?.emergencyContactEmail != nil){
-        contactView.emergencyContactEmail = (self.trip?.emergencyContactEmail)!
+            self.trip?.imagefilename = fileNames
         }
         
-        if(self.trip?.desc != nil){
-        descView.tripdesc = (self.trip?.desc)!
-        }
-        photoView.imagefilename = self.trip?.imagefilename
-
+        
     }
 
     
 }
-
-
-
-
