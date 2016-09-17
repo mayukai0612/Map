@@ -13,7 +13,7 @@ import AssetsLibrary
 protocol PassPhotosDelegate{
     func passPhotos(selected:[GalleryImage])
 
-   // func passUImages(images:[UIImage])
+    func passUImages(images:[UIImage])
 }
 
 
@@ -99,6 +99,7 @@ class PhotoLibary: UIViewController,UICollectionViewDataSource,UICollectionViewD
 
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        
         return imageArray.count
     }
     

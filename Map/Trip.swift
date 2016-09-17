@@ -35,6 +35,7 @@ class Trip: NSObject {
         self.departTime = departTime
         
     }
+    
     init(tripID: String,userID: String,category: String,tripTitle: String,departTime: String,returnTime: String,lat:String,lgt:String,imagefilename: [String])
     {
         self.tripID = tripID
@@ -49,6 +50,22 @@ class Trip: NSObject {
     
         self.imagefilename = imagefilename
     }
+    
+    init(tripID: String,userID: String,category: String,tripTitle: String,departTime: String,returnTime: String,lat:String,lgt:String)
+    {
+        self.tripID = tripID
+        self.userID = userID
+        
+        self.category = category
+        self.tripTitle = tripTitle
+        self.departTime = departTime
+        self.returnTime  = returnTime
+        self.lat = lat
+        self.lgt = lgt
+        
+    }
+    
+    
     
     init(category: String,tripTitle: String,departTime: String,returnTime: String,lat:String,lgt:String,imagefilename: [String])
     {

@@ -25,8 +25,7 @@
 		2A4E517E1D52D6EE0061EA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4E517D1D52D6EE0061EA02 /* Assets.xcassets */; };
 		2A4E51811D52D6EE0061EA02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4E517F1D52D6EE0061EA02 /* LaunchScreen.storyboard */; };
 		2A9DA5401D6FF1CD00EC5FA6 /* TripCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA53F1D6FF1CD00EC5FA6 /* TripCategoryView.swift */; };
-		2A9DA5421D6FF1EA00EC5FA6 /* CategoryEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5411D6FF1EA00EC5FA6 /* CategoryEditView.swift */; };
-		2A9DA5441D6FF8D700EC5FA6 /* JournalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5431D6FF8D700EC5FA6 /* JournalList.swift */; };
+		2A9DA5441D6FF8D700EC5FA6 /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5431D6FF8D700EC5FA6 /* TripList.swift */; };
 		2A9DA5481D7160CB00EC5FA6 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5471D7160CB00EC5FA6 /* Trip.swift */; };
 		2A9DA54C1D7165CF00EC5FA6 /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA54B1D7165CF00EC5FA6 /* TripCell.swift */; };
 		2A9DA54E1D71E5C200EC5FA6 /* TripTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA54D1D71E5C200EC5FA6 /* TripTitleView.swift */; };
@@ -43,13 +42,19 @@
 		2A9DA5671D72D31500EC5FA6 /* LocationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5661D72D31500EC5FA6 /* LocationPopUpView.swift */; };
 		2A9DA5691D72D33200EC5FA6 /* EmergencyContactPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5681D72D33200EC5FA6 /* EmergencyContactPopUpView.swift */; };
 		2A9DA56B1D72D34B00EC5FA6 /* DescPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA56A1D72D34B00EC5FA6 /* DescPopUpView.swift */; };
-		2AB36FD61D5DC2E100F0867E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB36FD51D5DC2E100F0867E /* LocationSearchTable.swift */; };
 		2AD230D21D6C658B002B2220 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD230D11D6C658B002B2220 /* SearchView.swift */; };
 		2AD230D41D6D84F2002B2220 /* animalListForLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD230D31D6D84F2002B2220 /* animalListForLocationsView.swift */; };
 		2AD230D61D6DD51A002B2220 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD230D51D6DD51A002B2220 /* FilterView.swift */; };
 		2AE6083F1D6EA90100C87723 /* SearchLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6083E1D6EA90100C87723 /* SearchLocationCell.swift */; };
 		2AE608451D6EB8C100C87723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE608441D6EB8C100C87723 /* AppDelegate.swift */; };
 		2AE608741D6F081800C87723 /* AddTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE608731D6F081800C87723 /* AddTrip.swift */; };
+		2AF7F76B1D87E6FE00B86E6B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF7F76A1D87E6FE00B86E6B /* AssetsLibrary.framework */; };
+		2AF7F76D1D87E72C00B86E6B /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF7F76C1D87E72C00B86E6B /* Photos.framework */; };
+		2AF7F7711D880A4400B86E6B /* PhotoLibary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F7701D880A4400B86E6B /* PhotoLibary.swift */; };
+		2AF7F7731D88E21A00B86E6B /* GalleryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F7721D88E21A00B86E6B /* GalleryImage.swift */; };
+		2AF7F7751D88E34700B86E6B /* GalleryImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F7741D88E34700B86E6B /* GalleryImageCell.swift */; };
+		2AF7F7771D88ED5A00B86E6B /* ConstantsInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F7761D88ED5A00B86E6B /* ConstantsInApp.swift */; };
+		2AF7F7791D89040200B86E6B /* GetImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F7781D89040200B86E6B /* GetImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +79,7 @@
 		2A4E51801D52D6EE0061EA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A4E51821D52D6EE0061EA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A9DA53F1D6FF1CD00EC5FA6 /* TripCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCategoryView.swift; sourceTree = "<group>"; };
-		2A9DA5411D6FF1EA00EC5FA6 /* CategoryEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEditView.swift; sourceTree = "<group>"; };
-		2A9DA5431D6FF8D700EC5FA6 /* JournalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalList.swift; sourceTree = "<group>"; };
+		2A9DA5431D6FF8D700EC5FA6 /* TripList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
 		2A9DA5471D7160CB00EC5FA6 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		2A9DA54B1D7165CF00EC5FA6 /* TripCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
 		2A9DA54D1D71E5C200EC5FA6 /* TripTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripTitleView.swift; sourceTree = "<group>"; };
@@ -92,13 +96,19 @@
 		2A9DA5661D72D31500EC5FA6 /* LocationPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPopUpView.swift; sourceTree = "<group>"; };
 		2A9DA5681D72D33200EC5FA6 /* EmergencyContactPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContactPopUpView.swift; sourceTree = "<group>"; };
 		2A9DA56A1D72D34B00EC5FA6 /* DescPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescPopUpView.swift; sourceTree = "<group>"; };
-		2AB36FD51D5DC2E100F0867E /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		2AD230D11D6C658B002B2220 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2AD230D31D6D84F2002B2220 /* animalListForLocationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = animalListForLocationsView.swift; path = ../animalListForLocationsView.swift; sourceTree = "<group>"; };
 		2AD230D51D6DD51A002B2220 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterView.swift; path = ../FilterView.swift; sourceTree = "<group>"; };
 		2AE6083E1D6EA90100C87723 /* SearchLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocationCell.swift; sourceTree = "<group>"; };
 		2AE608441D6EB8C100C87723 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE608731D6F081800C87723 /* AddTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrip.swift; sourceTree = "<group>"; };
+		2AF7F76A1D87E6FE00B86E6B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		2AF7F76C1D87E72C00B86E6B /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		2AF7F7701D880A4400B86E6B /* PhotoLibary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibary.swift; sourceTree = "<group>"; };
+		2AF7F7721D88E21A00B86E6B /* GalleryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImage.swift; sourceTree = "<group>"; };
+		2AF7F7741D88E34700B86E6B /* GalleryImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImageCell.swift; sourceTree = "<group>"; };
+		2AF7F7761D88ED5A00B86E6B /* ConstantsInApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsInApp.swift; sourceTree = "<group>"; };
+		2AF7F7781D89040200B86E6B /* GetImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetImageCell.swift; sourceTree = "<group>"; };
 		5B08868423B4C2CE49B7E2FA /* Pods-Map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Map/Pods-Map.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,12 +117,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF7F76D1D87E72C00B86E6B /* Photos.framework in Frameworks */,
+				2AF7F76B1D87E6FE00B86E6B /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B3DAF927069F7D556EE72CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AF7F76C1D87E72C00B86E6B /* Photos.framework */,
+				2AF7F76A1D87E6FE00B86E6B /* AssetsLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2A1CCFB01D76EC8A008EBB59 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +154,7 @@
 				2A4E51751D52D6EE0061EA02 /* Map */,
 				2A4E51741D52D6EE0061EA02 /* Products */,
 				8BDEE589753E8287638FE3AF /* Pods */,
-				B0BEC2A04F5514E809CD1859 /* Frameworks */,
+				0B3DAF927069F7D556EE72CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,7 +178,7 @@
 				2A1CCFB01D76EC8A008EBB59 /* Weather */,
 				2A9DA55A1D729C2800EC5FA6 /* Login/Logout */,
 				2AE6086F1D6EC86300C87723 /* MapSearch */,
-				2AE608721D6F07C500C87723 /* Journal */,
+				2AE608721D6F07C500C87723 /* Trips */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -165,7 +186,6 @@
 		2A9DA5551D71E67500EC5FA6 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				2A9DA55F1D72B9F900EC5FA6 /* PopupViews */,
 				2A9DA53F1D6FF1CD00EC5FA6 /* TripCategoryView.swift */,
 				2A9DA54D1D71E5C200EC5FA6 /* TripTitleView.swift */,
 				2A9DA54F1D71E5F600EC5FA6 /* TripTimeView.swift */,
@@ -173,6 +193,8 @@
 				2A9DA5531D71E65D00EC5FA6 /* TripEmergencyContactView.swift */,
 				2A9DA5561D71E6C600EC5FA6 /* TripDescView.swift */,
 				2A9DA5581D71E6E300EC5FA6 /* TripPhotoView.swift */,
+				2AF7F76F1D87EA2200B86E6B /* PickMultiplePhotos */,
+				2A9DA55F1D72B9F900EC5FA6 /* PopupViews */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -204,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				2AE608701D6EC89900C87723 /* ViewControllers */,
-				2AB36FD51D5DC2E100F0867E /* LocationSearchTable.swift */,
 				2A0B97151D628C9A00CFE698 /* AnimalInformaition.swift */,
 				2A0B97171D64167D00CFE698 /* CustomPointAnnotation.swift */,
 				2A0B971F1D6778F300CFE698 /* UINavigationBarTaller.swift */,
@@ -226,18 +247,37 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		2AE608721D6F07C500C87723 /* Journal */ = {
+		2AE608721D6F07C500C87723 /* Trips */ = {
 			isa = PBXGroup;
 			children = (
+				2AF7F76E1D87E98000B86E6B /* TripList */,
 				2A9DA5551D71E67500EC5FA6 /* SubViews */,
-				2A9DA5431D6FF8D700EC5FA6 /* JournalList.swift */,
-				2AE608731D6F081800C87723 /* AddTrip.swift */,
-				2A1CCFAE1D766CC2008EBB59 /* TripDB.swift */,
-				2A9DA5411D6FF1EA00EC5FA6 /* CategoryEditView.swift */,
-				2A9DA5471D7160CB00EC5FA6 /* Trip.swift */,
-				2A9DA54B1D7165CF00EC5FA6 /* TripCell.swift */,
 			);
-			name = Journal;
+			name = Trips;
+			sourceTree = "<group>";
+		};
+		2AF7F76E1D87E98000B86E6B /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				2A9DA5431D6FF8D700EC5FA6 /* TripList.swift */,
+				2AE608731D6F081800C87723 /* AddTrip.swift */,
+				2A9DA54B1D7165CF00EC5FA6 /* TripCell.swift */,
+				2A9DA5471D7160CB00EC5FA6 /* Trip.swift */,
+				2A1CCFAE1D766CC2008EBB59 /* TripDB.swift */,
+			);
+			name = TripList;
+			sourceTree = "<group>";
+		};
+		2AF7F76F1D87EA2200B86E6B /* PickMultiplePhotos */ = {
+			isa = PBXGroup;
+			children = (
+				2AF7F7701D880A4400B86E6B /* PhotoLibary.swift */,
+				2AF7F7721D88E21A00B86E6B /* GalleryImage.swift */,
+				2AF7F7741D88E34700B86E6B /* GalleryImageCell.swift */,
+				2AF7F7781D89040200B86E6B /* GetImageCell.swift */,
+				2AF7F7761D88ED5A00B86E6B /* ConstantsInApp.swift */,
+			);
+			name = PickMultiplePhotos;
 			sourceTree = "<group>";
 		};
 		8BDEE589753E8287638FE3AF /* Pods */ = {
@@ -247,13 +287,6 @@
 				009FF89D6192114AE6641908 /* Pods-Map.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		B0BEC2A04F5514E809CD1859 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF7F7791D89040200B86E6B /* GetImageCell.swift in Sources */,
 				2AD230D61D6DD51A002B2220 /* FilterView.swift in Sources */,
 				2A9DA5591D71E6E300EC5FA6 /* TripPhotoView.swift in Sources */,
 				2A0B97161D628C9A00CFE698 /* AnimalInformaition.swift in Sources */,
@@ -389,7 +423,7 @@
 				2A1CCFB61D76F192008EBB59 /* WeatherInfo.swift in Sources */,
 				2A1CCFB21D76EDDC008EBB59 /* WeatherTableView.swift in Sources */,
 				2A9DA54E1D71E5C200EC5FA6 /* TripTitleView.swift in Sources */,
-				2A9DA5441D6FF8D700EC5FA6 /* JournalList.swift in Sources */,
+				2A9DA5441D6FF8D700EC5FA6 /* TripList.swift in Sources */,
 				2AE608451D6EB8C100C87723 /* AppDelegate.swift in Sources */,
 				2A9DA5611D72BA5200EC5FA6 /* CategoryPopupView.swift in Sources */,
 				2A1CCFAF1D766CC2008EBB59 /* TripDB.swift in Sources */,
@@ -403,17 +437,19 @@
 				2A0B971E1D669E7E00CFE698 /* MapSearch.swift in Sources */,
 				2A9DA5501D71E5F600EC5FA6 /* TripTimeView.swift in Sources */,
 				2A1CCFB41D76EDEC008EBB59 /* WeatherCell.swift in Sources */,
+				2AF7F7731D88E21A00B86E6B /* GalleryImage.swift in Sources */,
 				2A0B97241D69FED000CFE698 /* SearchFromDB.swift in Sources */,
 				2A9DA5571D71E6C600EC5FA6 /* TripDescView.swift in Sources */,
 				2A9DA5541D71E65D00EC5FA6 /* TripEmergencyContactView.swift in Sources */,
 				2A9DA5691D72D33200EC5FA6 /* EmergencyContactPopUpView.swift in Sources */,
 				2A9DA5481D7160CB00EC5FA6 /* Trip.swift in Sources */,
+				2AF7F7751D88E34700B86E6B /* GalleryImageCell.swift in Sources */,
 				2A9DA5651D72D2F600EC5FA6 /* TimePopUpView.swift in Sources */,
+				2AF7F7771D88ED5A00B86E6B /* ConstantsInApp.swift in Sources */,
 				2A0B97201D6778F300CFE698 /* UINavigationBarTaller.swift in Sources */,
 				2A9DA54C1D7165CF00EC5FA6 /* TripCell.swift in Sources */,
+				2AF7F7711D880A4400B86E6B /* PhotoLibary.swift in Sources */,
 				2A9DA5521D71E62B00EC5FA6 /* TripLocationView.swift in Sources */,
-				2A9DA5421D6FF1EA00EC5FA6 /* CategoryEditView.swift in Sources */,
-				2AB36FD61D5DC2E100F0867E /* LocationSearchTable.swift in Sources */,
 				2A9DA55E1D72B7ED00EC5FA6 /* FireBaseService.swift in Sources */,
 				2A9DA55C1D729CD300EC5FA6 /* SignUpViewController.swift in Sources */,
 				2A1CCFB81D76FD81008EBB59 /* WeatherSearch.swift in Sources */,
@@ -532,9 +568,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Map/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "monash-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -549,6 +591,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Map/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

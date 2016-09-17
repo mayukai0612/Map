@@ -67,20 +67,24 @@ class TripLocationView: UIView ,updateTripParameterDelegate,showLocationDelegate
         title.textColor = textColor
         //create mapview
         
-        self.mapView = MKMapView(frame:self.frame)
+        //initialized on the main thread
+        dispatch_async(dispatch_get_main_queue()) {
+            self.mapView = MKMapView(frame:self.frame)
+            // if the trip has been set location, then show the map
+            // else show the default image
+            if(self.lat != "" && self.lat != nil){
+                self.addSubview(self.mapView!)
+            }else{
+                self.addSubview(imageView)
+                
+            }
+            self.addSubview(title)
+            self.showLocation()
         
-        
-        // if the trip has been set location, then show the map
-        // else show the default image
-        if(self.lat != "" && self.lat != nil){
-        self.addSubview(self.mapView!)
-        }else{
-            self.addSubview(imageView)
-
         }
+
         
-        self.addSubview(title)
-        showLocation()
+        
     }
  
     func updateTrip(tripPara: String, paraIdentifier: String) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addTripsDelegate,reloadTableDelegate{
+class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addTripsDelegate,reloadTableDelegate,PassFileNamesDelegate{
     @IBOutlet weak var createTripBtn: UIButton!
 
     @IBOutlet weak var tripTableView: UITableView!
@@ -27,6 +27,7 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
     
     var tripList = [Trip]()
     var userid:String?
+    var selectedTrip: Trip?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +107,22 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
         
     }
     
+    //passFileNamesDelegate
+    func passFileNames(filename: [String]) {
+        //pass the file names to tirp
+        
+        self.selectedTrip?.imagefilename = filename
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        let destination = storyboard.instantiateViewControllerWithIdentifier("addTrip") as! AddTrip
+        destination.trip = selectedTrip
+        destination.delegate = self
+        destination.editOrCreateFlag = "edit"
+
+        navigationController?.pushViewController(destination, animated: true)
+    }
+    
+    
     func reloadtable(trip:Trip)
     {
 //        //load trips
@@ -141,18 +158,27 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedTrip: Trip?
+        
          selectedTrip = self.tripList[indexPath.row]
-        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let destination = storyboard.instantiateViewControllerWithIdentifier("addTrip") as! AddTrip
-        destination.trip = selectedTrip
-        destination.delegate = self
-        destination.editOrCreateFlag = "edit"
+        
+        //get fileNames of the selected trip
+        let tripDB = TripDB()
+        tripDB.passFileNamesDelegate = self
+        tripDB.loadFileNames(selectedTrip!.userID!, tripid: Int(selectedTrip!.tripID!)!)
         
         //when a cell selected, it turns grey.Using deselect to turn it back to normal
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
-        navigationController?.pushViewController(destination, animated: true)
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+//        let destination = storyboard.instantiateViewControllerWithIdentifier("addTrip") as! AddTrip
+//        destination.trip = selectedTrip
+//        destination.delegate = self
+//        destination.editOrCreateFlag = "edit"
+//        
+//        //when a cell selected, it turns grey.Using deselect to turn it back to normal
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//
+//        navigationController?.pushViewController(destination, animated: true)
       
     }
     

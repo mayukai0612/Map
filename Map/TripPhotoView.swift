@@ -91,7 +91,7 @@ class TripPhotoView: UIView {
         
         let tripDB = TripDB()
         self.addSubview(imageView!)
-        tripDB.loadImageFromUrl(url, view: self.imageView!)
+      //  tripDB.loadImageFromUrl(url, view: self.imageView!)
 
       //  imageView?.image = image
     }

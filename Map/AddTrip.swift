@@ -48,20 +48,20 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    passValueToSubViews()
+    
+    
+    
     
     //get userid
      self.userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")
     //set userid to trip
     self.trip?.userID = self.userid
 
+    passValueToSubViews()
     addRightButtonToNavBar()
     setDelegateForPopUp()
     makeRoundCorners()
-        
-    loadViews()
-        
+    loadRecViews()
     initCollectionViews()
 
 
@@ -84,10 +84,8 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     //collection views
     
     func initCollectionViews(){
-        //get images
-      //  tripDB.
-       // tripDB.loadImagesFromUrls(<#T##fileName: [String]##[String]#>, view: UIImageView)
         
+       
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection =  UICollectionViewScrollDirection.Vertical
         let itemWidth = SCREEN_WIDTH/4 - 1.5
@@ -108,19 +106,38 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         self.collectionView!.dataSource = self
         
         
+        //if it it an editview
+        if(editOrCreateFlag == "edit"){
+            tripDB.passPhotosDelegate = self
+            //set file names
+       // let fileNames = ["ELc0s3a0ybdSvljGpAdS7an3yBk1_1.jpg","ELc0s3a0ybdSvljGpAdS7an3yBk1_2.jpg","ELc0s3a0ybdSvljGpAdS7an3yBk1_3.jpg","ELc0s3a0ybdSvljGpAdS7an3yBk1_4.jpg","ELc0s3a0ybdSvljGpAdS7an3yBk1_5.jpg"]
+            //get all images
+            tripDB.loadImagesFromUrls((self.trip?.imagefilename)!,collectionView: self.collectionView!)
+            
+        }
+        
     }
     
    
     
-    
+    //get gallery images from gallery
     func passPhotos(selected: [GalleryImage]) {
-        imageArray = selected
+    
+        convertGalleryImageToUIImage(selected)
         
+    }
+    
+    func passUImages(images:[UIImage])
+    {
+     
+        imagesToBeSaved = images
+    
     }
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return imageArray.count
+        //
+        return imagesToBeSaved.count
     }
     
     
@@ -128,7 +145,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         
         print(collectionView)
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! GetImageCell;
-        cell.update(imageArray[indexPath.row])
+        cell.imageView.image = imagesToBeSaved[indexPath.row]
         return cell;
         
     }
@@ -179,7 +196,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     
     }
     
-    func loadViews()
+    func loadRecViews()
     {
         categoryView.loadViews()
         titleView.loadViews()
@@ -198,12 +215,15 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     
     func saveTrip(trip:Trip)
     {
+        //convert images from GalleryImage type to UIImage type
         convertGalleryImageToUIImage(self.imageArray)
+        
+        //set file name
+        setFileNames()
 
-        getFileNames()
-        //convert
         //save images to server
         setTripID(self.trip!)
+        
         tripDB.uploadPhotos(self.imagesToBeSaved,trip:self.trip!)
         
 
@@ -261,6 +281,9 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
 //       self.
 //    }
 //    
+    
+    //convert image from galleryImage type to UIImage type
+    //store the images to variable 'imagesToBeSaved'
     func convertGalleryImageToUIImage(imageArray:[GalleryImage])
         
     {
@@ -399,7 +422,8 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     
     }
     
-    func getFileNames()
+    //set all the file names and store them into 'trip.imagefilename'
+    func setFileNames()
     {
         let count =   imagesToBeSaved.count
         
