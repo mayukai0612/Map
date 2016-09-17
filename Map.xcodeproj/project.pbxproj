@@ -24,6 +24,7 @@
 		2A1CCFC11D770DFC008EBB59 /* OpenWeatherMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1CCFC01D770DFC008EBB59 /* OpenWeatherMap.swift */; };
 		2A4E517E1D52D6EE0061EA02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A4E517D1D52D6EE0061EA02 /* Assets.xcassets */; };
 		2A4E51811D52D6EE0061EA02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4E517F1D52D6EE0061EA02 /* LaunchScreen.storyboard */; };
+		2A71DB231D8D69A7008C388D /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71DB221D8D69A7008C388D /* PhotoView.swift */; };
 		2A9DA5401D6FF1CD00EC5FA6 /* TripCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA53F1D6FF1CD00EC5FA6 /* TripCategoryView.swift */; };
 		2A9DA5441D6FF8D700EC5FA6 /* TripList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5431D6FF8D700EC5FA6 /* TripList.swift */; };
 		2A9DA5481D7160CB00EC5FA6 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5471D7160CB00EC5FA6 /* Trip.swift */; };
@@ -48,6 +49,7 @@
 		2AE6083F1D6EA90100C87723 /* SearchLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6083E1D6EA90100C87723 /* SearchLocationCell.swift */; };
 		2AE608451D6EB8C100C87723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE608441D6EB8C100C87723 /* AppDelegate.swift */; };
 		2AE608741D6F081800C87723 /* AddTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE608731D6F081800C87723 /* AddTrip.swift */; };
+		2AE8598D1D8D494A00A8A437 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8598C1D8D494A00A8A437 /* Photo.swift */; };
 		2AF7F76B1D87E6FE00B86E6B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF7F76A1D87E6FE00B86E6B /* AssetsLibrary.framework */; };
 		2AF7F76D1D87E72C00B86E6B /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF7F76C1D87E72C00B86E6B /* Photos.framework */; };
 		2AF7F7711D880A4400B86E6B /* PhotoLibary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F7701D880A4400B86E6B /* PhotoLibary.swift */; };
@@ -78,6 +80,7 @@
 		2A4E517D1D52D6EE0061EA02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A4E51801D52D6EE0061EA02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A4E51821D52D6EE0061EA02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A71DB221D8D69A7008C388D /* PhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		2A9DA53F1D6FF1CD00EC5FA6 /* TripCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripCategoryView.swift; sourceTree = "<group>"; };
 		2A9DA5431D6FF8D700EC5FA6 /* TripList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripList.swift; sourceTree = "<group>"; };
 		2A9DA5471D7160CB00EC5FA6 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		2AE6083E1D6EA90100C87723 /* SearchLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocationCell.swift; sourceTree = "<group>"; };
 		2AE608441D6EB8C100C87723 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE608731D6F081800C87723 /* AddTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrip.swift; sourceTree = "<group>"; };
+		2AE8598C1D8D494A00A8A437 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		2AF7F76A1D87E6FE00B86E6B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		2AF7F76C1D87E72C00B86E6B /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		2AF7F7701D880A4400B86E6B /* PhotoLibary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibary.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 				2AF7F7741D88E34700B86E6B /* GalleryImageCell.swift */,
 				2AF7F7781D89040200B86E6B /* GetImageCell.swift */,
 				2AF7F7761D88ED5A00B86E6B /* ConstantsInApp.swift */,
+				2A71DB221D8D69A7008C388D /* PhotoView.swift */,
+				2AE8598C1D8D494A00A8A437 /* Photo.swift */,
 			);
 			name = PickMultiplePhotos;
 			sourceTree = "<group>";
@@ -438,7 +444,9 @@
 				2A9DA5501D71E5F600EC5FA6 /* TripTimeView.swift in Sources */,
 				2A1CCFB41D76EDEC008EBB59 /* WeatherCell.swift in Sources */,
 				2AF7F7731D88E21A00B86E6B /* GalleryImage.swift in Sources */,
+				2AE8598D1D8D494A00A8A437 /* Photo.swift in Sources */,
 				2A0B97241D69FED000CFE698 /* SearchFromDB.swift in Sources */,
+				2A71DB231D8D69A7008C388D /* PhotoView.swift in Sources */,
 				2A9DA5571D71E6C600EC5FA6 /* TripDescView.swift in Sources */,
 				2A9DA5541D71E65D00EC5FA6 /* TripEmergencyContactView.swift in Sources */,
 				2A9DA5691D72D33200EC5FA6 /* EmergencyContactPopUpView.swift in Sources */,

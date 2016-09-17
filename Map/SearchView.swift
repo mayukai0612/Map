@@ -244,13 +244,14 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
             guard let mapView = mapView,
                 let searchBarText = self.locationSearchBar!.text else { return }
             let request = MKLocalSearchRequest()
-            request.naturalLanguageQuery = searchBarText
+            request.naturalLanguageQuery = searchBarText + ",Australia"
             request.region = mapView.region
             let search = MKLocalSearch(request: request)
             search.startWithCompletionHandler { response, _ in
                 guard let response = response else {
                     return
                 }
+
                 self.matchingItems = response.mapItems
                 self.tableView!.reloadData()
             }

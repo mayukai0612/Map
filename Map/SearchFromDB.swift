@@ -198,7 +198,13 @@ class SearchFromDB: NSObject, MKMapViewDelegate{
             pointAnnoation.coordinate = animal.coordinate!
             
             //Title of annotation
-            pointAnnoation.title = "\(animalArray.count)   records."
+            if (animalArray.count == 1)
+            {
+                pointAnnoation.title = "\(animalArray.count)   record."
+
+            }else{
+                pointAnnoation.title = "\(animalArray.count)   records."
+            }
             
             //calculate distance between current loc and animal loc
             let distance = calculateDistanceInKM(currentLoc!,secondLocation: animal.coordinate!)

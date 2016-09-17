@@ -6,7 +6,7 @@ protocol  reloadTableDelegate {
     func reloadtable(trip:Trip)
 }
 
-class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,passTripParaDelegate,cameraAndPicLibDelegate,PassPhotosDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
+class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,passTripParaDelegate,cameraAndPicLibDelegate,PassPhotosDelegate,UICollectionViewDataSource,UICollectionViewDelegate, DeletePhotoDelegate{
     
     @IBOutlet weak var categoryView: TripCategoryView!
 
@@ -30,18 +30,12 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
 
     //trip
     var delegate:reloadTableDelegate?
-    var category:String?
-    var tripTitle:String?
-    var departure:String?
-    var returnTime:String?
-    var lat:String?
-    var lgt:String?
 
     var imageStr:String?
     
     var trip: Trip? = Trip()
     var userid: String?
-    
+    var tripid: String?
     var tripDB:TripDB = TripDB()
     var tripList = [Trip]()
     var editOrCreateFlag: String?
@@ -111,8 +105,10 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
             tripDB.passPhotosDelegate = self
             //set file names
        // let fileNames = ["ELc0s3a0ybdSvljGpAdS7an3yBk1_1.jpg","ELc0s3a0ybdSvljGpAdS7an3yBk1_2.jpg","ELc0s3a0ybdSvljGpAdS7an3yBk1_3.jpg","ELc0s3a0ybdSvljGpAdS7an3yBk1_4.jpg","ELc0s3a0ybdSvljGpAdS7an3yBk1_5.jpg"]
-            //get all images
+            //check if the trip has file names and get all images
+            if(self.trip?.imagefilename.count != 0){
             tripDB.loadImagesFromUrls((self.trip?.imagefilename)!,collectionView: self.collectionView!)
+            }
             
         }
         
@@ -127,13 +123,32 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         
     }
     
-    func passUImages(images:[UIImage])
+    //get images from server
+    func passUImages(images:[Photo])
     {
-     
-        imagesToBeSaved = images
+        //sort
+        let index = images.count
+        
+        for i in 1...index {
+            
+            for image in images{
+                
+                if(image.index == i)
+                {
+                    imagesToBeSaved.append(image.image!)
+                }
+                
+            }
+        }
+        
+        //imagesToBeSaved = images
     
     }
     
+    func deletePhoto(index: Int) {
+            self.imagesToBeSaved.removeAtIndex(index)
+            self.collectionView?.reloadData()
+    }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         //
@@ -149,7 +164,21 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         return cell;
         
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let image = imagesToBeSaved[indexPath.row]
+        
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("PhotoViewNC") as! UINavigationController
+        let photoView = vc.viewControllers[0] as! PhotoView
+        photoView.image = image
+        photoView.imageIndex = indexPath.row
+        photoView.deletePhotoDelegate = self
+      //  vc.image = image
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
 
+    
     func makeRoundCorners(){
         categoryView.layer.cornerRadius = 5
         categoryView.layer.masksToBounds = true
@@ -215,72 +244,51 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     
     func saveTrip(trip:Trip)
     {
-        //convert images from GalleryImage type to UIImage type
-        convertGalleryImageToUIImage(self.imageArray)
-        
-        //set file name
-        setFileNames()
 
-        //save images to server
+        if(self.editOrCreateFlag == "add"){
+
+            if(!checkInput()) {return}
+        
+        checkTripAttributes()
+
+        //set tripid to be maxid (in list) + 1
         setTripID(self.trip!)
+        //save trip without images to DB
+        tripDB.saveTrip(self.trip!)
+            if(self.imagesToBeSaved.count != 0)
+            {
+                //convert images from GalleryImage type to UIImage type
+                convertGalleryImageToUIImage(self.imageArray)
+                
+                //set file name
+                setFileNames()
+                
+                //save images to server
+                setTripID(self.trip!)
+                tripDB.uploadPhotos(self.imagesToBeSaved,trip:self.trip!)
+                
+            }
+        }
         
-        tripDB.uploadPhotos(self.imagesToBeSaved,trip:self.trip!)
+        else if (editOrCreateFlag == "edit")
+        {
+            if(!checkInput()) {return}
+            if(self.trip?.tripImage == nil)
+            {
+                tripDB.updateTrip(self.trip!)
+            }
+            else{
+                
+                
+            }
+        }
         
-
-//        if(self.editOrCreateFlag == "add"){
-//
-//        checkTripAttributes()
-//
-//      
-//        
-//        //set tripid to be maxid (in list) + 1
-//        setTripID(self.trip!)
-//        
-//            if(self.imagesToBeSaved.count == 0)
-//            {
-//                tripDB.saveTrip(self.trip!)
-//            }
-//            else{
-//                
-//                //define picture file name: userid + index
-//                getFileNames()
-//                
-//                
-//                //convert
-//                convertGalleryImageToUIImage(self.imageArray)
-//                //save images to server
-//                tripDB.uploadPhotos(self.imagesToBeSaved,trip:self.trip!)
-//                
-//                //save tirp and image to database
-//               // tripDB.uploadTrips( self.imagesToBeSaved, trip:self.trip!)
-//            }
-//        }
-//        else if (editOrCreateFlag == "edit")
-//        {
-//            if(self.trip?.tripImage == nil)
-//            {
-//                tripDB.updateTrip(self.trip!)
-//            }
-//            else{
-//                //save tirp and image to database
-//                //tripDB.myImageUploadRequest( self.trip!.tripImage!, trip:self.trip!)
-//                
-//                //define picture file name: userid + timestamp
-//                getFileNames()
-//                tripDB.updateImageUploadRequest(self.imagesToBeSaved, trip: self.trip!)
-//                
-//            }
-//        }
-//        
-//        self.navigationController?.popViewControllerAnimated(true)
-//        delegate?.reloadtable(self.trip!)
+        self.navigationController?.popViewControllerAnimated(true)
+        delegate?.reloadtable(self.trip!)
 
     }
     
-//    func passUImages(images: [UIImage]) {
-//       self.
-//    }
-//    
+
     
     //convert image from galleryImage type to UIImage type
     //store the images to variable 'imagesToBeSaved'
@@ -296,7 +304,11 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         
     }
     
-    
+    func checkIfTripEdited()
+    {
+        
+        
+    }
     
     //set tripid of one trip
     func setTripID(trip:Trip)
@@ -351,7 +363,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         print("photoLibary")
         let vc =  self.storyboard?.instantiateViewControllerWithIdentifier("PhotoLibary") as! PhotoLibary
         vc.photoDelegate = self
-
+        vc.count = self.imagesToBeSaved.count
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -381,14 +393,14 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     func checkTripAttributes()
     {
         
-        if (self.trip!.category == nil)
-        {
-            self.trip!.category = ""
-        }
-        if(self.trip!.tripTitle == nil)
-        {
-            self.trip!.tripTitle = ""
-        }
+//        if (self.trip!.category == nil)
+//        {
+//            self.trip!.category = ""
+//        }
+//        if(self.trip!.tripTitle == nil)
+//        {
+//            self.trip!.tripTitle = ""
+//        }
         if (self.trip!.departTime == nil)
         {
             self.trip!.departTime = ""
@@ -435,7 +447,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         dateFormatter.dateFormat = "yyyyMMddHHmmss"
         let timeStamp = dateFormatter.stringFromDate(date)
         let stringOfIndex = String(index)
-        let filename = userid! + "_" + stringOfIndex + ".jpg"
+        let filename = userid! + "_" + timeStamp + stringOfIndex + ".jpg"
         fileNames.append(filename)
             index += 1
         }
@@ -443,6 +455,22 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         }
         
         
+    }
+    
+    func checkInput() -> Bool
+    {
+        var check = true
+        if (self.trip?.category == nil || self.trip?.tripTitle == nil )
+        {
+             check = false
+            let alert = UIAlertController(title: "Empty input", message: "Category and content can not be empty!", preferredStyle: .Alert)
+            let action = UIAlertAction(title: "Got it", style: .Default, handler: nil)
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+           
+        }
+        
+        return check
     }
 
     

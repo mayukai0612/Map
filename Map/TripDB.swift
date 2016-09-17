@@ -14,7 +14,7 @@
     var tripList = [Trip]()
     var delegate :addTripsDelegate?
     var passPhotosDelegate:PassPhotosDelegate?
-    var images = [UIImage]()
+    var images = [Photo]()
     var passFileNamesDelegate:PassFileNamesDelegate?
 
  //*****Add******
@@ -269,13 +269,16 @@
             
             // Print out response string
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("responseString = \(responseString)")
+            print("responseString = \(responseString!)")
             
-            
+           
             do {
                 if let fileNameArray = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as? [String] {
                     
-                    self.passFileNamesDelegate?.passFileNames(fileNameArray)
+                    dispatch_async(dispatch_get_main_queue(),
+                        { 
+                            self.passFileNamesDelegate?.passFileNames(fileNameArray)
+                    })
                     
                     
                 }
@@ -284,9 +287,16 @@
             catch let error as NSError {
                 print("error")
                 print(error.localizedDescription)
-                //  self.alertDelegate?.showAlert()
+                //if no record is returned, pass an empty array
+                let filenameArray = [String]()
+                dispatch_async(dispatch_get_main_queue(),
+                    {
+                        self.passFileNamesDelegate?.passFileNames(filenameArray)
+                })
             }
-            catch{}
+            catch{
+                    print("ERROR")
+            }
             
             
         })
@@ -295,6 +305,22 @@
     
     }
     
+    func downLoadImageWithUrl(url:NSURL,index:Int)
+    {
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (responseData, responseUrl, error) -> Void in
+            // if responseData is not null...
+            if let data = responseData{
+                
+                    let image = UIImage(data: data)
+                    //set index of photo
+                    let photo = Photo(image: image!,index:index)
+                    self.images.append(photo)
+                    print(String(url))
+            }
+        }
+        // Run task
+        task.resume()
+    }
     
     
     //load image from urls and show it on the colllection view
@@ -302,18 +328,45 @@
         
         //convert file names to urls
         let picUrls = convertToUrls(fileName)
+        //create a serial queue
+     //   let serialQueue = dispatch_queue_create("imagesQueue", DISPATCH_QUEUE_SERIAL)
         
-        // Download task:
-        for url in picUrls{
+        
+      
+//        // Download task:
+//        for url in picUrls{
+//            var index = 1;
+//            dispatch_async(serialQueue) { () -> Void in
+//                self.downLoadImageWithUrl(url,index: index)
+//                dispatch_async(dispatch_get_main_queue(), {
+//                    if(url == picUrls.last){
+//                        print("update view")
+//                        self.passPhotosDelegate?.passUImages(self.images)
+//                        collectionView.reloadData()
+//                    }
+//                   
+//                })
+//                
+//            }
+        
+            //get index of the image
+         //   index += 1
+            
+            for url in picUrls{
+
+            var index = 1;
+                
             let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (responseData, responseUrl, error) -> Void in
                 // if responseData is not null...
                 if let data = responseData{
                     
+                    let image = UIImage(data: data)
+                    let photo = Photo(image: image!,index:index)
+                    self.images.append(photo)
+                    print("get one image")
                     // execute in UI thread
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        let image = UIImage(data: data)
-                        self.images.append(image!)
-                        print("get one image")
+                      
                         if(url == picUrls.last)
                         {
                             print("update view")
@@ -321,16 +374,18 @@
                             collectionView.reloadData()
                         }
                         
-                        // uiView.addSubview(view)
                     })
                 }
+                
+                index += 1
             }
             
             // Run task
             task.resume()
+            }
         }
         
-    }
+    
 
 //*****Delete******
     func deleteTrip(trip:Trip)
@@ -423,10 +478,10 @@
             .filter() { $0 != nil }
     }
 
-}
+
 
  
- 
+}
  
  
  extension NSMutableData {

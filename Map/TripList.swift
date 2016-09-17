@@ -19,6 +19,7 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
         vc.delegate = self
         vc.editOrCreateFlag = "add"
         vc.tripList = self.tripList
+       // vc.tripid = self.tripList.count + 1
         self.navigationController!.pushViewController(vc, animated: true)
 
         
@@ -116,6 +117,7 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let destination = storyboard.instantiateViewControllerWithIdentifier("addTrip") as! AddTrip
         destination.trip = selectedTrip
+        destination.tripid = selectedTrip?.tripID
         destination.delegate = self
         destination.editOrCreateFlag = "edit"
 

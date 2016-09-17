@@ -340,8 +340,10 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         v!.rightCalloutAccessoryView = btn
         
         if (annotation is MKUserLocation) {
+            //user location
             return nil
         }else{
+            //set image
         let customPointAnnotation = annotation as! CustomPointAnnotation
         v!.image = UIImage(named:customPointAnnotation.pinCustomImageName)
             

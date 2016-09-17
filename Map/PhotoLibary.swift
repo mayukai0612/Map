@@ -13,7 +13,7 @@ import AssetsLibrary
 protocol PassPhotosDelegate{
     func passPhotos(selected:[GalleryImage])
 
-    func passUImages(images:[UIImage])
+    func passUImages(images:[Photo])
 }
 
 
@@ -31,7 +31,7 @@ class PhotoLibary: UIViewController,UICollectionViewDataSource,UICollectionViewD
     var assetsLibrary:ALAssetsLibrary!
     var currentAlbum:ALAssetsGroup?
     var tempPickedImage:GalleryImage!
-    var count:Int = 0;
+    var count = Int()
     var selectedImage:[GalleryImage] = []
     var imageArray:[GalleryImage] = []
     
