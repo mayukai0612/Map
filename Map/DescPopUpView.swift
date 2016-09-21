@@ -136,6 +136,7 @@ class DescPopUpView: UIViewController ,UITextViewDelegate{
         }
     }
     
+    //text view delegate method - begin editing
     func textViewDidBeginEditing(textView: UITextView) {
         if textView.textColor == UIColor.lightGrayColor() {
             if (self.desc == ""){
@@ -145,6 +146,7 @@ class DescPopUpView: UIViewController ,UITextViewDelegate{
         }
     }
     
+    //text view delegate method - end editing
     func textViewDidEndEditing(textView: UITextView) {
         if textView.text.isEmpty {
             textView.text = "Enter you main topic here.."

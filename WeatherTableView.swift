@@ -42,7 +42,6 @@ class WeatherTableView: UITableViewController,addWeatherDelegate,weatherUpdateDe
         
         
         //get current location 
-        //show current location
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         // using only when application is in use

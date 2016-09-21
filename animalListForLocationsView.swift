@@ -21,6 +21,7 @@ class animalListForLocationsView: UIViewController,UITableViewDelegate,UITableVi
         self.navigationItem.setHidesBackButton(true, animated: false)
         removeSubViewsFromNavBar()
         addListViews()
+        //remove the blank area on the top of tableview
         self.automaticallyAdjustsScrollViewInsets = false
         
     }
@@ -127,6 +128,15 @@ class animalListForLocationsView: UIViewController,UITableViewDelegate,UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
+
+         let animal: AnimalInformation = self.animalInfoArray![indexPath.row] as! AnimalInformation
+        
+        let animalName = animal.title
+        
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("animalProfile") as! AnimalProfile
+        vc.animalName = animalName
+        
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
