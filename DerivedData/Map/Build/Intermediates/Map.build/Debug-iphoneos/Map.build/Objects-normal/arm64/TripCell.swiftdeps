@@ -1,0 +1,284 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TripCell"
+provides-nominal:
+- "C3Map8TripCell"
+provides-member:
+- ["C3Map8TripCell", ""]
+provides-dynamic-lookup:
+- "tripTitleLable"
+- "tripCategory"
+- "awakeFromNib"
+- "tripDate"
+- "tripLocLable"
+- "setSelected"
+depends-top-level:
+- "TripCell"
+- "Bool"
+- "UITableViewCell"
+- "UIImageView"
+- "UILabel"
+depends-member:
+- ["Ps9AnyObject", "awakeFromNib"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "setSelected"]
+- ["Ps9AnyObject", "tripCategory"]
+- ["Ps9AnyObject", "tripDate"]
+- ["Ps9AnyObject", "tripLocLable"]
+- ["Ps9AnyObject", "tripTitleLable"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "awakeFromNib"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "setSelected"]
+- ["Ps11CVarArgType", "tripCategory"]
+- ["Ps11CVarArgType", "tripDate"]
+- ["Ps11CVarArgType", "tripLocLable"]
+- ["Ps11CVarArgType", "tripTitleLable"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "awakeFromNib"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "setSelected"]
+- ["Ps28CustomDebugStringConvertible", "tripCategory"]
+- ["Ps28CustomDebugStringConvertible", "tripDate"]
+- ["Ps28CustomDebugStringConvertible", "tripLocLable"]
+- ["Ps28CustomDebugStringConvertible", "tripTitleLable"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "awakeFromNib"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "setSelected"]
+- ["Ps23CustomStringConvertible", "tripCategory"]
+- ["Ps23CustomStringConvertible", "tripDate"]
+- ["Ps23CustomStringConvertible", "tripLocLable"]
+- ["Ps23CustomStringConvertible", "tripTitleLable"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "awakeFromNib"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "setSelected"]
+- ["Ps9Equatable", "tripCategory"]
+- ["Ps9Equatable", "tripDate"]
+- ["Ps9Equatable", "tripLocLable"]
+- ["Ps9Equatable", "tripTitleLable"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "awakeFromNib"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "setSelected"]
+- ["Ps8Hashable", "tripCategory"]
+- ["Ps8Hashable", "tripDate"]
+- ["Ps8Hashable", "tripLocLable"]
+- ["Ps8Hashable", "tripTitleLable"]
+- ["Ps8Hashable", ""]
+- ["PSo8NSCoding", "awakeFromNib"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "setSelected"]
+- ["PSo8NSCoding", "tripCategory"]
+- ["PSo8NSCoding", "tripDate"]
+- ["PSo8NSCoding", "tripLocLable"]
+- ["PSo8NSCoding", "tripTitleLable"]
+- ["PSo8NSCoding", ""]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "awakeFromNib"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "setSelected"]
+- ["CSo8NSObject", "tripCategory"]
+- ["CSo8NSObject", "tripDate"]
+- ["CSo8NSObject", "tripLocLable"]
+- ["CSo8NSObject", "tripTitleLable"]
+- ["PSo16NSObjectProtocol", "awakeFromNib"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "setSelected"]
+- ["PSo16NSObjectProtocol", "tripCategory"]
+- ["PSo16NSObjectProtocol", "tripDate"]
+- ["PSo16NSObjectProtocol", "tripLocLable"]
+- ["PSo16NSObjectProtocol", "tripTitleLable"]
+- ["PSo16NSObjectProtocol", ""]
+- ["C3Map8TripCell", "Bool"]
+- ["C3Map8TripCell", "UIImageView"]
+- ["C3Map8TripCell", "UILabel"]
+- ["C3Map8TripCell", "awakeFromNib"]
+- ["C3Map8TripCell", "deinit"]
+- ["C3Map8TripCell", "init"]
+- ["C3Map8TripCell", "setSelected"]
+- ["C3Map8TripCell", "tripCategory"]
+- ["C3Map8TripCell", "tripDate"]
+- ["C3Map8TripCell", "tripLocLable"]
+- ["C3Map8TripCell", "tripTitleLable"]
+- ["PSo29UIAccessibilityIdentification", "awakeFromNib"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "setSelected"]
+- ["PSo29UIAccessibilityIdentification", "tripCategory"]
+- ["PSo29UIAccessibilityIdentification", "tripDate"]
+- ["PSo29UIAccessibilityIdentification", "tripLocLable"]
+- ["PSo29UIAccessibilityIdentification", "tripTitleLable"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "awakeFromNib"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "setSelected"]
+- ["PSo12UIAppearance", "tripCategory"]
+- ["PSo12UIAppearance", "tripDate"]
+- ["PSo12UIAppearance", "tripLocLable"]
+- ["PSo12UIAppearance", "tripTitleLable"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "awakeFromNib"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "setSelected"]
+- ["PSo21UIAppearanceContainer", "tripCategory"]
+- ["PSo21UIAppearanceContainer", "tripDate"]
+- ["PSo21UIAppearanceContainer", "tripLocLable"]
+- ["PSo21UIAppearanceContainer", "tripTitleLable"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo17UICoordinateSpace", "awakeFromNib"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "setSelected"]
+- ["PSo17UICoordinateSpace", "tripCategory"]
+- ["PSo17UICoordinateSpace", "tripDate"]
+- ["PSo17UICoordinateSpace", "tripLocLable"]
+- ["PSo17UICoordinateSpace", "tripTitleLable"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "awakeFromNib"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "setSelected"]
+- ["PSo13UIDynamicItem", "tripCategory"]
+- ["PSo13UIDynamicItem", "tripDate"]
+- ["PSo13UIDynamicItem", "tripLocLable"]
+- ["PSo13UIDynamicItem", "tripTitleLable"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "awakeFromNib"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "setSelected"]
+- ["PSo18UIFocusEnvironment", "tripCategory"]
+- ["PSo18UIFocusEnvironment", "tripDate"]
+- ["PSo18UIFocusEnvironment", "tripLocLable"]
+- ["PSo18UIFocusEnvironment", "tripTitleLable"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["PSo27UIGestureRecognizerDelegate", "awakeFromNib"]
+- ["PSo27UIGestureRecognizerDelegate", "init"]
+- ["PSo27UIGestureRecognizerDelegate", "setSelected"]
+- ["PSo27UIGestureRecognizerDelegate", "tripCategory"]
+- ["PSo27UIGestureRecognizerDelegate", "tripDate"]
+- ["PSo27UIGestureRecognizerDelegate", "tripLocLable"]
+- ["PSo27UIGestureRecognizerDelegate", "tripTitleLable"]
+- ["PSo27UIGestureRecognizerDelegate", ""]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "UIImageView"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "awakeFromNib"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "setSelected"]
+- ["CSo11UIResponder", "tripCategory"]
+- ["CSo11UIResponder", "tripDate"]
+- ["CSo11UIResponder", "tripLocLable"]
+- ["CSo11UIResponder", "tripTitleLable"]
+- ["CSo15UITableViewCell", "Bool"]
+- ["CSo15UITableViewCell", "UIImageView"]
+- ["CSo15UITableViewCell", "UILabel"]
+- ["CSo15UITableViewCell", "awakeFromNib"]
+- ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "setSelected"]
+- ["CSo15UITableViewCell", "tripCategory"]
+- ["CSo15UITableViewCell", "tripDate"]
+- ["CSo15UITableViewCell", "tripLocLable"]
+- ["CSo15UITableViewCell", "tripTitleLable"]
+- ["CSo15UITableViewCell", ""]
+- ["PSo18UITraitEnvironment", "awakeFromNib"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "setSelected"]
+- ["PSo18UITraitEnvironment", "tripCategory"]
+- ["PSo18UITraitEnvironment", "tripDate"]
+- ["PSo18UITraitEnvironment", "tripLocLable"]
+- ["PSo18UITraitEnvironment", "tripTitleLable"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "Bool"]
+- ["CSo6UIView", "UIImageView"]
+- ["CSo6UIView", "UILabel"]
+- ["CSo6UIView", "awakeFromNib"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "setSelected"]
+- ["CSo6UIView", "tripCategory"]
+- ["CSo6UIView", "tripDate"]
+- ["CSo6UIView", "tripLocLable"]
+- ["CSo6UIView", "tripTitleLable"]
+- ["Ps12_Reflectable", "awakeFromNib"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "setSelected"]
+- ["Ps12_Reflectable", "tripCategory"]
+- ["Ps12_Reflectable", "tripDate"]
+- ["Ps12_Reflectable", "tripLocLable"]
+- ["Ps12_Reflectable", "tripTitleLable"]
+- ["Ps12_Reflectable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "C3Map8TripCell"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo27UIGestureRecognizerDelegate"
+- "CSo11UIResponder"
+- "CSo15UITableViewCell"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AssetsLibrary.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/Firebase.h"
+interface-hash: "105cddb58e95f52509c99bef39c21816"

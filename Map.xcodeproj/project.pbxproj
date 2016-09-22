@@ -41,7 +41,7 @@
 		2A9DA5541D71E65D00EC5FA6 /* TripEmergencyContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5531D71E65D00EC5FA6 /* TripEmergencyContactView.swift */; };
 		2A9DA5571D71E6C600EC5FA6 /* TripDescView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5561D71E6C600EC5FA6 /* TripDescView.swift */; };
 		2A9DA5591D71E6E300EC5FA6 /* TripPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5581D71E6E300EC5FA6 /* TripPhotoView.swift */; };
-		2A9DA55C1D729CD300EC5FA6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA55B1D729CD300EC5FA6 /* SignUpViewController.swift */; };
+		2A9DA55C1D729CD300EC5FA6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA55B1D729CD300EC5FA6 /* SignInViewController.swift */; };
 		2A9DA55E1D72B7ED00EC5FA6 /* FireBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA55D1D72B7ED00EC5FA6 /* FireBaseService.swift */; };
 		2A9DA5611D72BA5200EC5FA6 /* CategoryPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5601D72BA5200EC5FA6 /* CategoryPopupView.swift */; };
 		2A9DA5631D72D2DB00EC5FA6 /* TitlePopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5621D72D2DB00EC5FA6 /* TitlePopUpView.swift */; };
@@ -49,6 +49,9 @@
 		2A9DA5671D72D31500EC5FA6 /* LocationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5661D72D31500EC5FA6 /* LocationPopUpView.swift */; };
 		2A9DA5691D72D33200EC5FA6 /* EmergencyContactPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA5681D72D33200EC5FA6 /* EmergencyContactPopUpView.swift */; };
 		2A9DA56B1D72D34B00EC5FA6 /* DescPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DA56A1D72D34B00EC5FA6 /* DescPopUpView.swift */; };
+		2ACEF2521D936522002901EB /* IGLDropDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACEF24F1D936522002901EB /* IGLDropDownItem.m */; };
+		2ACEF2531D936522002901EB /* IGLDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACEF2511D936522002901EB /* IGLDropDownMenu.m */; };
+		2ACEF2561D93886E002901EB /* WildControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACEF2551D93886E002901EB /* WildControl.swift */; };
 		2AD230D21D6C658B002B2220 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD230D11D6C658B002B2220 /* SearchView.swift */; };
 		2AD230D41D6D84F2002B2220 /* animalListForLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD230D31D6D84F2002B2220 /* animalListForLocationsView.swift */; };
 		2AD230D61D6DD51A002B2220 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD230D51D6DD51A002B2220 /* FilterView.swift */; };
@@ -62,6 +65,7 @@
 		2AE608451D6EB8C100C87723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE608441D6EB8C100C87723 /* AppDelegate.swift */; };
 		2AE608741D6F081800C87723 /* AddTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE608731D6F081800C87723 /* AddTrip.swift */; };
 		2AE8598D1D8D494A00A8A437 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8598C1D8D494A00A8A437 /* Photo.swift */; };
+		2AF4E6E81D92755A0019DF5C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4E6E71D92755A0019DF5C /* SignUpViewController.swift */; };
 		2AF7F76B1D87E6FE00B86E6B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF7F76A1D87E6FE00B86E6B /* AssetsLibrary.framework */; };
 		2AF7F76D1D87E72C00B86E6B /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF7F76C1D87E72C00B86E6B /* Photos.framework */; };
 		2AF7F7711D880A4400B86E6B /* PhotoLibary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7F7701D880A4400B86E6B /* PhotoLibary.swift */; };
@@ -108,7 +112,7 @@
 		2A9DA5531D71E65D00EC5FA6 /* TripEmergencyContactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripEmergencyContactView.swift; sourceTree = "<group>"; };
 		2A9DA5561D71E6C600EC5FA6 /* TripDescView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDescView.swift; sourceTree = "<group>"; };
 		2A9DA5581D71E6E300EC5FA6 /* TripPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripPhotoView.swift; sourceTree = "<group>"; };
-		2A9DA55B1D729CD300EC5FA6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2A9DA55B1D729CD300EC5FA6 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		2A9DA55D1D72B7ED00EC5FA6 /* FireBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FireBaseService.swift; path = Map/FireBaseService.swift; sourceTree = "<group>"; };
 		2A9DA5601D72BA5200EC5FA6 /* CategoryPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPopupView.swift; sourceTree = "<group>"; };
 		2A9DA5621D72D2DB00EC5FA6 /* TitlePopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlePopUpView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,12 @@
 		2A9DA5661D72D31500EC5FA6 /* LocationPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPopUpView.swift; sourceTree = "<group>"; };
 		2A9DA5681D72D33200EC5FA6 /* EmergencyContactPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContactPopUpView.swift; sourceTree = "<group>"; };
 		2A9DA56A1D72D34B00EC5FA6 /* DescPopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescPopUpView.swift; sourceTree = "<group>"; };
+		2ACEF24E1D936522002901EB /* IGLDropDownItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDropDownItem.h; sourceTree = "<group>"; };
+		2ACEF24F1D936522002901EB /* IGLDropDownItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownItem.m; sourceTree = "<group>"; };
+		2ACEF2501D936522002901EB /* IGLDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDropDownMenu.h; sourceTree = "<group>"; };
+		2ACEF2511D936522002901EB /* IGLDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownMenu.m; sourceTree = "<group>"; };
+		2ACEF2541D9365F5002901EB /* DropDown Menu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DropDown Menu-Bridging-Header.h"; path = "../../../../Downloads/DropDown-Menu-master/DropDown Menu/DropDown Menu-Bridging-Header.h"; sourceTree = "<group>"; };
+		2ACEF2551D93886E002901EB /* WildControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildControl.swift; sourceTree = "<group>"; };
 		2AD230D11D6C658B002B2220 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2AD230D31D6D84F2002B2220 /* animalListForLocationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = animalListForLocationsView.swift; path = ../animalListForLocationsView.swift; sourceTree = "<group>"; };
 		2AD230D51D6DD51A002B2220 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterView.swift; path = ../FilterView.swift; sourceTree = "<group>"; };
@@ -129,6 +139,7 @@
 		2AE608441D6EB8C100C87723 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE608731D6F081800C87723 /* AddTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrip.swift; sourceTree = "<group>"; };
 		2AE8598C1D8D494A00A8A437 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		2AF4E6E71D92755A0019DF5C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2AF7F76A1D87E6FE00B86E6B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		2AF7F76C1D87E72C00B86E6B /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		2AF7F7701D880A4400B86E6B /* PhotoLibary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibary.swift; sourceTree = "<group>"; };
@@ -201,6 +212,7 @@
 				2A4E51821D52D6EE0061EA02 /* Info.plist */,
 				2A1CCFAC1D7586D3008EBB59 /* GoogleService-Info.plist */,
 				2AE608441D6EB8C100C87723 /* AppDelegate.swift */,
+				2ACEF24D1D936522002901EB /* IGLDropdown */,
 				2ADD6BFC1D8ED56B00623F8D /* Utilities */,
 				2ADD6BF11D8E32D900623F8D /* Report */,
 				2A9C691E1D91EB2400AF426D /* Profile */,
@@ -241,7 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				2A9DA55D1D72B7ED00EC5FA6 /* FireBaseService.swift */,
-				2A9DA55B1D729CD300EC5FA6 /* SignUpViewController.swift */,
+				2A9DA55B1D729CD300EC5FA6 /* SignInViewController.swift */,
+				2AF4E6E71D92755A0019DF5C /* SignUpViewController.swift */,
 			);
 			name = Login/Logout;
 			path = ..;
@@ -260,6 +273,18 @@
 			name = PopupViews;
 			sourceTree = "<group>";
 		};
+		2ACEF24D1D936522002901EB /* IGLDropdown */ = {
+			isa = PBXGroup;
+			children = (
+				2ACEF24E1D936522002901EB /* IGLDropDownItem.h */,
+				2ACEF24F1D936522002901EB /* IGLDropDownItem.m */,
+				2ACEF2501D936522002901EB /* IGLDropDownMenu.h */,
+				2ACEF2511D936522002901EB /* IGLDropDownMenu.m */,
+			);
+			name = IGLDropdown;
+			path = ../../../../Downloads/IGLDropdown;
+			sourceTree = "<group>";
+		};
 		2ADD6BF11D8E32D900623F8D /* Report */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +296,7 @@
 				2ADD6BF81D8EBE9800623F8D /* ReportDB.swift */,
 				2A9C69141D8F9F2200AF426D /* ReportCategoryPopUpView.swift */,
 				2A9C691A1D90139F00AF426D /* Report.swift */,
+				2ACEF2551D93886E002901EB /* WildControl.swift */,
 			);
 			name = Report;
 			sourceTree = "<group>";
@@ -280,6 +306,7 @@
 			children = (
 				2ADD6BFD1D8ED59800623F8D /* LineView.swift */,
 				2A9C69161D8FE30600AF426D /* TimePicker.swift */,
+				2ACEF2541D9365F5002901EB /* DropDown Menu-Bridging-Header.h */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -476,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ACEF2521D936522002901EB /* IGLDropDownItem.m in Sources */,
 				2AF7F7791D89040200B86E6B /* GetImageCell.swift in Sources */,
 				2AD230D61D6DD51A002B2220 /* FilterView.swift in Sources */,
 				2A9DA5591D71E6E300EC5FA6 /* TripPhotoView.swift in Sources */,
@@ -521,13 +549,16 @@
 				2ADD6BF71D8E5CE200623F8D /* DKDropMenu.swift in Sources */,
 				2AF7F7751D88E34700B86E6B /* GalleryImageCell.swift in Sources */,
 				2A9DA5651D72D2F600EC5FA6 /* TimePopUpView.swift in Sources */,
+				2ACEF2531D936522002901EB /* IGLDropDownMenu.m in Sources */,
+				2ACEF2561D93886E002901EB /* WildControl.swift in Sources */,
 				2A0B97201D6778F300CFE698 /* UINavigationBarTaller.swift in Sources */,
 				2A9C69171D8FE30600AF426D /* TimePicker.swift in Sources */,
 				2A9DA54C1D7165CF00EC5FA6 /* TripCell.swift in Sources */,
 				2AF7F7711D880A4400B86E6B /* PhotoLibary.swift in Sources */,
 				2A9DA5521D71E62B00EC5FA6 /* TripLocationView.swift in Sources */,
+				2AF4E6E81D92755A0019DF5C /* SignUpViewController.swift in Sources */,
 				2A9DA55E1D72B7ED00EC5FA6 /* FireBaseService.swift in Sources */,
-				2A9DA55C1D729CD300EC5FA6 /* SignUpViewController.swift in Sources */,
+				2A9DA55C1D729CD300EC5FA6 /* SignInViewController.swift in Sources */,
 				2A1CCFB81D76FD81008EBB59 /* WeatherSearch.swift in Sources */,
 				2A1CCFC11D770DFC008EBB59 /* OpenWeatherMap.swift in Sources */,
 				2AD230D21D6C658B002B2220 /* SearchView.swift in Sources */,

@@ -1,0 +1,396 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SearchLocationCell"
+provides-nominal:
+- "C3Map18SearchLocationCell"
+provides-member:
+- ["C3Map18SearchLocationCell", ""]
+provides-dynamic-lookup:
+- "subTitle"
+- "title"
+depends-top-level:
+- "String"
+- "SearchLocationCell"
+- !private "fatalError"
+- "UILabel"
+- !private "UIColor"
+- "NSCoder"
+- !private "+"
+- !private "CGRectMake"
+- !private "StringLiteralType"
+- "UITableViewCellStyle"
+- "UITableViewCell"
+- !private "CGFloat"
+depends-member:
+- !private ["Ps9AnyObject", "CGRectMake"]
+- !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UILabel"]
+- !private ["Ps9AnyObject", "addSubview"]
+- !private ["Ps9AnyObject", "blackColor"]
+- !private ["Ps9AnyObject", "contentView"]
+- !private ["Ps9AnyObject", "fatalError"]
+- !private ["Ps9AnyObject", "frame"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "subTitle"]
+- !private ["Ps9AnyObject", "textColor"]
+- ["Ps9AnyObject", "title"]
+- ["Ps9AnyObject", ""]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["Ps11CVarArgType", "CGRectMake"]
+- !private ["Ps11CVarArgType", "UIColor"]
+- !private ["Ps11CVarArgType", "UILabel"]
+- !private ["Ps11CVarArgType", "addSubview"]
+- !private ["Ps11CVarArgType", "blackColor"]
+- !private ["Ps11CVarArgType", "contentView"]
+- !private ["Ps11CVarArgType", "fatalError"]
+- !private ["Ps11CVarArgType", "frame"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "subTitle"]
+- !private ["Ps11CVarArgType", "textColor"]
+- ["Ps11CVarArgType", "title"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps28CustomDebugStringConvertible", "CGRectMake"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UILabel"]
+- !private ["Ps28CustomDebugStringConvertible", "addSubview"]
+- !private ["Ps28CustomDebugStringConvertible", "blackColor"]
+- !private ["Ps28CustomDebugStringConvertible", "contentView"]
+- !private ["Ps28CustomDebugStringConvertible", "fatalError"]
+- !private ["Ps28CustomDebugStringConvertible", "frame"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "subTitle"]
+- !private ["Ps28CustomDebugStringConvertible", "textColor"]
+- ["Ps28CustomDebugStringConvertible", "title"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "CGRectMake"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UILabel"]
+- !private ["Ps23CustomStringConvertible", "addSubview"]
+- !private ["Ps23CustomStringConvertible", "blackColor"]
+- !private ["Ps23CustomStringConvertible", "contentView"]
+- !private ["Ps23CustomStringConvertible", "fatalError"]
+- !private ["Ps23CustomStringConvertible", "frame"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "subTitle"]
+- !private ["Ps23CustomStringConvertible", "textColor"]
+- ["Ps23CustomStringConvertible", "title"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "CGRectMake"]
+- !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UILabel"]
+- !private ["Ps9Equatable", "addSubview"]
+- !private ["Ps9Equatable", "blackColor"]
+- !private ["Ps9Equatable", "contentView"]
+- !private ["Ps9Equatable", "fatalError"]
+- !private ["Ps9Equatable", "frame"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "subTitle"]
+- !private ["Ps9Equatable", "textColor"]
+- ["Ps9Equatable", "title"]
+- ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "CGRectMake"]
+- !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UILabel"]
+- !private ["Ps8Hashable", "addSubview"]
+- !private ["Ps8Hashable", "blackColor"]
+- !private ["Ps8Hashable", "contentView"]
+- !private ["Ps8Hashable", "fatalError"]
+- !private ["Ps8Hashable", "frame"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "subTitle"]
+- !private ["Ps8Hashable", "textColor"]
+- ["Ps8Hashable", "title"]
+- ["Ps8Hashable", ""]
+- !private ["PSo8NSCoding", "CGRectMake"]
+- !private ["PSo8NSCoding", "UIColor"]
+- !private ["PSo8NSCoding", "UILabel"]
+- !private ["PSo8NSCoding", "addSubview"]
+- !private ["PSo8NSCoding", "blackColor"]
+- !private ["PSo8NSCoding", "contentView"]
+- !private ["PSo8NSCoding", "fatalError"]
+- !private ["PSo8NSCoding", "frame"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "subTitle"]
+- !private ["PSo8NSCoding", "textColor"]
+- ["PSo8NSCoding", "title"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "blackColor"]
+- !private ["CSo8NSObject", "CGFloat"]
+- !private ["CSo8NSObject", "CGRectMake"]
+- ["CSo8NSObject", "NSCoder"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UIColor"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "UITableViewCellStyle"]
+- !private ["CSo8NSObject", "addSubview"]
+- !private ["CSo8NSObject", "blackColor"]
+- !private ["CSo8NSObject", "contentView"]
+- !private ["CSo8NSObject", "fatalError"]
+- !private ["CSo8NSObject", "frame"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "subTitle"]
+- !private ["CSo8NSObject", "textColor"]
+- ["CSo8NSObject", "title"]
+- !private ["PSo16NSObjectProtocol", "CGRectMake"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UILabel"]
+- !private ["PSo16NSObjectProtocol", "addSubview"]
+- !private ["PSo16NSObjectProtocol", "blackColor"]
+- !private ["PSo16NSObjectProtocol", "contentView"]
+- !private ["PSo16NSObjectProtocol", "fatalError"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "subTitle"]
+- !private ["PSo16NSObjectProtocol", "textColor"]
+- ["PSo16NSObjectProtocol", "title"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "blackColor"]
+- !private ["C3Map18SearchLocationCell", "CGFloat"]
+- !private ["C3Map18SearchLocationCell", "CGRectMake"]
+- ["C3Map18SearchLocationCell", "NSCoder"]
+- ["C3Map18SearchLocationCell", "String"]
+- !private ["C3Map18SearchLocationCell", "UIColor"]
+- ["C3Map18SearchLocationCell", "UILabel"]
+- ["C3Map18SearchLocationCell", "UITableViewCellStyle"]
+- !private ["C3Map18SearchLocationCell", "contentView"]
+- ["C3Map18SearchLocationCell", "deinit"]
+- !private ["C3Map18SearchLocationCell", "fatalError"]
+- ["C3Map18SearchLocationCell", "init"]
+- ["C3Map18SearchLocationCell", "subTitle"]
+- ["C3Map18SearchLocationCell", "title"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["PSo29UIAccessibilityIdentification", "CGRectMake"]
+- !private ["PSo29UIAccessibilityIdentification", "UIColor"]
+- !private ["PSo29UIAccessibilityIdentification", "UILabel"]
+- !private ["PSo29UIAccessibilityIdentification", "addSubview"]
+- !private ["PSo29UIAccessibilityIdentification", "contentView"]
+- !private ["PSo29UIAccessibilityIdentification", "fatalError"]
+- !private ["PSo29UIAccessibilityIdentification", "frame"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "subTitle"]
+- !private ["PSo29UIAccessibilityIdentification", "textColor"]
+- ["PSo29UIAccessibilityIdentification", "title"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- !private ["PSo12UIAppearance", "CGRectMake"]
+- !private ["PSo12UIAppearance", "UIColor"]
+- !private ["PSo12UIAppearance", "UILabel"]
+- !private ["PSo12UIAppearance", "addSubview"]
+- !private ["PSo12UIAppearance", "contentView"]
+- !private ["PSo12UIAppearance", "fatalError"]
+- !private ["PSo12UIAppearance", "frame"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "subTitle"]
+- !private ["PSo12UIAppearance", "textColor"]
+- ["PSo12UIAppearance", "title"]
+- ["PSo12UIAppearance", ""]
+- !private ["PSo21UIAppearanceContainer", "CGRectMake"]
+- !private ["PSo21UIAppearanceContainer", "UIColor"]
+- !private ["PSo21UIAppearanceContainer", "UILabel"]
+- !private ["PSo21UIAppearanceContainer", "addSubview"]
+- !private ["PSo21UIAppearanceContainer", "contentView"]
+- !private ["PSo21UIAppearanceContainer", "fatalError"]
+- !private ["PSo21UIAppearanceContainer", "frame"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "subTitle"]
+- !private ["PSo21UIAppearanceContainer", "textColor"]
+- ["PSo21UIAppearanceContainer", "title"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo7UIColor", "blackColor"]
+- !private ["PSo17UICoordinateSpace", "CGRectMake"]
+- !private ["PSo17UICoordinateSpace", "UIColor"]
+- !private ["PSo17UICoordinateSpace", "UILabel"]
+- !private ["PSo17UICoordinateSpace", "addSubview"]
+- !private ["PSo17UICoordinateSpace", "contentView"]
+- !private ["PSo17UICoordinateSpace", "fatalError"]
+- !private ["PSo17UICoordinateSpace", "frame"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "subTitle"]
+- !private ["PSo17UICoordinateSpace", "textColor"]
+- ["PSo17UICoordinateSpace", "title"]
+- ["PSo17UICoordinateSpace", ""]
+- !private ["PSo13UIDynamicItem", "CGRectMake"]
+- !private ["PSo13UIDynamicItem", "UIColor"]
+- !private ["PSo13UIDynamicItem", "UILabel"]
+- !private ["PSo13UIDynamicItem", "addSubview"]
+- !private ["PSo13UIDynamicItem", "contentView"]
+- !private ["PSo13UIDynamicItem", "fatalError"]
+- !private ["PSo13UIDynamicItem", "frame"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "subTitle"]
+- !private ["PSo13UIDynamicItem", "textColor"]
+- ["PSo13UIDynamicItem", "title"]
+- ["PSo13UIDynamicItem", ""]
+- !private ["PSo18UIFocusEnvironment", "CGRectMake"]
+- !private ["PSo18UIFocusEnvironment", "UIColor"]
+- !private ["PSo18UIFocusEnvironment", "UILabel"]
+- !private ["PSo18UIFocusEnvironment", "addSubview"]
+- !private ["PSo18UIFocusEnvironment", "contentView"]
+- !private ["PSo18UIFocusEnvironment", "fatalError"]
+- !private ["PSo18UIFocusEnvironment", "frame"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "subTitle"]
+- !private ["PSo18UIFocusEnvironment", "textColor"]
+- ["PSo18UIFocusEnvironment", "title"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo27UIGestureRecognizerDelegate", "CGRectMake"]
+- !private ["PSo27UIGestureRecognizerDelegate", "UIColor"]
+- !private ["PSo27UIGestureRecognizerDelegate", "UILabel"]
+- !private ["PSo27UIGestureRecognizerDelegate", "contentView"]
+- !private ["PSo27UIGestureRecognizerDelegate", "fatalError"]
+- ["PSo27UIGestureRecognizerDelegate", "init"]
+- ["PSo27UIGestureRecognizerDelegate", "subTitle"]
+- ["PSo27UIGestureRecognizerDelegate", "title"]
+- ["PSo27UIGestureRecognizerDelegate", ""]
+- !private ["CSo7UILabel", "frame"]
+- !private ["CSo7UILabel", "init"]
+- !private ["CSo7UILabel", "textColor"]
+- !private ["CSo11UIResponder", "CGFloat"]
+- !private ["CSo11UIResponder", "CGRectMake"]
+- ["CSo11UIResponder", "NSCoder"]
+- ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "UIColor"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "UITableViewCellStyle"]
+- !private ["CSo11UIResponder", "addSubview"]
+- !private ["CSo11UIResponder", "contentView"]
+- !private ["CSo11UIResponder", "fatalError"]
+- !private ["CSo11UIResponder", "frame"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "subTitle"]
+- !private ["CSo11UIResponder", "textColor"]
+- ["CSo11UIResponder", "title"]
+- !private ["CSo15UITableViewCell", "CGFloat"]
+- !private ["CSo15UITableViewCell", "CGRectMake"]
+- ["CSo15UITableViewCell", "NSCoder"]
+- ["CSo15UITableViewCell", "String"]
+- !private ["CSo15UITableViewCell", "UIColor"]
+- ["CSo15UITableViewCell", "UILabel"]
+- ["CSo15UITableViewCell", "UITableViewCellStyle"]
+- !private ["CSo15UITableViewCell", "contentView"]
+- !private ["CSo15UITableViewCell", "fatalError"]
+- ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "subTitle"]
+- ["CSo15UITableViewCell", "title"]
+- ["CSo15UITableViewCell", ""]
+- !private ["PSo18UITraitEnvironment", "CGRectMake"]
+- !private ["PSo18UITraitEnvironment", "UIColor"]
+- !private ["PSo18UITraitEnvironment", "UILabel"]
+- !private ["PSo18UITraitEnvironment", "addSubview"]
+- !private ["PSo18UITraitEnvironment", "contentView"]
+- !private ["PSo18UITraitEnvironment", "fatalError"]
+- !private ["PSo18UITraitEnvironment", "frame"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "subTitle"]
+- !private ["PSo18UITraitEnvironment", "textColor"]
+- ["PSo18UITraitEnvironment", "title"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "CGFloat"]
+- !private ["CSo6UIView", "CGRectMake"]
+- ["CSo6UIView", "NSCoder"]
+- ["CSo6UIView", "String"]
+- !private ["CSo6UIView", "UIColor"]
+- ["CSo6UIView", "UILabel"]
+- ["CSo6UIView", "UITableViewCellStyle"]
+- !private ["CSo6UIView", "addSubview"]
+- !private ["CSo6UIView", "contentView"]
+- !private ["CSo6UIView", "fatalError"]
+- !private ["CSo6UIView", "frame"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "subTitle"]
+- !private ["CSo6UIView", "textColor"]
+- ["CSo6UIView", "title"]
+- !private ["Ps24_ColorLiteralConvertible", "blackColor"]
+- !private ["Ps12_Reflectable", "CGRectMake"]
+- !private ["Ps12_Reflectable", "UIColor"]
+- !private ["Ps12_Reflectable", "UILabel"]
+- !private ["Ps12_Reflectable", "addSubview"]
+- !private ["Ps12_Reflectable", "contentView"]
+- !private ["Ps12_Reflectable", "fatalError"]
+- !private ["Ps12_Reflectable", "frame"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "subTitle"]
+- !private ["Ps12_Reflectable", "textColor"]
+- ["Ps12_Reflectable", "title"]
+- ["Ps12_Reflectable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "V12CoreGraphics7CGFloat"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "C3Map18SearchLocationCell"
+- !private "Vs12StaticString"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo7UIColor"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo27UIGestureRecognizerDelegate"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- "CSo15UITableViewCell"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- !private "Ps24_ColorLiteralConvertible"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AssetsLibrary.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/Firebase.h"
+interface-hash: "883507437e6304dd9ecb60631944dd2a"

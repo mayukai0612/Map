@@ -22,7 +22,9 @@ class PhotoView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //set background color
+        self.view.backgroundColor = UIColor.blackColor()
+
         // add image to imageView
         self.photoImageView.image = image
         

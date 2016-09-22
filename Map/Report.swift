@@ -20,7 +20,7 @@ class Report:NSObject{
     var reportLgt:Double?
     var reportAddress:String?
     var imageFileName:String?
-    
+    var compareDate:NSDate?
     
     init(userid:String,reportCat:String,reportTitle:String,reportContent:String,reportTime:String,reportLat:Double,reportLgt:Double,reportAddress:String,imageFileName:String) {
         self.userid = userid

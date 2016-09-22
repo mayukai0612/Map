@@ -1,0 +1,610 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "UINavigationBarTaller"
+provides-nominal:
+- "C3Map21UINavigationBarTaller"
+provides-member:
+- ["C3Map21UINavigationBarTaller", ""]
+provides-dynamic-lookup:
+- "layoutSubviews"
+- "heightIncrease"
+- "navigationBarHeight"
+- "sizeThatFits"
+depends-top-level:
+- !private "StringLiteralType"
+- !private "String"
+- "NSCoder"
+- "-"
+- "UINavigationBarTaller"
+- "CGRect"
+- !private "NSStringFromClass"
+- !private "CGSizeMake"
+- "CGFloat"
+- !private "+"
+- "UINavigationBar"
+- "CGSize"
+- !private "UIView"
+- !private "/"
+depends-member:
+- !private ["Ps9AnyObject", "CGSizeMake"]
+- !private ["Ps9AnyObject", "NSStringFromClass"]
+- !private ["Ps9AnyObject", "UINavigationBarTaller"]
+- !private ["Ps9AnyObject", "bounds"]
+- !private ["Ps9AnyObject", "frame"]
+- ["Ps9AnyObject", "heightIncrease"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "initialize"]
+- ["Ps9AnyObject", "layoutSubviews"]
+- ["Ps9AnyObject", "navigationBarHeight"]
+- ["Ps9AnyObject", "sizeThatFits"]
+- !private ["Ps9AnyObject", "subviews"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "contains"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "contains"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["VSC7CGPoint", "y"]
+- !private ["VSC6CGRect", "origin"]
+- !private ["VSC6CGRect", "size"]
+- !private ["VSC6CGSize", "height"]
+- !private ["VSC6CGSize", "width"]
+- !private ["Ps11CVarArgType", "CGSizeMake"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "NSStringFromClass"]
+- !private ["Ps11CVarArgType", "UINavigationBarTaller"]
+- !private ["Ps11CVarArgType", "bounds"]
+- !private ["Ps11CVarArgType", "frame"]
+- ["Ps11CVarArgType", "heightIncrease"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "initialize"]
+- ["Ps11CVarArgType", "layoutSubviews"]
+- ["Ps11CVarArgType", "navigationBarHeight"]
+- ["Ps11CVarArgType", "sizeThatFits"]
+- !private ["Ps11CVarArgType", "subviews"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "contains"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps28CustomDebugStringConvertible", "CGSizeMake"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "NSStringFromClass"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "UINavigationBarTaller"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "bounds"]
+- !private ["Ps28CustomDebugStringConvertible", "contains"]
+- !private ["Ps28CustomDebugStringConvertible", "frame"]
+- ["Ps28CustomDebugStringConvertible", "heightIncrease"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "initialize"]
+- ["Ps28CustomDebugStringConvertible", "layoutSubviews"]
+- ["Ps28CustomDebugStringConvertible", "navigationBarHeight"]
+- ["Ps28CustomDebugStringConvertible", "sizeThatFits"]
+- !private ["Ps28CustomDebugStringConvertible", "subviews"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "CGSizeMake"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "NSStringFromClass"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "UINavigationBarTaller"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "bounds"]
+- !private ["Ps23CustomStringConvertible", "contains"]
+- !private ["Ps23CustomStringConvertible", "frame"]
+- ["Ps23CustomStringConvertible", "heightIncrease"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "initialize"]
+- ["Ps23CustomStringConvertible", "layoutSubviews"]
+- ["Ps23CustomStringConvertible", "navigationBarHeight"]
+- ["Ps23CustomStringConvertible", "sizeThatFits"]
+- !private ["Ps23CustomStringConvertible", "subviews"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "CGSizeMake"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "NSStringFromClass"]
+- !private ["Ps9Equatable", "UINavigationBarTaller"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "bounds"]
+- !private ["Ps9Equatable", "frame"]
+- !private ["Ps9Equatable", "height"]
+- ["Ps9Equatable", "heightIncrease"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "initialize"]
+- ["Ps9Equatable", "layoutSubviews"]
+- ["Ps9Equatable", "navigationBarHeight"]
+- !private ["Ps9Equatable", "origin"]
+- !private ["Ps9Equatable", "size"]
+- ["Ps9Equatable", "sizeThatFits"]
+- !private ["Ps9Equatable", "subviews"]
+- !private ["Ps9Equatable", "width"]
+- !private ["Ps9Equatable", "y"]
+- ["Ps9Equatable", ""]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "CGSizeMake"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "NSStringFromClass"]
+- !private ["Ps8Hashable", "UINavigationBarTaller"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "bounds"]
+- !private ["Ps8Hashable", "frame"]
+- ["Ps8Hashable", "heightIncrease"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "initialize"]
+- ["Ps8Hashable", "layoutSubviews"]
+- ["Ps8Hashable", "navigationBarHeight"]
+- ["Ps8Hashable", "sizeThatFits"]
+- !private ["Ps8Hashable", "subviews"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "contains"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "contains"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "contains"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "contains"]
+- !private ["PSo8NSCoding", "CGSizeMake"]
+- !private ["PSo8NSCoding", "NSStringFromClass"]
+- !private ["PSo8NSCoding", "UINavigationBarTaller"]
+- !private ["PSo8NSCoding", "bounds"]
+- !private ["PSo8NSCoding", "frame"]
+- ["PSo8NSCoding", "heightIncrease"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "initialize"]
+- ["PSo8NSCoding", "layoutSubviews"]
+- ["PSo8NSCoding", "navigationBarHeight"]
+- ["PSo8NSCoding", "sizeThatFits"]
+- !private ["PSo8NSCoding", "subviews"]
+- ["PSo8NSCoding", ""]
+- ["CSo8NSObject", "CGFloat"]
+- ["CSo8NSObject", "CGRect"]
+- ["CSo8NSObject", "CGSize"]
+- !private ["CSo8NSObject", "CGSizeMake"]
+- ["CSo8NSObject", "NSCoder"]
+- !private ["CSo8NSObject", "NSStringFromClass"]
+- !private ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UINavigationBarTaller"]
+- !private ["CSo8NSObject", "UIView"]
+- !private ["CSo8NSObject", "bounds"]
+- !private ["CSo8NSObject", "frame"]
+- ["CSo8NSObject", "heightIncrease"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "initialize"]
+- ["CSo8NSObject", "layoutSubviews"]
+- ["CSo8NSObject", "navigationBarHeight"]
+- ["CSo8NSObject", "sizeThatFits"]
+- !private ["CSo8NSObject", "subviews"]
+- !private ["PSo16NSObjectProtocol", "CGSizeMake"]
+- !private ["PSo16NSObjectProtocol", "NSStringFromClass"]
+- !private ["PSo16NSObjectProtocol", "UINavigationBarTaller"]
+- !private ["PSo16NSObjectProtocol", "bounds"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- ["PSo16NSObjectProtocol", "heightIncrease"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "initialize"]
+- ["PSo16NSObjectProtocol", "layoutSubviews"]
+- ["PSo16NSObjectProtocol", "navigationBarHeight"]
+- ["PSo16NSObjectProtocol", "sizeThatFits"]
+- !private ["PSo16NSObjectProtocol", "subviews"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "contains"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "contains"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["PSo29UIAccessibilityIdentification", "CGSizeMake"]
+- !private ["PSo29UIAccessibilityIdentification", "NSStringFromClass"]
+- !private ["PSo29UIAccessibilityIdentification", "UINavigationBarTaller"]
+- !private ["PSo29UIAccessibilityIdentification", "bounds"]
+- !private ["PSo29UIAccessibilityIdentification", "frame"]
+- ["PSo29UIAccessibilityIdentification", "heightIncrease"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "initialize"]
+- ["PSo29UIAccessibilityIdentification", "layoutSubviews"]
+- ["PSo29UIAccessibilityIdentification", "navigationBarHeight"]
+- ["PSo29UIAccessibilityIdentification", "sizeThatFits"]
+- !private ["PSo29UIAccessibilityIdentification", "subviews"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- !private ["PSo12UIAppearance", "CGSizeMake"]
+- !private ["PSo12UIAppearance", "NSStringFromClass"]
+- !private ["PSo12UIAppearance", "UINavigationBarTaller"]
+- !private ["PSo12UIAppearance", "bounds"]
+- !private ["PSo12UIAppearance", "frame"]
+- ["PSo12UIAppearance", "heightIncrease"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "initialize"]
+- ["PSo12UIAppearance", "layoutSubviews"]
+- ["PSo12UIAppearance", "navigationBarHeight"]
+- ["PSo12UIAppearance", "sizeThatFits"]
+- !private ["PSo12UIAppearance", "subviews"]
+- ["PSo12UIAppearance", ""]
+- !private ["PSo21UIAppearanceContainer", "CGSizeMake"]
+- !private ["PSo21UIAppearanceContainer", "NSStringFromClass"]
+- !private ["PSo21UIAppearanceContainer", "UINavigationBarTaller"]
+- !private ["PSo21UIAppearanceContainer", "bounds"]
+- !private ["PSo21UIAppearanceContainer", "frame"]
+- ["PSo21UIAppearanceContainer", "heightIncrease"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "initialize"]
+- ["PSo21UIAppearanceContainer", "layoutSubviews"]
+- ["PSo21UIAppearanceContainer", "navigationBarHeight"]
+- ["PSo21UIAppearanceContainer", "sizeThatFits"]
+- !private ["PSo21UIAppearanceContainer", "subviews"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo16UIBarPositioning", "CGSizeMake"]
+- !private ["PSo16UIBarPositioning", "NSStringFromClass"]
+- !private ["PSo16UIBarPositioning", "UINavigationBarTaller"]
+- !private ["PSo16UIBarPositioning", "bounds"]
+- ["PSo16UIBarPositioning", "heightIncrease"]
+- ["PSo16UIBarPositioning", "init"]
+- ["PSo16UIBarPositioning", "initialize"]
+- ["PSo16UIBarPositioning", "layoutSubviews"]
+- ["PSo16UIBarPositioning", "navigationBarHeight"]
+- ["PSo16UIBarPositioning", "sizeThatFits"]
+- !private ["PSo16UIBarPositioning", "subviews"]
+- ["PSo16UIBarPositioning", ""]
+- !private ["PSo17UICoordinateSpace", "CGSizeMake"]
+- !private ["PSo17UICoordinateSpace", "NSStringFromClass"]
+- !private ["PSo17UICoordinateSpace", "UINavigationBarTaller"]
+- !private ["PSo17UICoordinateSpace", "bounds"]
+- !private ["PSo17UICoordinateSpace", "frame"]
+- ["PSo17UICoordinateSpace", "heightIncrease"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "initialize"]
+- ["PSo17UICoordinateSpace", "layoutSubviews"]
+- ["PSo17UICoordinateSpace", "navigationBarHeight"]
+- ["PSo17UICoordinateSpace", "sizeThatFits"]
+- !private ["PSo17UICoordinateSpace", "subviews"]
+- ["PSo17UICoordinateSpace", ""]
+- !private ["PSo13UIDynamicItem", "CGSizeMake"]
+- !private ["PSo13UIDynamicItem", "NSStringFromClass"]
+- !private ["PSo13UIDynamicItem", "UINavigationBarTaller"]
+- !private ["PSo13UIDynamicItem", "bounds"]
+- !private ["PSo13UIDynamicItem", "frame"]
+- ["PSo13UIDynamicItem", "heightIncrease"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "initialize"]
+- ["PSo13UIDynamicItem", "layoutSubviews"]
+- ["PSo13UIDynamicItem", "navigationBarHeight"]
+- ["PSo13UIDynamicItem", "sizeThatFits"]
+- !private ["PSo13UIDynamicItem", "subviews"]
+- ["PSo13UIDynamicItem", ""]
+- !private ["PSo18UIFocusEnvironment", "CGSizeMake"]
+- !private ["PSo18UIFocusEnvironment", "NSStringFromClass"]
+- !private ["PSo18UIFocusEnvironment", "UINavigationBarTaller"]
+- !private ["PSo18UIFocusEnvironment", "bounds"]
+- !private ["PSo18UIFocusEnvironment", "frame"]
+- ["PSo18UIFocusEnvironment", "heightIncrease"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "initialize"]
+- ["PSo18UIFocusEnvironment", "layoutSubviews"]
+- ["PSo18UIFocusEnvironment", "navigationBarHeight"]
+- ["PSo18UIFocusEnvironment", "sizeThatFits"]
+- !private ["PSo18UIFocusEnvironment", "subviews"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo15UINavigationBar", "CGFloat"]
+- ["CSo15UINavigationBar", "CGRect"]
+- ["CSo15UINavigationBar", "CGSize"]
+- !private ["CSo15UINavigationBar", "CGSizeMake"]
+- ["CSo15UINavigationBar", "NSCoder"]
+- !private ["CSo15UINavigationBar", "NSStringFromClass"]
+- !private ["CSo15UINavigationBar", "String"]
+- !private ["CSo15UINavigationBar", "UINavigationBarTaller"]
+- !private ["CSo15UINavigationBar", "UIView"]
+- !private ["CSo15UINavigationBar", "bounds"]
+- ["CSo15UINavigationBar", "heightIncrease"]
+- ["CSo15UINavigationBar", "init"]
+- ["CSo15UINavigationBar", "initialize"]
+- ["CSo15UINavigationBar", "layoutSubviews"]
+- ["CSo15UINavigationBar", "navigationBarHeight"]
+- ["CSo15UINavigationBar", "sizeThatFits"]
+- !private ["CSo15UINavigationBar", "subviews"]
+- ["CSo15UINavigationBar", ""]
+- ["C3Map21UINavigationBarTaller", "CGFloat"]
+- ["C3Map21UINavigationBarTaller", "CGRect"]
+- ["C3Map21UINavigationBarTaller", "CGSize"]
+- !private ["C3Map21UINavigationBarTaller", "CGSizeMake"]
+- ["C3Map21UINavigationBarTaller", "NSCoder"]
+- !private ["C3Map21UINavigationBarTaller", "NSStringFromClass"]
+- !private ["C3Map21UINavigationBarTaller", "String"]
+- !private ["C3Map21UINavigationBarTaller", "UINavigationBarTaller"]
+- !private ["C3Map21UINavigationBarTaller", "UIView"]
+- !private ["C3Map21UINavigationBarTaller", "bounds"]
+- ["C3Map21UINavigationBarTaller", "deinit"]
+- ["C3Map21UINavigationBarTaller", "heightIncrease"]
+- ["C3Map21UINavigationBarTaller", "init"]
+- !private ["C3Map21UINavigationBarTaller", "initialize"]
+- ["C3Map21UINavigationBarTaller", "layoutSubviews"]
+- ["C3Map21UINavigationBarTaller", "navigationBarHeight"]
+- ["C3Map21UINavigationBarTaller", "sizeThatFits"]
+- !private ["C3Map21UINavigationBarTaller", "subviews"]
+- ["CSo11UIResponder", "CGFloat"]
+- ["CSo11UIResponder", "CGRect"]
+- ["CSo11UIResponder", "CGSize"]
+- !private ["CSo11UIResponder", "CGSizeMake"]
+- ["CSo11UIResponder", "NSCoder"]
+- !private ["CSo11UIResponder", "NSStringFromClass"]
+- !private ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "UINavigationBarTaller"]
+- !private ["CSo11UIResponder", "UIView"]
+- !private ["CSo11UIResponder", "bounds"]
+- !private ["CSo11UIResponder", "frame"]
+- ["CSo11UIResponder", "heightIncrease"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "initialize"]
+- ["CSo11UIResponder", "layoutSubviews"]
+- ["CSo11UIResponder", "navigationBarHeight"]
+- ["CSo11UIResponder", "sizeThatFits"]
+- !private ["CSo11UIResponder", "subviews"]
+- !private ["PSo18UITraitEnvironment", "CGSizeMake"]
+- !private ["PSo18UITraitEnvironment", "NSStringFromClass"]
+- !private ["PSo18UITraitEnvironment", "UINavigationBarTaller"]
+- !private ["PSo18UITraitEnvironment", "bounds"]
+- !private ["PSo18UITraitEnvironment", "frame"]
+- ["PSo18UITraitEnvironment", "heightIncrease"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "initialize"]
+- ["PSo18UITraitEnvironment", "layoutSubviews"]
+- ["PSo18UITraitEnvironment", "navigationBarHeight"]
+- ["PSo18UITraitEnvironment", "sizeThatFits"]
+- !private ["PSo18UITraitEnvironment", "subviews"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "CGFloat"]
+- ["CSo6UIView", "CGRect"]
+- ["CSo6UIView", "CGSize"]
+- !private ["CSo6UIView", "CGSizeMake"]
+- ["CSo6UIView", "NSCoder"]
+- !private ["CSo6UIView", "NSStringFromClass"]
+- !private ["CSo6UIView", "String"]
+- !private ["CSo6UIView", "UINavigationBarTaller"]
+- !private ["CSo6UIView", "UIView"]
+- !private ["CSo6UIView", "bounds"]
+- !private ["CSo6UIView", "frame"]
+- ["CSo6UIView", "heightIncrease"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "initialize"]
+- ["CSo6UIView", "layoutSubviews"]
+- ["CSo6UIView", "navigationBarHeight"]
+- ["CSo6UIView", "sizeThatFits"]
+- !private ["CSo6UIView", "subviews"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "contains"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "contains"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "contains"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "CGSizeMake"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "NSStringFromClass"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "UINavigationBarTaller"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "bounds"]
+- !private ["Ps12_Reflectable", "contains"]
+- !private ["Ps12_Reflectable", "frame"]
+- !private ["Ps12_Reflectable", "height"]
+- ["Ps12_Reflectable", "heightIncrease"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "initialize"]
+- ["Ps12_Reflectable", "layoutSubviews"]
+- ["Ps12_Reflectable", "navigationBarHeight"]
+- !private ["Ps12_Reflectable", "origin"]
+- !private ["Ps12_Reflectable", "size"]
+- ["Ps12_Reflectable", "sizeThatFits"]
+- !private ["Ps12_Reflectable", "subviews"]
+- !private ["Ps12_Reflectable", "width"]
+- !private ["Ps12_Reflectable", "y"]
+- ["Ps12_Reflectable", ""]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- "V12CoreGraphics7CGFloat"
+- !private "VSC7CGPoint"
+- !private "VSC6CGRect"
+- !private "VSC6CGSize"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- "PSo8NSCoding"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo16UIBarPositioning"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "CSo15UINavigationBar"
+- "C3Map21UINavigationBarTaller"
+- "CSo11UIResponder"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AssetsLibrary.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/Firebase.h"
+interface-hash: "151a91535fdd68d303b911f2a48f8ab1"

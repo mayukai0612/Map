@@ -23,10 +23,13 @@ protocol updateMapDelegate {
 
 class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITableViewDataSource{
     
-    let data = ["Centipede", "Honey Bee", "Kangaroo", "Octopus",
-                "Shark", "Shell", "Snake", "Spider",
-                "Tick", "Toadfish"]
+   
     
+    let data =  ["Box jellyfish","Honey bee","Centipedes","Blue-ringed octopus",
+        "Bull shark","Tiger shark","East brown snake","Melbourne Trap-door Spider","Redback spider","Geographer cone snail","Tick","White-tailed spiders","Bull ants","Blue bottle","Common Death Adder","Red-bellied Black Snake","Yellow-bellied Sea Snake","Highland Copperhead","European Wasp","Fox","Hog Deer","Red Deer","Fallow Deer","Dingo","Rabbit","Brush-tailed Rock-wallaby","Swamp Wallaby","Trichosurus caninus","Common Brushtail Possum","Wombat"]
+
+
+
     var animalSearchBar: UISearchBar?
     var locationSearchBar: UISearchBar?
     var tableView:UITableView?
@@ -121,6 +124,7 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
         self.locationSearchBar!.setImage(locimage, forSearchBarIcon: UISearchBarIcon.Search, state: UIControlState.Normal)
         self.locationSearchBar!.delegate = self
         self.locationSearchBar?.accessibilityIdentifier = "locationSearch"
+        
         
         
         //create cancle button image

@@ -1,0 +1,201 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Report"
+provides-nominal:
+- "C3Map6Report"
+provides-member:
+- ["C3Map6Report", ""]
+provides-dynamic-lookup:
+- "reportCategory"
+- "reportTitle"
+- "userid"
+- "reportContent"
+- "reportAddress"
+- "imageFileName"
+- "reportTime"
+depends-top-level:
+- "Int"
+- "Double"
+- "String"
+- "Report"
+- "NSObject"
+- !private "StringLiteralType"
+depends-member:
+- ["Ps9AnyObject", "imageFileName"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "reportAddress"]
+- ["Ps9AnyObject", "reportCategory"]
+- ["Ps9AnyObject", "reportContent"]
+- ["Ps9AnyObject", "reportLat"]
+- ["Ps9AnyObject", "reportLgt"]
+- ["Ps9AnyObject", "reportTime"]
+- ["Ps9AnyObject", "reportTitle"]
+- ["Ps9AnyObject", "reportid"]
+- ["Ps9AnyObject", "userid"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "imageFileName"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "reportAddress"]
+- ["Ps11CVarArgType", "reportCategory"]
+- ["Ps11CVarArgType", "reportContent"]
+- ["Ps11CVarArgType", "reportLat"]
+- ["Ps11CVarArgType", "reportLgt"]
+- ["Ps11CVarArgType", "reportTime"]
+- ["Ps11CVarArgType", "reportTitle"]
+- ["Ps11CVarArgType", "reportid"]
+- ["Ps11CVarArgType", "userid"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "imageFileName"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "reportAddress"]
+- ["Ps28CustomDebugStringConvertible", "reportCategory"]
+- ["Ps28CustomDebugStringConvertible", "reportContent"]
+- ["Ps28CustomDebugStringConvertible", "reportLat"]
+- ["Ps28CustomDebugStringConvertible", "reportLgt"]
+- ["Ps28CustomDebugStringConvertible", "reportTime"]
+- ["Ps28CustomDebugStringConvertible", "reportTitle"]
+- ["Ps28CustomDebugStringConvertible", "reportid"]
+- ["Ps28CustomDebugStringConvertible", "userid"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "imageFileName"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "reportAddress"]
+- ["Ps23CustomStringConvertible", "reportCategory"]
+- ["Ps23CustomStringConvertible", "reportContent"]
+- ["Ps23CustomStringConvertible", "reportLat"]
+- ["Ps23CustomStringConvertible", "reportLgt"]
+- ["Ps23CustomStringConvertible", "reportTime"]
+- ["Ps23CustomStringConvertible", "reportTitle"]
+- ["Ps23CustomStringConvertible", "reportid"]
+- ["Ps23CustomStringConvertible", "userid"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "imageFileName"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "reportAddress"]
+- ["Ps9Equatable", "reportCategory"]
+- ["Ps9Equatable", "reportContent"]
+- ["Ps9Equatable", "reportLat"]
+- ["Ps9Equatable", "reportLgt"]
+- ["Ps9Equatable", "reportTime"]
+- ["Ps9Equatable", "reportTitle"]
+- ["Ps9Equatable", "reportid"]
+- ["Ps9Equatable", "userid"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "imageFileName"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "reportAddress"]
+- ["Ps8Hashable", "reportCategory"]
+- ["Ps8Hashable", "reportContent"]
+- ["Ps8Hashable", "reportLat"]
+- ["Ps8Hashable", "reportLgt"]
+- ["Ps8Hashable", "reportTime"]
+- ["Ps8Hashable", "reportTitle"]
+- ["Ps8Hashable", "reportid"]
+- ["Ps8Hashable", "userid"]
+- ["Ps8Hashable", ""]
+- ["CSo8NSObject", "Double"]
+- ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "imageFileName"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "reportAddress"]
+- ["CSo8NSObject", "reportCategory"]
+- ["CSo8NSObject", "reportContent"]
+- ["CSo8NSObject", "reportLat"]
+- ["CSo8NSObject", "reportLgt"]
+- ["CSo8NSObject", "reportTime"]
+- ["CSo8NSObject", "reportTitle"]
+- ["CSo8NSObject", "reportid"]
+- ["CSo8NSObject", "userid"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "imageFileName"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "reportAddress"]
+- ["PSo16NSObjectProtocol", "reportCategory"]
+- ["PSo16NSObjectProtocol", "reportContent"]
+- ["PSo16NSObjectProtocol", "reportLat"]
+- ["PSo16NSObjectProtocol", "reportLgt"]
+- ["PSo16NSObjectProtocol", "reportTime"]
+- ["PSo16NSObjectProtocol", "reportTitle"]
+- ["PSo16NSObjectProtocol", "reportid"]
+- ["PSo16NSObjectProtocol", "userid"]
+- ["PSo16NSObjectProtocol", ""]
+- ["C3Map6Report", "Double"]
+- ["C3Map6Report", "Int"]
+- ["C3Map6Report", "String"]
+- ["C3Map6Report", "deinit"]
+- ["C3Map6Report", "imageFileName"]
+- ["C3Map6Report", "init"]
+- ["C3Map6Report", "reportAddress"]
+- ["C3Map6Report", "reportCategory"]
+- ["C3Map6Report", "reportContent"]
+- ["C3Map6Report", "reportLat"]
+- ["C3Map6Report", "reportLgt"]
+- ["C3Map6Report", "reportTime"]
+- ["C3Map6Report", "reportTitle"]
+- ["C3Map6Report", "reportid"]
+- ["C3Map6Report", "userid"]
+- !private ["Vs12StaticString", "deinit"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "C3Map6Report"
+- !private "Vs12StaticString"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AssetsLibrary.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/Firebase.h"
+interface-hash: "61027c388c52b006b1e19afba876ff41"

@@ -32,7 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        // Set translucent. (Default value is already true, so this can be removed if desired.)
      //   UINavigationBar.appearance().translucent = true
         //set title color
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+       // UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
+        let  navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        navigationBarAppearace.tintColor =  UIColor.whiteColor()
+        navigationBarAppearace.barTintColor = UIColor(red: 86, green: 171, blue: 59)
         
         //change tab bar tint color
         let tabbarTintColor = UIColor(red: 86, green: 171, blue: 59)

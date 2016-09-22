@@ -8,11 +8,15 @@
 
 import UIKit
 
-
-class ReportList: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class ReportList: UIViewController,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource,RefreshDelegate,UITextFieldDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    @IBOutlet weak var categoryTextField: UITextField!
+    
+    
+    @IBOutlet weak var timeTextfield: UITextField!
     
     @IBOutlet weak var reportDangerImage: UIImageView!
     
@@ -28,8 +32,47 @@ class ReportList: UIViewController,UITableViewDelegate,UITableViewDataSource{
     var syncCompleted:Bool=false
     var reportList:NSMutableArray = []
     
+    var tmpList:NSMutableArray = []
+
+    var categorySet:NSArray = ["All categories","Animals",
+                             "Weather",
+                             "Fire",
+                             "Flood",
+                             "RoadConditions",
+                             "WildThreat",
+                             "Other"]
+    var timeSet = ["Time ascending","Time descending"]
+
+    var categoryPicker = UIPickerView()
+    var timePicker = UIPickerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+
+        
+        categoryTextField.text = "All categories"
+        timeTextfield.text = "Time descending"
+        
+        categoryPicker.tag  = 1
+        categoryPicker.delegate = self
+        categoryPicker.dataSource = self
+        
+        categoryTextField.inputView = categoryPicker
+        categoryTextField.delegate = self
+        categoryTextField.tag = 1
+        
+        timePicker.tag  = 2
+        timePicker.delegate = self
+        timePicker.dataSource = self
+        
+        timeTextfield.inputView = timePicker
+        timeTextfield.delegate = self
+        timeTextfield.tag = 2
+        
+        
+         addDoneToPicker()
         
         addActionsToImage()
         
@@ -42,14 +85,102 @@ class ReportList: UIViewController,UITableViewDelegate,UITableViewDataSource{
         tableView.tableFooterView = UIView()
         tableView.rowHeight = 90
 
+        //right bar item
+        let reloadItem = UIBarButtonItem(title: "Refresh", style: .Plain, target: self, action: #selector(refresh))
+
+        self.navigationItem.rightBarButtonItem = reloadItem
       //  tableView.registerClass(ReportListCell.self, forCellReuseIdentifier: "reportCell")
         let reportDB = ReportDB()
-        reportDB.downloadReportData(self.reportList,tableView:self.tableView)
+        reportDB.downloadReportData(self.reportList,tmpList: self.tmpList,tableView:self.tableView)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func refresh()
+    {   self.reportList.removeAllObjects()
+        self.tmpList.removeAllObjects()
+        let reportDB = ReportDB()
+        reportDB.downloadReportData(self.reportList,tmpList:self.tmpList,tableView:self.tableView)
+    }
+    
+    func addDoneToPicker()
+    {
+    
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ReportList.donePicker))
+        
+        toolBar.setItems([ spaceButton,cancelButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        categoryTextField.inputAccessoryView = toolBar
+        timeTextfield.inputAccessoryView = toolBar
+    }
+    
+    func donePicker(){
+        self.categoryTextField.resignFirstResponder()
+        self.timeTextfield.resignFirstResponder()
+
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+    {
+        return 1
+    }
+    
+    // returns the # of rows in each component..
+     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        var count:Int?
+        
+        if(pickerView.tag == 1){
+           count = categorySet.count
+        }
+        
+        if(pickerView.tag == 2){
+            count = timeSet.count
+        }
+        
+        return count!
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if(pickerView.tag == 1){
+            categoryTextField.text = categorySet[row] as? String
+        }
+        
+        if(pickerView.tag == 2){
+            timeTextfield.text = timeSet[row] 
+        }
+
+        
+    }
+    
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        var title:String?
+        
+        if(pickerView.tag == 1){
+            title =  categorySet[row] as? String
+        }
+        
+        if(pickerView.tag == 2 ){
+            title =  timeSet[row]
+        }
+        return title!
+
     }
     
     func addActionsToImage()
@@ -70,15 +201,121 @@ class ReportList: UIViewController,UITableViewDelegate,UITableViewDataSource{
         
         //navigate to add report view controller
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("addReport") as! AddReport
+        vc.refreshDelegate = self
         self.navigationController?.pushViewController(vc, animated: true)
         
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+        if (textField.tag == 1)
+        {
+            print(textField.text)
+            self.orderByCategory(textField.text!)
+            print(1)
+        }
+        
+        if (textField.tag == 2)
+        {
+            print(2)
+            self.orderByTimeDescending()
+        }
+        
+    }
+    func orderByCategory(category:String)
+    {
+        switch category {
+        case "All categories":
+            self.refresh()
+        case "Animals":
+            showBasedOnCategory("Animals")
+        case "Weather":
+            showBasedOnCategory("Weather")
+        case "Fire":
+            showBasedOnCategory("Fire")
+        case "Flood":
+            showBasedOnCategory("Flood")
+        case "RoadConditions":
+            showBasedOnCategory("RoadConditions")
+        case "WildThreat":
+            showBasedOnCategory("WildThreat")
+        case "Other":
+            showBasedOnCategory("Other")
+        default:
+            self.refresh()
+        }
+ 
+    }
+    
+    func showBasedOnCategory(category:String)
+    {
+        
+        self.reportList.removeAllObjects()
+        for item in self.tmpList{
+            self.reportList.addObject(item)
+        }
+        
+       // self.reportList.removeAllObjects()
+        for element in self.tmpList
+        {
+          
+                if let item = element as? Report
+                {
+                    print("test")
+                    let cat = item.reportCategory
+                    print (cat)
+                    if (cat != category)
+                    {
+                        
+                        self.reportList.removeObject(element)
+                    }
+
+            }
+           
+            
+    
+ 
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    
+    func orderByTimeDescending()
+    {
+        
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+        
+        for element in self.reportList
+        {
+            
+            if let item = element as? Report
+            {
+                let date = dateFormatter.dateFromString(item.reportTime!)
+                
+                item.compareDate = date
+                
+                self.reportList.removeObject(element)
+                self.reportList.addObject(item)
+                
+            }
+        }
+        
+        self.reportList.sort({ $0.compareDate!!.compare($1.compareDate!!) == .OrderedDescending })
+        
+        self.tableView.reloadData()
+
+    
     }
     
     
     
     func wildAnimalControl()
     {
-        
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("wildControl")
+        self.navigationController?.pushViewController(vc!, animated: true)
         
     }
     

@@ -1,0 +1,976 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "passTripParaDelegate"
+- "addChildViewDelegate"
+- "TripCategoryView"
+provides-nominal:
+- "P3Map20passTripParaDelegate"
+- "P3Map20addChildViewDelegate"
+- "C3Map16TripCategoryView"
+provides-member:
+- ["P3Map20passTripParaDelegate", ""]
+- ["P3Map20addChildViewDelegate", ""]
+- ["C3Map16TripCategoryView", ""]
+provides-dynamic-lookup:
+- "touchesEnded"
+- "touchesBegan"
+- "changeView"
+- "touchesMoved"
+- "updateTrip"
+- "loadViews"
+- "category"
+depends-top-level:
+- "UIViewController"
+- !private "-"
+- "TripCategoryView"
+- !private "UILabel"
+- !private "UIColor"
+- !private "UIStoryboard"
+- "updateTripParameterDelegate"
+- !private "CGRect"
+- !private "!="
+- !private "UIImage"
+- !private "UIFont"
+- "passTripParaDelegate"
+- "UIEvent"
+- !private "StringLiteralType"
+- !private "CategoryPopupView"
+- !private "UIImageView"
+- "addChildViewDelegate"
+- "UITouch"
+- "UIView"
+- "Set"
+- !private "/"
+- "String"
+depends-member:
+- !private ["Ps16AbsoluteValuable", "IntegerLiteralType"]
+- !private ["Ps16AbsoluteValuable", "Stride"]
+- !private ["Ps9AnyObject", "CGRect"]
+- !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UIFont"]
+- !private ["Ps9AnyObject", "UIImage"]
+- !private ["Ps9AnyObject", "UIImageView"]
+- !private ["Ps9AnyObject", "UILabel"]
+- !private ["Ps9AnyObject", "UIStoryboard"]
+- !private ["Ps9AnyObject", "addSubview"]
+- ["Ps9AnyObject", "category"]
+- ["Ps9AnyObject", "changeView"]
+- !private ["Ps9AnyObject", "contentMode"]
+- ["Ps9AnyObject", "delegate"]
+- !private ["Ps9AnyObject", "font"]
+- !private ["Ps9AnyObject", "image"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "instantiateViewControllerWithIdentifier"]
+- ["Ps9AnyObject", "loadViews"]
+- !private ["Ps9AnyObject", "locationInView"]
+- ["Ps9AnyObject", "passParaDelegate"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "textColor"]
+- ["Ps9AnyObject", "touchesBegan"]
+- ["Ps9AnyObject", "touchesEnded"]
+- ["Ps9AnyObject", "touchesMoved"]
+- ["Ps9AnyObject", "updateTrip"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "first"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps22BidirectionalIndexType", "Stride"]
+- !private ["Ps22BidirectionalIndexType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Stride"]
+- !private ["Ps21BitwiseOperationsType", "_DisallowMixedSignArithmetic"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["V12CoreGraphics7CGFloat", "IntegerLiteralType"]
+- !private ["V12CoreGraphics7CGFloat", "Stride"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["VSC6CGRect", "init"]
+- !private ["Ps11CVarArgType", "CGRect"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "Stride"]
+- !private ["Ps11CVarArgType", "UIColor"]
+- !private ["Ps11CVarArgType", "UIFont"]
+- !private ["Ps11CVarArgType", "UIImage"]
+- !private ["Ps11CVarArgType", "UIImageView"]
+- !private ["Ps11CVarArgType", "UILabel"]
+- !private ["Ps11CVarArgType", "UIStoryboard"]
+- !private ["Ps11CVarArgType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps11CVarArgType", "addSubview"]
+- ["Ps11CVarArgType", "category"]
+- ["Ps11CVarArgType", "changeView"]
+- !private ["Ps11CVarArgType", "contentMode"]
+- ["Ps11CVarArgType", "delegate"]
+- !private ["Ps11CVarArgType", "font"]
+- !private ["Ps11CVarArgType", "image"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "instantiateViewControllerWithIdentifier"]
+- ["Ps11CVarArgType", "loadViews"]
+- !private ["Ps11CVarArgType", "locationInView"]
+- ["Ps11CVarArgType", "passParaDelegate"]
+- !private ["Ps11CVarArgType", "text"]
+- !private ["Ps11CVarArgType", "textColor"]
+- ["Ps11CVarArgType", "touchesBegan"]
+- ["Ps11CVarArgType", "touchesEnded"]
+- ["Ps11CVarArgType", "touchesMoved"]
+- ["Ps11CVarArgType", "updateTrip"]
+- ["Ps11CVarArgType", ""]
+- !private ["C3Map17CategoryPopupView", "category"]
+- !private ["C3Map17CategoryPopupView", "delegate"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "first"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "Stride"]
+- !private ["Ps10Comparable", "_DisabledRangeIndex"]
+- !private ["Ps10Comparable", "_DisallowMixedSignArithmetic"]
+- !private ["Ps28CustomDebugStringConvertible", "CGRect"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "IntegerLiteralType"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "Stride"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UIFont"]
+- !private ["Ps28CustomDebugStringConvertible", "UIImage"]
+- !private ["Ps28CustomDebugStringConvertible", "UIImageView"]
+- !private ["Ps28CustomDebugStringConvertible", "UILabel"]
+- !private ["Ps28CustomDebugStringConvertible", "UIStoryboard"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "addSubview"]
+- ["Ps28CustomDebugStringConvertible", "category"]
+- ["Ps28CustomDebugStringConvertible", "changeView"]
+- !private ["Ps28CustomDebugStringConvertible", "contentMode"]
+- ["Ps28CustomDebugStringConvertible", "delegate"]
+- !private ["Ps28CustomDebugStringConvertible", "first"]
+- !private ["Ps28CustomDebugStringConvertible", "font"]
+- !private ["Ps28CustomDebugStringConvertible", "image"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "instantiateViewControllerWithIdentifier"]
+- ["Ps28CustomDebugStringConvertible", "loadViews"]
+- !private ["Ps28CustomDebugStringConvertible", "locationInView"]
+- ["Ps28CustomDebugStringConvertible", "passParaDelegate"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "textColor"]
+- ["Ps28CustomDebugStringConvertible", "touchesBegan"]
+- ["Ps28CustomDebugStringConvertible", "touchesEnded"]
+- ["Ps28CustomDebugStringConvertible", "touchesMoved"]
+- ["Ps28CustomDebugStringConvertible", "updateTrip"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "CGRect"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "Stride"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UIFont"]
+- !private ["Ps23CustomStringConvertible", "UIImage"]
+- !private ["Ps23CustomStringConvertible", "UIImageView"]
+- !private ["Ps23CustomStringConvertible", "UILabel"]
+- !private ["Ps23CustomStringConvertible", "UIStoryboard"]
+- !private ["Ps23CustomStringConvertible", "_DisallowMixedSignArithmetic"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addSubview"]
+- ["Ps23CustomStringConvertible", "category"]
+- ["Ps23CustomStringConvertible", "changeView"]
+- !private ["Ps23CustomStringConvertible", "contentMode"]
+- ["Ps23CustomStringConvertible", "delegate"]
+- !private ["Ps23CustomStringConvertible", "first"]
+- !private ["Ps23CustomStringConvertible", "font"]
+- !private ["Ps23CustomStringConvertible", "image"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "instantiateViewControllerWithIdentifier"]
+- ["Ps23CustomStringConvertible", "loadViews"]
+- !private ["Ps23CustomStringConvertible", "locationInView"]
+- ["Ps23CustomStringConvertible", "passParaDelegate"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "textColor"]
+- ["Ps23CustomStringConvertible", "touchesBegan"]
+- ["Ps23CustomStringConvertible", "touchesEnded"]
+- ["Ps23CustomStringConvertible", "touchesMoved"]
+- ["Ps23CustomStringConvertible", "updateTrip"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "IntegerLiteralType"]
+- !private ["Sd", "Stride"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "CGRect"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "Generator"]
+- !private ["Ps9Equatable", "Index"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "ScaleAspectFit"]
+- !private ["Ps9Equatable", "Stride"]
+- !private ["Ps9Equatable", "SubSequence"]
+- !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UIFont"]
+- !private ["Ps9Equatable", "UIImage"]
+- !private ["Ps9Equatable", "UIImageView"]
+- !private ["Ps9Equatable", "UILabel"]
+- !private ["Ps9Equatable", "UIStoryboard"]
+- !private ["Ps9Equatable", "_DisabledRangeIndex"]
+- !private ["Ps9Equatable", "_DisallowMixedSignArithmetic"]
+- !private ["Ps9Equatable", "_Element"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addSubview"]
+- ["Ps9Equatable", "category"]
+- ["Ps9Equatable", "changeView"]
+- !private ["Ps9Equatable", "contentMode"]
+- ["Ps9Equatable", "delegate"]
+- !private ["Ps9Equatable", "first"]
+- !private ["Ps9Equatable", "font"]
+- !private ["Ps9Equatable", "image"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "instantiateViewControllerWithIdentifier"]
+- ["Ps9Equatable", "loadViews"]
+- !private ["Ps9Equatable", "locationInView"]
+- ["Ps9Equatable", "passParaDelegate"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "textColor"]
+- ["Ps9Equatable", "touchesBegan"]
+- ["Ps9Equatable", "touchesEnded"]
+- ["Ps9Equatable", "touchesMoved"]
+- ["Ps9Equatable", "updateTrip"]
+- ["Ps9Equatable", ""]
+- !private ["Sf", "Stride"]
+- !private ["Sf", "deinit"]
+- !private ["Ps23FloatLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps23FloatLiteralConvertible", "Stride"]
+- !private ["Ps17FloatingPointType", "IntegerLiteralType"]
+- !private ["Ps17FloatingPointType", "Stride"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps16ForwardIndexType", "Stride"]
+- !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
+- !private ["Ps16ForwardIndexType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "CGRect"]
+- !private ["Ps8Hashable", "Generator"]
+- !private ["Ps8Hashable", "Index"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "ScaleAspectFit"]
+- !private ["Ps8Hashable", "Stride"]
+- !private ["Ps8Hashable", "SubSequence"]
+- !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UIFont"]
+- !private ["Ps8Hashable", "UIImage"]
+- !private ["Ps8Hashable", "UIImageView"]
+- !private ["Ps8Hashable", "UILabel"]
+- !private ["Ps8Hashable", "UIStoryboard"]
+- !private ["Ps8Hashable", "_DisallowMixedSignArithmetic"]
+- !private ["Ps8Hashable", "_Element"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addSubview"]
+- ["Ps8Hashable", "category"]
+- ["Ps8Hashable", "changeView"]
+- !private ["Ps8Hashable", "contentMode"]
+- ["Ps8Hashable", "delegate"]
+- !private ["Ps8Hashable", "first"]
+- !private ["Ps8Hashable", "font"]
+- !private ["Ps8Hashable", "image"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "instantiateViewControllerWithIdentifier"]
+- ["Ps8Hashable", "loadViews"]
+- !private ["Ps8Hashable", "locationInView"]
+- ["Ps8Hashable", "passParaDelegate"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "textColor"]
+- ["Ps8Hashable", "touchesBegan"]
+- ["Ps8Hashable", "touchesEnded"]
+- ["Ps8Hashable", "touchesMoved"]
+- ["Ps8Hashable", "updateTrip"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "first"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "Stride"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "Stride"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "Stride"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "Stride"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "Stride"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "Stride"]
+- !private ["Ps21IntegerArithmeticType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Stride"]
+- !private ["Ps25IntegerLiteralConvertible", "_DisallowMixedSignArithmetic"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Stride"]
+- !private ["Ps11IntegerType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Stride"]
+- !private ["PSo8NSCoding", "CGRect"]
+- !private ["PSo8NSCoding", "UIColor"]
+- !private ["PSo8NSCoding", "UIFont"]
+- !private ["PSo8NSCoding", "UIImage"]
+- !private ["PSo8NSCoding", "UIImageView"]
+- !private ["PSo8NSCoding", "UILabel"]
+- !private ["PSo8NSCoding", "UIStoryboard"]
+- !private ["PSo8NSCoding", "addSubview"]
+- ["PSo8NSCoding", "category"]
+- ["PSo8NSCoding", "changeView"]
+- !private ["PSo8NSCoding", "contentMode"]
+- ["PSo8NSCoding", "delegate"]
+- !private ["PSo8NSCoding", "font"]
+- !private ["PSo8NSCoding", "image"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "loadViews"]
+- ["PSo8NSCoding", "passParaDelegate"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "textColor"]
+- ["PSo8NSCoding", "touchesBegan"]
+- ["PSo8NSCoding", "touchesEnded"]
+- ["PSo8NSCoding", "touchesMoved"]
+- ["PSo8NSCoding", "updateTrip"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "category"]
+- !private ["PSo26NSExtensionRequestHandling", "delegate"]
+- !private ["CSo8NSObject", "CGRect"]
+- !private ["CSo8NSObject", "CategoryPopupView"]
+- ["CSo8NSObject", "Set"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UIColor"]
+- ["CSo8NSObject", "UIEvent"]
+- !private ["CSo8NSObject", "UIFont"]
+- !private ["CSo8NSObject", "UIImage"]
+- !private ["CSo8NSObject", "UIImageView"]
+- !private ["CSo8NSObject", "UILabel"]
+- !private ["CSo8NSObject", "UIStoryboard"]
+- ["CSo8NSObject", "UITouch"]
+- ["CSo8NSObject", "addChildViewDelegate"]
+- !private ["CSo8NSObject", "addSubview"]
+- ["CSo8NSObject", "category"]
+- ["CSo8NSObject", "changeView"]
+- !private ["CSo8NSObject", "contentMode"]
+- ["CSo8NSObject", "delegate"]
+- !private ["CSo8NSObject", "font"]
+- !private ["CSo8NSObject", "image"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "instantiateViewControllerWithIdentifier"]
+- ["CSo8NSObject", "loadViews"]
+- !private ["CSo8NSObject", "locationInView"]
+- ["CSo8NSObject", "passParaDelegate"]
+- ["CSo8NSObject", "passTripParaDelegate"]
+- !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "textColor"]
+- ["CSo8NSObject", "touchesBegan"]
+- ["CSo8NSObject", "touchesEnded"]
+- ["CSo8NSObject", "touchesMoved"]
+- ["CSo8NSObject", "updateTrip"]
+- !private ["PSo16NSObjectProtocol", "CGRect"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UIFont"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
+- !private ["PSo16NSObjectProtocol", "UIImageView"]
+- !private ["PSo16NSObjectProtocol", "UILabel"]
+- !private ["PSo16NSObjectProtocol", "UIStoryboard"]
+- !private ["PSo16NSObjectProtocol", "addSubview"]
+- ["PSo16NSObjectProtocol", "category"]
+- ["PSo16NSObjectProtocol", "changeView"]
+- !private ["PSo16NSObjectProtocol", "contentMode"]
+- ["PSo16NSObjectProtocol", "delegate"]
+- !private ["PSo16NSObjectProtocol", "font"]
+- !private ["PSo16NSObjectProtocol", "image"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "instantiateViewControllerWithIdentifier"]
+- ["PSo16NSObjectProtocol", "loadViews"]
+- !private ["PSo16NSObjectProtocol", "locationInView"]
+- ["PSo16NSObjectProtocol", "passParaDelegate"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "textColor"]
+- ["PSo16NSObjectProtocol", "touchesBegan"]
+- ["PSo16NSObjectProtocol", "touchesEnded"]
+- ["PSo16NSObjectProtocol", "touchesMoved"]
+- ["PSo16NSObjectProtocol", "updateTrip"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps21RandomAccessIndexType", "Stride"]
+- !private ["Ps21RandomAccessIndexType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps16RawRepresentable", "ScaleAspectFit"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "first"]
+- !private ["Vs3Set", "Generator"]
+- !private ["Vs3Set", "Index"]
+- !private ["Vs3Set", "SubSequence"]
+- !private ["Vs3Set", "_Element"]
+- !private ["Vs3Set", "first"]
+- !private ["Vs12SetGenerator", "Element"]
+- !private ["Vs8SetIndex", "Distance"]
+- !private ["Vs8SetIndex", "_DisabledRangeIndex"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps17SignedIntegerType", "Stride"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Stride"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "Stride"]
+- !private ["Ps10Strideable", "_DisallowMixedSignArithmetic"]
+- !private ["C3Map16TripCategoryView", "CGRect"]
+- !private ["C3Map16TripCategoryView", "CategoryPopupView"]
+- ["C3Map16TripCategoryView", "Set"]
+- ["C3Map16TripCategoryView", "String"]
+- !private ["C3Map16TripCategoryView", "UIColor"]
+- ["C3Map16TripCategoryView", "UIEvent"]
+- !private ["C3Map16TripCategoryView", "UIFont"]
+- !private ["C3Map16TripCategoryView", "UIImage"]
+- !private ["C3Map16TripCategoryView", "UIImageView"]
+- !private ["C3Map16TripCategoryView", "UILabel"]
+- !private ["C3Map16TripCategoryView", "UIStoryboard"]
+- ["C3Map16TripCategoryView", "UITouch"]
+- ["C3Map16TripCategoryView", "addChildViewDelegate"]
+- !private ["C3Map16TripCategoryView", "addSubview"]
+- ["C3Map16TripCategoryView", "category"]
+- ["C3Map16TripCategoryView", "changeView"]
+- ["C3Map16TripCategoryView", "deinit"]
+- ["C3Map16TripCategoryView", "delegate"]
+- ["C3Map16TripCategoryView", "init"]
+- ["C3Map16TripCategoryView", "loadViews"]
+- ["C3Map16TripCategoryView", "passParaDelegate"]
+- ["C3Map16TripCategoryView", "passTripParaDelegate"]
+- ["C3Map16TripCategoryView", "touchesBegan"]
+- ["C3Map16TripCategoryView", "touchesEnded"]
+- ["C3Map16TripCategoryView", "touchesMoved"]
+- ["C3Map16TripCategoryView", "updateTrip"]
+- !private ["PSo29UIAccessibilityIdentification", "CGRect"]
+- !private ["PSo29UIAccessibilityIdentification", "UIColor"]
+- !private ["PSo29UIAccessibilityIdentification", "UIFont"]
+- !private ["PSo29UIAccessibilityIdentification", "UIImage"]
+- !private ["PSo29UIAccessibilityIdentification", "UIImageView"]
+- !private ["PSo29UIAccessibilityIdentification", "UILabel"]
+- !private ["PSo29UIAccessibilityIdentification", "UIStoryboard"]
+- !private ["PSo29UIAccessibilityIdentification", "addSubview"]
+- ["PSo29UIAccessibilityIdentification", "category"]
+- ["PSo29UIAccessibilityIdentification", "changeView"]
+- !private ["PSo29UIAccessibilityIdentification", "contentMode"]
+- ["PSo29UIAccessibilityIdentification", "delegate"]
+- !private ["PSo29UIAccessibilityIdentification", "font"]
+- !private ["PSo29UIAccessibilityIdentification", "image"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "loadViews"]
+- ["PSo29UIAccessibilityIdentification", "passParaDelegate"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo29UIAccessibilityIdentification", "textColor"]
+- ["PSo29UIAccessibilityIdentification", "touchesBegan"]
+- ["PSo29UIAccessibilityIdentification", "touchesEnded"]
+- ["PSo29UIAccessibilityIdentification", "touchesMoved"]
+- ["PSo29UIAccessibilityIdentification", "updateTrip"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- !private ["PSo12UIAppearance", "CGRect"]
+- !private ["PSo12UIAppearance", "UIColor"]
+- !private ["PSo12UIAppearance", "UIFont"]
+- !private ["PSo12UIAppearance", "UIImage"]
+- !private ["PSo12UIAppearance", "UIImageView"]
+- !private ["PSo12UIAppearance", "UILabel"]
+- !private ["PSo12UIAppearance", "UIStoryboard"]
+- !private ["PSo12UIAppearance", "addSubview"]
+- ["PSo12UIAppearance", "category"]
+- ["PSo12UIAppearance", "changeView"]
+- !private ["PSo12UIAppearance", "contentMode"]
+- ["PSo12UIAppearance", "delegate"]
+- !private ["PSo12UIAppearance", "font"]
+- !private ["PSo12UIAppearance", "image"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "loadViews"]
+- ["PSo12UIAppearance", "passParaDelegate"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo12UIAppearance", "textColor"]
+- ["PSo12UIAppearance", "touchesBegan"]
+- ["PSo12UIAppearance", "touchesEnded"]
+- ["PSo12UIAppearance", "touchesMoved"]
+- ["PSo12UIAppearance", "updateTrip"]
+- ["PSo12UIAppearance", ""]
+- !private ["PSo21UIAppearanceContainer", "CGRect"]
+- !private ["PSo21UIAppearanceContainer", "UIColor"]
+- !private ["PSo21UIAppearanceContainer", "UIFont"]
+- !private ["PSo21UIAppearanceContainer", "UIImage"]
+- !private ["PSo21UIAppearanceContainer", "UIImageView"]
+- !private ["PSo21UIAppearanceContainer", "UILabel"]
+- !private ["PSo21UIAppearanceContainer", "UIStoryboard"]
+- !private ["PSo21UIAppearanceContainer", "addSubview"]
+- ["PSo21UIAppearanceContainer", "category"]
+- ["PSo21UIAppearanceContainer", "changeView"]
+- !private ["PSo21UIAppearanceContainer", "contentMode"]
+- ["PSo21UIAppearanceContainer", "delegate"]
+- !private ["PSo21UIAppearanceContainer", "font"]
+- !private ["PSo21UIAppearanceContainer", "image"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "loadViews"]
+- ["PSo21UIAppearanceContainer", "passParaDelegate"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "textColor"]
+- ["PSo21UIAppearanceContainer", "touchesBegan"]
+- ["PSo21UIAppearanceContainer", "touchesEnded"]
+- ["PSo21UIAppearanceContainer", "touchesMoved"]
+- ["PSo21UIAppearanceContainer", "updateTrip"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo7UIColor", "init"]
+- !private ["PSo18UIContentContainer", "category"]
+- !private ["PSo18UIContentContainer", "delegate"]
+- !private ["PSo17UICoordinateSpace", "CGRect"]
+- !private ["PSo17UICoordinateSpace", "UIColor"]
+- !private ["PSo17UICoordinateSpace", "UIFont"]
+- !private ["PSo17UICoordinateSpace", "UIImage"]
+- !private ["PSo17UICoordinateSpace", "UIImageView"]
+- !private ["PSo17UICoordinateSpace", "UILabel"]
+- !private ["PSo17UICoordinateSpace", "UIStoryboard"]
+- !private ["PSo17UICoordinateSpace", "addSubview"]
+- ["PSo17UICoordinateSpace", "category"]
+- ["PSo17UICoordinateSpace", "changeView"]
+- !private ["PSo17UICoordinateSpace", "contentMode"]
+- ["PSo17UICoordinateSpace", "delegate"]
+- !private ["PSo17UICoordinateSpace", "font"]
+- !private ["PSo17UICoordinateSpace", "image"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "loadViews"]
+- ["PSo17UICoordinateSpace", "passParaDelegate"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo17UICoordinateSpace", "textColor"]
+- ["PSo17UICoordinateSpace", "touchesBegan"]
+- ["PSo17UICoordinateSpace", "touchesEnded"]
+- ["PSo17UICoordinateSpace", "touchesMoved"]
+- ["PSo17UICoordinateSpace", "updateTrip"]
+- ["PSo17UICoordinateSpace", ""]
+- !private ["PSo13UIDynamicItem", "CGRect"]
+- !private ["PSo13UIDynamicItem", "UIColor"]
+- !private ["PSo13UIDynamicItem", "UIFont"]
+- !private ["PSo13UIDynamicItem", "UIImage"]
+- !private ["PSo13UIDynamicItem", "UIImageView"]
+- !private ["PSo13UIDynamicItem", "UILabel"]
+- !private ["PSo13UIDynamicItem", "UIStoryboard"]
+- !private ["PSo13UIDynamicItem", "addSubview"]
+- ["PSo13UIDynamicItem", "category"]
+- ["PSo13UIDynamicItem", "changeView"]
+- !private ["PSo13UIDynamicItem", "contentMode"]
+- ["PSo13UIDynamicItem", "delegate"]
+- !private ["PSo13UIDynamicItem", "font"]
+- !private ["PSo13UIDynamicItem", "image"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "loadViews"]
+- ["PSo13UIDynamicItem", "passParaDelegate"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo13UIDynamicItem", "textColor"]
+- ["PSo13UIDynamicItem", "touchesBegan"]
+- ["PSo13UIDynamicItem", "touchesEnded"]
+- ["PSo13UIDynamicItem", "touchesMoved"]
+- ["PSo13UIDynamicItem", "updateTrip"]
+- ["PSo13UIDynamicItem", ""]
+- !private ["PSo18UIFocusEnvironment", "CGRect"]
+- !private ["PSo18UIFocusEnvironment", "UIColor"]
+- !private ["PSo18UIFocusEnvironment", "UIFont"]
+- !private ["PSo18UIFocusEnvironment", "UIImage"]
+- !private ["PSo18UIFocusEnvironment", "UIImageView"]
+- !private ["PSo18UIFocusEnvironment", "UILabel"]
+- !private ["PSo18UIFocusEnvironment", "UIStoryboard"]
+- !private ["PSo18UIFocusEnvironment", "addSubview"]
+- ["PSo18UIFocusEnvironment", "category"]
+- ["PSo18UIFocusEnvironment", "changeView"]
+- !private ["PSo18UIFocusEnvironment", "contentMode"]
+- ["PSo18UIFocusEnvironment", "delegate"]
+- !private ["PSo18UIFocusEnvironment", "font"]
+- !private ["PSo18UIFocusEnvironment", "image"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "loadViews"]
+- ["PSo18UIFocusEnvironment", "passParaDelegate"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "textColor"]
+- ["PSo18UIFocusEnvironment", "touchesBegan"]
+- ["PSo18UIFocusEnvironment", "touchesEnded"]
+- ["PSo18UIFocusEnvironment", "touchesMoved"]
+- ["PSo18UIFocusEnvironment", "updateTrip"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo6UIFont", "init"]
+- !private ["CSo7UIImage", "init"]
+- !private ["CSo11UIImageView", "contentMode"]
+- !private ["CSo11UIImageView", "image"]
+- !private ["CSo11UIImageView", "init"]
+- !private ["CSo7UILabel", "font"]
+- !private ["CSo7UILabel", "init"]
+- !private ["CSo7UILabel", "text"]
+- !private ["CSo7UILabel", "textColor"]
+- !private ["CSo11UIResponder", "CGRect"]
+- !private ["CSo11UIResponder", "CategoryPopupView"]
+- ["CSo11UIResponder", "Set"]
+- ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "UIColor"]
+- ["CSo11UIResponder", "UIEvent"]
+- !private ["CSo11UIResponder", "UIFont"]
+- !private ["CSo11UIResponder", "UIImage"]
+- !private ["CSo11UIResponder", "UIImageView"]
+- !private ["CSo11UIResponder", "UILabel"]
+- !private ["CSo11UIResponder", "UIStoryboard"]
+- ["CSo11UIResponder", "UITouch"]
+- ["CSo11UIResponder", "addChildViewDelegate"]
+- !private ["CSo11UIResponder", "addSubview"]
+- ["CSo11UIResponder", "category"]
+- ["CSo11UIResponder", "changeView"]
+- !private ["CSo11UIResponder", "contentMode"]
+- ["CSo11UIResponder", "delegate"]
+- !private ["CSo11UIResponder", "font"]
+- !private ["CSo11UIResponder", "image"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "loadViews"]
+- ["CSo11UIResponder", "passParaDelegate"]
+- ["CSo11UIResponder", "passTripParaDelegate"]
+- !private ["CSo11UIResponder", "text"]
+- !private ["CSo11UIResponder", "textColor"]
+- ["CSo11UIResponder", "touchesBegan"]
+- ["CSo11UIResponder", "touchesEnded"]
+- ["CSo11UIResponder", "touchesMoved"]
+- ["CSo11UIResponder", "updateTrip"]
+- !private ["PSo16UIStateRestoring", "category"]
+- !private ["PSo16UIStateRestoring", "delegate"]
+- !private ["CSo12UIStoryboard", "init"]
+- !private ["CSo12UIStoryboard", "instantiateViewControllerWithIdentifier"]
+- !private ["CSo7UITouch", "locationInView"]
+- !private ["PSo18UITraitEnvironment", "CGRect"]
+- !private ["PSo18UITraitEnvironment", "UIColor"]
+- !private ["PSo18UITraitEnvironment", "UIFont"]
+- !private ["PSo18UITraitEnvironment", "UIImage"]
+- !private ["PSo18UITraitEnvironment", "UIImageView"]
+- !private ["PSo18UITraitEnvironment", "UILabel"]
+- !private ["PSo18UITraitEnvironment", "UIStoryboard"]
+- !private ["PSo18UITraitEnvironment", "addSubview"]
+- ["PSo18UITraitEnvironment", "category"]
+- ["PSo18UITraitEnvironment", "changeView"]
+- !private ["PSo18UITraitEnvironment", "contentMode"]
+- ["PSo18UITraitEnvironment", "delegate"]
+- !private ["PSo18UITraitEnvironment", "font"]
+- !private ["PSo18UITraitEnvironment", "image"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "loadViews"]
+- ["PSo18UITraitEnvironment", "passParaDelegate"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "textColor"]
+- ["PSo18UITraitEnvironment", "touchesBegan"]
+- ["PSo18UITraitEnvironment", "touchesEnded"]
+- ["PSo18UITraitEnvironment", "touchesMoved"]
+- ["PSo18UITraitEnvironment", "updateTrip"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "CGRect"]
+- !private ["CSo6UIView", "CategoryPopupView"]
+- ["CSo6UIView", "Set"]
+- ["CSo6UIView", "String"]
+- !private ["CSo6UIView", "UIColor"]
+- ["CSo6UIView", "UIEvent"]
+- !private ["CSo6UIView", "UIFont"]
+- !private ["CSo6UIView", "UIImage"]
+- !private ["CSo6UIView", "UIImageView"]
+- !private ["CSo6UIView", "UILabel"]
+- !private ["CSo6UIView", "UIStoryboard"]
+- ["CSo6UIView", "UITouch"]
+- ["CSo6UIView", "addChildViewDelegate"]
+- !private ["CSo6UIView", "addSubview"]
+- ["CSo6UIView", "category"]
+- ["CSo6UIView", "changeView"]
+- !private ["CSo6UIView", "contentMode"]
+- ["CSo6UIView", "delegate"]
+- !private ["CSo6UIView", "font"]
+- !private ["CSo6UIView", "image"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "loadViews"]
+- ["CSo6UIView", "passParaDelegate"]
+- ["CSo6UIView", "passTripParaDelegate"]
+- !private ["CSo6UIView", "text"]
+- !private ["CSo6UIView", "textColor"]
+- ["CSo6UIView", "touchesBegan"]
+- ["CSo6UIView", "touchesEnded"]
+- ["CSo6UIView", "touchesMoved"]
+- ["CSo6UIView", "updateTrip"]
+- ["CSo6UIView", ""]
+- !private ["OSC17UIViewContentMode", "ScaleAspectFit"]
+- !private ["CSo16UIViewController", "category"]
+- !private ["CSo16UIViewController", "deinit"]
+- !private ["CSo16UIViewController", "delegate"]
+- !private ["Su", "IntegerLiteralType"]
+- !private ["Su", "Stride"]
+- !private ["Su", "_DisallowMixedSignArithmetic"]
+- !private ["Vs6UInt16", "IntegerLiteralType"]
+- !private ["Vs6UInt16", "Stride"]
+- !private ["Vs6UInt16", "_DisallowMixedSignArithmetic"]
+- !private ["Vs6UInt32", "IntegerLiteralType"]
+- !private ["Vs6UInt32", "Stride"]
+- !private ["Vs6UInt32", "_DisallowMixedSignArithmetic"]
+- !private ["Vs6UInt64", "IntegerLiteralType"]
+- !private ["Vs6UInt64", "Stride"]
+- !private ["Vs6UInt64", "_DisallowMixedSignArithmetic"]
+- !private ["Vs5UInt8", "IntegerLiteralType"]
+- !private ["Vs5UInt8", "Stride"]
+- !private ["Vs5UInt8", "_DisallowMixedSignArithmetic"]
+- !private ["Ps19UnsignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps19UnsignedIntegerType", "Stride"]
+- !private ["Ps19UnsignedIntegerType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps31_BuiltinFloatLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps31_BuiltinFloatLiteralConvertible", "Stride"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Stride"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisallowMixedSignArithmetic"]
+- !private ["Ps19_CVarArgAlignedType", "IntegerLiteralType"]
+- !private ["Ps19_CVarArgAlignedType", "Stride"]
+- !private ["Ps19_CVarArgAlignedType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps22_CVarArgPassedAsDouble", "IntegerLiteralType"]
+- !private ["Ps22_CVarArgPassedAsDouble", "Stride"]
+- !private ["Ps24_ColorLiteralConvertible", "init"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "IntegerLiteralType"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "Stride"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "_DisallowMixedSignArithmetic"]
+- !private ["Ps24_ImageLiteralConvertible", "init"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps14_Incrementable", "Stride"]
+- !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
+- !private ["Ps14_Incrementable", "_DisallowMixedSignArithmetic"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Stride"]
+- !private ["Ps22_IntegerArithmeticType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Stride"]
+- !private ["Ps12_IntegerType", "_DisallowMixedSignArithmetic"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Stride"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_DisallowMixedSignArithmetic"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "first"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps22_RandomAccessAmbiguity", "Stride"]
+- !private ["Ps22_RandomAccessAmbiguity", "_DisallowMixedSignArithmetic"]
+- !private ["Ps12_Reflectable", "CGRect"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "Stride"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "UIColor"]
+- !private ["Ps12_Reflectable", "UIFont"]
+- !private ["Ps12_Reflectable", "UIImage"]
+- !private ["Ps12_Reflectable", "UIImageView"]
+- !private ["Ps12_Reflectable", "UILabel"]
+- !private ["Ps12_Reflectable", "UIStoryboard"]
+- !private ["Ps12_Reflectable", "_DisallowMixedSignArithmetic"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "addSubview"]
+- ["Ps12_Reflectable", "category"]
+- ["Ps12_Reflectable", "changeView"]
+- !private ["Ps12_Reflectable", "contentMode"]
+- ["Ps12_Reflectable", "delegate"]
+- !private ["Ps12_Reflectable", "first"]
+- !private ["Ps12_Reflectable", "font"]
+- !private ["Ps12_Reflectable", "image"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "loadViews"]
+- ["Ps12_Reflectable", "passParaDelegate"]
+- !private ["Ps12_Reflectable", "text"]
+- !private ["Ps12_Reflectable", "textColor"]
+- ["Ps12_Reflectable", "touchesBegan"]
+- ["Ps12_Reflectable", "touchesEnded"]
+- ["Ps12_Reflectable", "touchesMoved"]
+- ["Ps12_Reflectable", "updateTrip"]
+- ["Ps12_Reflectable", ""]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps18_SignedIntegerType", "Stride"]
+- !private ["Ps18_StringElementType", "IntegerLiteralType"]
+- !private ["Ps18_StringElementType", "Stride"]
+- !private ["Ps18_StringElementType", "_DisallowMixedSignArithmetic"]
+- ["P3Map20addChildViewDelegate", "String"]
+- ["P3Map20addChildViewDelegate", "UIViewController"]
+- ["P3Map20addChildViewDelegate", "addChildView"]
+- ["P3Map20passTripParaDelegate", "String"]
+- ["P3Map20passTripParaDelegate", "passTripPara"]
+- !private ["P3Map27updateTripParameterDelegate", "CGRect"]
+- !private ["P3Map27updateTripParameterDelegate", "UIColor"]
+- !private ["P3Map27updateTripParameterDelegate", "UIFont"]
+- !private ["P3Map27updateTripParameterDelegate", "UIImage"]
+- !private ["P3Map27updateTripParameterDelegate", "UIImageView"]
+- !private ["P3Map27updateTripParameterDelegate", "UILabel"]
+- !private ["P3Map27updateTripParameterDelegate", "UIStoryboard"]
+- !private ["P3Map27updateTripParameterDelegate", "addSubview"]
+- !private ["P3Map27updateTripParameterDelegate", "category"]
+- !private ["P3Map27updateTripParameterDelegate", "delegate"]
+- !private ["P3Map27updateTripParameterDelegate", "loadViews"]
+- !private ["P3Map27updateTripParameterDelegate", "passParaDelegate"]
+- ["P3Map27updateTripParameterDelegate", "updateTrip"]
+- ["P3Map27updateTripParameterDelegate", ""]
+depends-nominal:
+- !private "Ps16AbsoluteValuable"
+- "Ps9AnyObject"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "V12CoreGraphics7CGFloat"
+- !private "VSC6CGRect"
+- "Ps11CVarArgType"
+- !private "C3Map17CategoryPopupView"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Sf"
+- !private "Ps23FloatLiteralConvertible"
+- !private "Ps17FloatingPointType"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "Ps14MirrorPathType"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps16RawRepresentable"
+- !private "Ps12SequenceType"
+- !private "Vs3Set"
+- !private "Vs12SetGenerator"
+- !private "Vs8SetIndex"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Vs5Slice"
+- !private "Ps10Strideable"
+- "C3Map16TripCategoryView"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo7UIColor"
+- !private "PSo18UIContentContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo6UIFont"
+- !private "CSo7UIImage"
+- !private "CSo11UIImageView"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- !private "PSo16UIStateRestoring"
+- !private "CSo12UIStoryboard"
+- !private "CSo7UITouch"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- !private "OSC17UIViewContentMode"
+- !private "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Ps19UnsignedIntegerType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps31_BuiltinFloatLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps19_CVarArgAlignedType"
+- !private "Ps22_CVarArgPassedAsDouble"
+- !private "Ps24_ColorLiteralConvertible"
+- !private "Ps28_DisallowMixedSignArithmetic"
+- !private "Ps24_ImageLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+- !private "Ps18_StringElementType"
+- "P3Map20addChildViewDelegate"
+- "P3Map20passTripParaDelegate"
+- "P3Map27updateTripParameterDelegate"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AssetsLibrary.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIREmailPasswordAuthProvider.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yukaima/Desktop/IE-Projects/Map/Pods/Firebase/Analytics/Sources/Firebase.h"
+interface-hash: "67b28c199ae0732b88359e6af1f5baf1"

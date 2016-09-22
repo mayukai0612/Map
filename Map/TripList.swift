@@ -47,11 +47,10 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
 //         self.navigationController?.navigationBar.shadowImage = UIImage()
 //        // Sets the translucent background color
 //         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
-        self.navigationController?.navigationBar.translucent = true
-
-        let navBarColor = UIColor(red: 55, green: 155, blue: 50)
-        self.navigationController?.navigationBar.backgroundColor = navBarColor
-        self.navigationController?.navigationBar.tintColor = navBarColor
+       // self.navigationController?.navigationBar.translucent = true
+       // let navBarColor = UIColor(red: 55, green: 155, blue: 50)
+       // self.navigationController?.navigationBar.backgroundColor = navBarColor
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         //get userid
         userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")

@@ -9,6 +9,12 @@
 import UIKit
 import MapKit
 
+protocol RefreshDelegate
+{
+
+    func refresh()
+}
+
 class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,PassCategoryDelegate,CLLocationManagerDelegate {
 
 
@@ -51,8 +57,12 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
     
     let picker = UIImagePickerController()
 
+    var refreshDelegate:RefreshDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+   
 
         addColorToViewBoard()
         
@@ -99,7 +109,9 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
         // self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
 
-
+        
+        self.navigationItem.title = "New Danger"
+       // self.navigationController.co
     }
     
     override func didReceiveMemoryWarning() {
@@ -146,7 +158,7 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
         rightBarButtonItemOne.customView = btnName
         
         let rightBarButtonItemTwo = UIBarButtonItem(title: "Save", style: .Plain, target: self, action: #selector(save))
-        
+        rightBarButtonItemTwo.tintColor = UIColor.whiteColor()
         self.navigationItem.rightBarButtonItems = [rightBarButtonItemTwo,rightBarButtonItemOne]
     }
    
@@ -185,13 +197,15 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
         {
         //save report
             //get userid
-            let userid = Int(NSUserDefaults.standardUserDefaults().stringForKey("userid")!)
+            let userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")!
             //get time
             let date = NSDate()
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
-
-            let timeStamp = dateFormatter.stringFromDate(date)
+            
+            let dateformatter = NSDateFormatter()
+            dateformatter.dateFormat = "ddMMyyyyHH:mm:ss"
+            let timeStamp = dateformatter.stringFromDate(date)
             
             //save
             let reportCategory = categoryTextField.text
@@ -205,7 +219,7 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
             
             if(self.reportImageView.image != nil){
             let reportImageFileName = String(userid) + "_" + timeStamp + ".jpg" // need to be unique
-                let report  = Report(userid:"1",reportCat:reportCategory!,reportTitle:reportTitle!,reportContent:reportContent,reportTime:reportTime,reportLat:reportLat,reportLgt:reportLgt,reportAddress:reportAddress!,imageFileName:reportImageFileName)
+                let report  = Report(userid:userid,reportCat:reportCategory!,reportTitle:reportTitle!,reportContent:reportContent,reportTime:reportTime,reportLat:reportLat,reportLgt:reportLgt,reportAddress:reportAddress!,imageFileName:reportImageFileName)
             
             let reportDB = ReportDB()
                 
@@ -218,19 +232,18 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
             }
             else{
                 let reportImageFileName = ""
-                let report  = Report(userid:"1",reportCat:reportCategory!,reportTitle:reportTitle!,reportContent:reportContent,reportTime:reportTime,reportLat:reportLat,reportLgt:reportLgt,reportAddress:reportAddress!,imageFileName:reportImageFileName)
+                let report  = Report(userid:userid,reportCat:reportCategory!,reportTitle:reportTitle!,reportContent:reportContent,reportTime:reportTime,reportLat:reportLat,reportLgt:reportLgt,reportAddress:reportAddress!,imageFileName:reportImageFileName)
                 
                 let reportDB = ReportDB()
                 reportDB.saveReport(report,imageArray: [UIImage](),navigationController: self.navigationController!)
             }
-        
-//        //save image
-//            if(self.reportImageView.image != nil)
-//            {
-//               
-//                reportDB.saveReportImage(imageArray,report:report)
-//            }
             
+            
+            //dismiss and refresh the view
+            self.navigationController?.popViewControllerAnimated(true)
+            dispatch_async(dispatch_get_main_queue(), { 
+                self.refreshDelegate?.refresh()
+            })
             
         }
     }
@@ -454,12 +467,19 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
         
         doneToolbar.items = items
         doneToolbar.sizeToFit()
+   
+      
         
         self.titleTextField.inputAccessoryView = doneToolbar
         self.contentTextView.inputAccessoryView = doneToolbar
         self.locationTextField.inputAccessoryView = doneToolbar
         
+       
+
+        
     }
+    
+    func donePicker(){}
     
     func cacleButtonAction()
     {

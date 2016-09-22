@@ -194,7 +194,7 @@ class ReportDB: NSObject{
   
     //Download
     
-    func downloadReportData(reportsList:NSMutableArray,tableView:UITableView) {
+    func downloadReportData(reportsList:NSMutableArray,tmpList:NSMutableArray,tableView:UITableView) {
         let request = NSMutableURLRequest(URL: NSURL(string: "http://13.73.113.104/ReportDanger/downloadReport.php")!)
         request.HTTPMethod = "POST"
         
@@ -233,6 +233,7 @@ class ReportDB: NSObject{
                     let oneReport = Report(userid: userid, reportid:rid!,reportCat: cat, reportTitle: title, reportContent: content, reportTime: time, reportLat: lat, reportLgt: lgt, reportAddress: add, imageFileName: filename)
                     
                     reportsList.addObject(oneReport)
+                    tmpList.addObject(oneReport)
                     dispatch_async(dispatch_get_main_queue(), { 
                         tableView.reloadData()
                     })

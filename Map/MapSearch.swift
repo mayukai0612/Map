@@ -141,7 +141,7 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
 //        self.mapView = MKMapView(frame: mapViewFrame)
 //        self.mapView!.tag = 10
 //        self.view.addSubview(self.mapView!)
-//        
+////
 //        define navigation bar
         
         _ = UIApplication.sharedApplication().statusBarFrame.size.height
@@ -160,7 +160,7 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         let navBarColor = UIColor(red: 86, green: 171, blue: 59)
         self.navigationController?.navigationBar.backgroundColor = navBarColor
         self.navigationController?.navigationBar.tintColor = navBarColor
-
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
 //        define subviews on navbar
         
