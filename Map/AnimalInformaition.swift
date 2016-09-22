@@ -13,6 +13,7 @@ class AnimalInformation: NSObject {
     var title: String?
     var eventDate:String?
     var coordinate: CLLocationCoordinate2D?
+    var fileName: String?
     
     init(title:String,eventDate:String,coordinate:CLLocationCoordinate2D)
     {

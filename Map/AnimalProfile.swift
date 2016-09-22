@@ -25,19 +25,21 @@ class AnimalProfile: UIViewController {
     
     
     var animalName: String?
-    
+    let urlPrefix = "http://13.73.113.104/DangerousAnimals/Images/"
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.descTextView.userInteractionEnabled  = false
         self.loadProfile(animalName!)
+        
+       
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
+   // http://13.73.113.104/DangerousAnimals/Images/Bluebottle.jpg
     func loadViews(animalProfile:Profile)
     {
         
@@ -47,6 +49,34 @@ class AnimalProfile: UIViewController {
         self.descTextView.text = animalProfile.desc
     
     
+    }
+    
+    func downLoadImageWithUrl(url:NSURL,imageView:UIImageView)
+    {
+        print("000")
+        print(url)
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (responseData, responseUrl, error) -> Void in
+            // if responseData is not null...
+            if let data = responseData{
+                
+                let image = UIImage(data: data)
+                dispatch_async(dispatch_get_main_queue(), {
+                    imageView.image = image
+                })
+            }
+            // Check for error
+            if error != nil
+            {
+                print("error///////")
+                print(error?.description)
+                
+                return
+            }
+            
+            
+        }
+        // Run task
+        task.resume()
     }
     
     func loadProfile(animalName:String) {
@@ -85,12 +115,19 @@ class AnimalProfile: UIViewController {
                 let desc = profile["Description"]  as! String
                 let dangerLevel = profile["Level_of_Dangers"]as! String
                 let firstAid = profile["First_aid_info"]as! String
-
+                let imageFileName = profile["imageFileName"] as! String
                 
+                let urlString = self.urlPrefix  + imageFileName
+                let newString = urlString.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+                let url = NSURL(string: newString)
+
           let animalProfile = Profile(vName:vName,sName:sName,desc:desc,dangerLevel:dangerLevel,firstAid:firstAid)
                 
                     dispatch_async(dispatch_get_main_queue(), { 
                         self.loadViews(animalProfile)
+                        
+                        self.downLoadImageWithUrl(url!, imageView: self.animalImageView)
+
 
                     })
                

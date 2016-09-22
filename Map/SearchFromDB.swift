@@ -99,6 +99,7 @@ class SearchFromDB: NSObject, MKMapViewDelegate{
                         
                         let date = animalInfo["EventDate"]as?String
                         
+                        
                         let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lgt)
                         
                         let animal = AnimalInformation(

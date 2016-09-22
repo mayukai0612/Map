@@ -132,7 +132,6 @@ class animalListForLocationsView: UIViewController,UITableViewDelegate,UITableVi
          let animal: AnimalInformation = self.animalInfoArray![indexPath.row] as! AnimalInformation
         
         let animalName = animal.title
-        
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("animalProfile") as! AnimalProfile
         vc.animalName = animalName
         

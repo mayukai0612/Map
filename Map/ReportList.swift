@@ -217,8 +217,13 @@ class ReportList: UIViewController,UITableViewDelegate,UITableViewDataSource,UIP
         
         if (textField.tag == 2)
         {
-            print(2)
-            self.orderByTimeDescending()
+            if(textField.text == "Time ascending"){
+            self.orderByTimeAscending()
+            }
+            
+            if(textField.text == "Time descending"){
+                self.orderByTimeDescending()
+            }
         }
         
     }
@@ -281,6 +286,42 @@ class ReportList: UIViewController,UITableViewDelegate,UITableViewDataSource,UIP
     }
     
     
+    func orderByTimeAscending()
+    {
+        
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+        
+        for element in self.reportList
+        {
+            
+            if let item = element as? Report
+            {
+                let date = dateFormatter.dateFromString(item.reportTime!)
+                
+                item.compareDate = date
+                
+                self.reportList.removeObject(element)
+                self.reportList.addObject(item)
+                
+            }
+        }
+        
+     let result =    self.reportList.sort {
+            $0.compareDate!!.compare($1.compareDate!!) == NSComparisonResult.OrderedAscending
+        }
+        
+        reportList.removeAllObjects()
+            for v in result
+            {
+                self.reportList.addObject(v)
+            }
+        self.tableView.reloadData()
+        
+        
+    }
+    
     func orderByTimeDescending()
     {
         
@@ -303,11 +344,18 @@ class ReportList: UIViewController,UITableViewDelegate,UITableViewDataSource,UIP
             }
         }
         
-        self.reportList.sort({ $0.compareDate!!.compare($1.compareDate!!) == .OrderedDescending })
         
+        let result =    self.reportList.sort {
+            $0.compareDate!!.compare($1.compareDate!!) == NSComparisonResult.OrderedDescending
+        }
+        
+        reportList.removeAllObjects()
+        for v in result
+        {
+            self.reportList.addObject(v)
+        }
         self.tableView.reloadData()
 
-    
     }
     
     

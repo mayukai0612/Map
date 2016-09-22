@@ -744,11 +744,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/AnimalProfile.swift"
-            timestampString = "496104175.800679"
+            timestampString = "496217897.687822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -760,12 +760,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/AnimalProfile.swift"
-            timestampString = "496104175.800679"
+            timestampString = "496217897.687822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "loadProfile(_:)"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "loadViews(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -776,12 +776,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/AnimalProfile.swift"
-            timestampString = "496104175.800679"
+            timestampString = "496217897.687822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "loadProfile(_:)"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "loadViews(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -792,12 +792,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/AnimalProfile.swift"
-            timestampString = "496104175.800679"
+            timestampString = "496217897.687822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "loadProfile(_:)"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "downLoadImageWithUrl(_:imageView:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -808,12 +808,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/AnimalProfile.swift"
-            timestampString = "496104175.800679"
+            timestampString = "496217897.687822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "loadProfile(_:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "downLoadImageWithUrl(_:imageView:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -824,12 +824,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/AnimalProfile.swift"
-            timestampString = "496104175.800679"
+            timestampString = "496217897.687822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "loadProfile(_:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "downLoadImageWithUrl(_:imageView:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -840,12 +840,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/AnimalProfile.swift"
-            timestampString = "496104175.800679"
+            timestampString = "496217897.687822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "loadProfile(_:)"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "downLoadImageWithUrl(_:imageView:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1752,11 +1752,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
             <Locations>
@@ -1800,11 +1800,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1848,11 +1848,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "orderByCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1864,11 +1864,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "orderByCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1880,11 +1880,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "orderByCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1896,11 +1896,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "258"
-            endingLineNumber = "258"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1912,11 +1912,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1928,11 +1928,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1944,11 +1944,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1960,11 +1960,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1976,11 +1976,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "274"
-            endingLineNumber = "274"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1992,11 +1992,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2008,11 +2008,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "showBasedOnCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2024,12 +2024,220 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Map/ReportList.swift"
-            timestampString = "496214655.177298"
+            timestampString = "496215260.097367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "showBasedOnCategory(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/ReportList.swift"
+            timestampString = "496215260.097367"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/ReportList.swift"
+            timestampString = "496215404.182358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "orderByCategory(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/ReportList.swift"
+            timestampString = "496215412.652901"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "refresh()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/ReportList.swift"
+            timestampString = "496215817.291258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/SearchFromDB.swift"
+            timestampString = "496217976.028512"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "loadDataByLocation(_:coordinate:distacnce:time:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "animalListForLocationsView.swift"
+            timestampString = "496217993.839685"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/AnimalProfile.swift"
+            timestampString = "496218040.526807"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "loadProfile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/AnimalProfile.swift"
+            timestampString = "496218624.493503"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "loadProfile(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/AnimalProfile.swift"
+            timestampString = "496218624.493503"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "loadProfile(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Map.AnimalProfile.(loadProfile (Swift.String) -&gt; ()).(closure #1)"
+                  moduleName = "Map"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yukaima/Desktop/IE-Projects/Map/Map/AnimalProfile.swift"
+                  timestampString = "496219378.872021"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "4000">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Map.AnimalProfile.(loadProfile (Swift.String) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "Map"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yukaima/Desktop/IE-Projects/Map/Map/AnimalProfile.swift"
+                  timestampString = "496219378.872205"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/AnimalProfile.swift"
+            timestampString = "496218922.115589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "downLoadImageWithUrl(_:imageView:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Map/AnimalProfile.swift"
+            timestampString = "496218937.691914"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "downLoadImageWithUrl(_:imageView:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -76,7 +76,7 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
          getCurrentTime()
         
         //set palceholder for textview
-        contentTextView.text = "What's happened"
+        contentTextView.text = "What happened"
         contentTextView.textColor = UIColor.lightGrayColor()
         contentTextView.delegate = self
         
@@ -264,7 +264,7 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
     //check input
     func checkInput() -> Bool
     {   var validation = true
-        if(self.titleTextField.text?.trim() == "" || self.contentTextView.text == "What's happended")
+        if(self.titleTextField.text?.trim() == "" || self.contentTextView.text == "What happended")
         {
             validation = false
         }
@@ -446,7 +446,7 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
     //text view delegate method - end editing
     func textViewDidEndEditing(textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "What's happened"
+            textView.text = "What happened"
             textView.textColor = UIColor.lightGrayColor()
         }
     }
