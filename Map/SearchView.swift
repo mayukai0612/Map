@@ -25,7 +25,7 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
     
    
     
-    let data =  ["Box jellyfish","Honey bee","Centipedes","Blue-ringed octopus",
+    let data =  ["Honey bee","Centipedes","Southern Blue-ringed Octopus",
         "Bull shark","Tiger shark","East brown snake","Melbourne Trap-door Spider","Redback spider","Geographer cone snail","Tick","White-tailed spiders","Bull ants","Blue bottle","Common Death Adder","Red-bellied Black Snake","Yellow-bellied Sea Snake","Highland Copperhead","European Wasp","Fox","Hog Deer","Red Deer","Fallow Deer","Dingo","Rabbit","Brush-tailed Rock-wallaby","Swamp Wallaby","Trichosurus caninus","Common Brushtail Possum","Wombat"]
 
 
@@ -92,7 +92,7 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
         self.tableView = UITableView(frame: tableViewFrame, style: UITableViewStyle.Plain)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
-        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TableCell")
+        self.tableView!.registerClass(SearchViewCell.self, forCellReuseIdentifier: "searchViewCell")
         tableView?.tag = 100
         self.view.addSubview(self.tableView!)
         
@@ -158,19 +158,24 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TableCell")! as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("searchViewCell") as! SearchViewCell
+        
+    
+    
+     
         if(self.selectedSearchBar == "animalSearch")
         {
             if indexPath.row < filteredData.count{
-                cell.textLabel?.text = filteredData[indexPath.row]
+                cell.nameLabel?.text = filteredData[indexPath.row]
+                cell.addressLabel.text = ""
                 print(indexPath.row)
             }
         }
         else if(self.selectedSearchBar == "locationSearch" )
         {
             let selectedItem = matchingItems[indexPath.row].placemark
-            cell.textLabel?.text = selectedItem.name
-            cell.detailTextLabel?.text = parseAddress(selectedItem)
+            cell.nameLabel?.text = selectedItem.name
+            cell.addressLabel?.text = parseAddress(selectedItem)
         }
   
         return cell
@@ -204,7 +209,7 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
         else if(self.selectedSearchBar == "locationSearch" )
         {
             let selectedItem = matchingItems[indexPath.row].placemark
-            self.locationSearchBar?.text = self.parseAddress(selectedItem)
+            self.locationSearchBar?.text = self.parseAddress(selectedItem).trim()
             self.selectedLocation = selectedItem.coordinate
             print(self.parseAddress(selectedItem))
         }
@@ -255,7 +260,15 @@ class SearchView: UIViewController,UITableViewDelegate,UISearchBarDelegate,UITab
                 guard let response = response else {
                     return
                 }
-
+                
+                print(response.mapItems[0])
+                
+//                let resultPredicate = NSPredicate(format: "not name contains[c] %@","Ltd")
+//                
+//                let items: NSArray = response.mapItems
+//                let itemsWithoutBusinesses = items.filteredArrayUsingPredicate(resultPredicate) as! [MKMapItem]
+           //     self.matchingItems = itemsWithoutBusinesses
+                
                 self.matchingItems = response.mapItems
                 self.tableView!.reloadData()
             }

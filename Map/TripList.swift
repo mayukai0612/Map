@@ -9,22 +9,24 @@
 import UIKit
 
 class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addTripsDelegate,reloadTableDelegate,PassFileNamesDelegate{
-    @IBOutlet weak var createTripBtn: UIButton!
 
     @IBOutlet weak var tripTableView: UITableView!
     
-    @IBAction func addTripButton(sender: AnyObject) {
-
-        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("addTrip") as! AddTrip
-        vc.delegate = self
-        vc.editOrCreateFlag = "add"
-        vc.tripList = self.tripList
-       // vc.tripid = self.tripList.count + 1
-        self.navigationController!.pushViewController(vc, animated: true)
-
-        
-        
-    }
+    @IBOutlet weak var createTripImage: UIImageView!
+    
+    
+//    @IBAction func addTripButton(sender: AnyObject) {
+//
+//        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("addTrip") as! AddTrip
+//        vc.delegate = self
+//        vc.editOrCreateFlag = "add"
+//        vc.tripList = self.tripList
+//       // vc.tripid = self.tripList.count + 1
+//        self.navigationController!.pushViewController(vc, animated: true)
+//
+//        
+//        
+//    }
     
     var tripList = [Trip]()
     var userid:String?
@@ -38,10 +40,8 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
         tripTableView.tableFooterView = UIView()
         tripTableView.rowHeight = 90
 
-        //change button color
-        let btnColor = UIColor(red: 86, green: 171, blue: 59)
-        self.createTripBtn.setTitleColor(btnColor, forState: UIControlState.Normal)
-
+      
+        
 //         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
 //        // Sets shadow (line below the bar) to a blank image
 //         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -62,7 +62,11 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
         loadTrips.delegate = self
         loadTrips.loadTrips(userid!)
         
-
+        //add action to image
+        let tapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(TriplList.createTrip))
+        createTripImage.userInteractionEnabled = true
+        createTripImage.addGestureRecognizer(tapGestureRecognizer)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -105,6 +109,18 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
         
         return cell
         
+    }
+    
+    func createTrip()
+    {
+    
+        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("addTrip") as! AddTrip
+                vc.delegate = self
+                vc.editOrCreateFlag = "add"
+                vc.tripList = self.tripList
+               // vc.tripid = self.tripList.count + 1
+                self.navigationController!.pushViewController(vc, animated: true)
+    
     }
     
     //passFileNamesDelegate
@@ -205,6 +221,12 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
         }
 
      
+    }
+    
+    func setBackButton()
+    {
+      //  self.navigationController!.navigationBar.topItem!.title = "Back"
+        self.navigationItem.leftBarButtonItem?.title = "back"
     }
     
   

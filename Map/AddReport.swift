@@ -446,7 +446,7 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
     //text view delegate method - end editing
     func textViewDidEndEditing(textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "What happened"
+            textView.text = "Describe the danger.."
             textView.textColor = UIColor.lightGrayColor()
         }
     }
@@ -459,7 +459,7 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
         doneToolbar.barStyle = UIBarStyle.Default
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem = UIBarButtonItem(title: "Cancle", style: UIBarButtonItemStyle.Done, target: self, action: #selector(AddReport.cacleButtonAction))
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: #selector(AddReport.cacleButtonAction))
         
         var items = [UIBarButtonItem]()
         items.append(flexSpace)

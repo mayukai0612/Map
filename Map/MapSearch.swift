@@ -93,14 +93,14 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         
         //create title
         let title = UILabel(frame:titleFrame)
-        title.text = "Wild Danger"
-        title.font = UIFont (name: "AmericanTypewriter-Bold", size: 15)
+        title.text = "Wild Safety"
+        title.font = UIFont (name: "Arial-BoldMT", size: 15)
         title.textColor = UIColor.whiteColor()
         
         //crearte image view
         let imageView = UIImageView(frame: imageFrame)
         imageView.contentMode = .ScaleAspectFit
-        let image = UIImage(named: "Logo")
+        let image = UIImage(named: "BearFootprintWhite")
         imageView.image = image
         
         //create filter view
@@ -180,19 +180,19 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         //create search bar
         let searchBar = UISearchBar(frame: searchBarFrame)
 
-        searchBar.placeholder  = "Animal,places..                                                            "
+        searchBar.placeholder  = "Enter the animal name or location                                          "
         searchBar.delegate = self
         
         //create title
         let title = UILabel(frame:titleFrame)
-        title.text = "Wild Danger"
-        title.font = UIFont (name: "AmericanTypewriter-Bold", size: 15)
+        title.text = "Wild Safety"
+        title.font = UIFont (name: "Arial-BoldMT", size: 15)
         title.textColor = UIColor.whiteColor()
         
         //crearte image view
         let imageView = UIImageView(frame: imageFrame)
         imageView.contentMode = .ScaleAspectFit
-        let image = UIImage(named: "Logo")
+        let image = UIImage(named: "BearFootprintWhite")
         imageView.image = image
         
         //create filter view
@@ -280,9 +280,9 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         
         dispatch_async(dispatch_get_main_queue()) {
 
-        let alertController = UIAlertController(title: "iOScreator", message:
-            "No results matching!", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        let alertController = UIAlertController(title: "No records", message:
+            "This dangerous species has not been found here!", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Got it", style: UIAlertActionStyle.Default,handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
         }

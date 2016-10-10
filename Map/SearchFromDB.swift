@@ -201,10 +201,10 @@ class SearchFromDB: NSObject, MKMapViewDelegate{
             //Title of annotation
             if (animalArray.count == 1)
             {
-                pointAnnoation.title = "\(animalArray.count)   record."
+                pointAnnoation.title = "\(animalArray.count)  wild animal identified here."
 
             }else{
-                pointAnnoation.title = "\(animalArray.count)   records."
+                pointAnnoation.title = "\(animalArray.count)  wild animals identified here."
             }
             
             //calculate distance between current loc and animal loc

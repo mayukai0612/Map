@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol LoadNavBarViewsDelegate
+{
+    func loadNavBarviews()
+}
+
 class AnimalProfile: UIViewController {
     
     
@@ -25,14 +30,23 @@ class AnimalProfile: UIViewController {
     
     
     var animalName: String?
+    var backButton:UIButton?
+    var loadNavBarViewsDelegate:LoadNavBarViewsDelegate?
     let urlPrefix = "http://13.73.113.104/DangerousAnimals/Images/"
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //disable the swipe back function
+        self.navigationItem.setHidesBackButton(true, animated: false)
+
+        removeSubViewsFromNavBar()
+        addNavBar()
+        
         self.descTextView.userInteractionEnabled  = false
         self.loadProfile(animalName!)
         
-       
+        self.automaticallyAdjustsScrollViewInsets = false
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -149,6 +163,57 @@ class AnimalProfile: UIViewController {
     
 }
 
+    func addNavBar()
+    {
+        // add back button
+        backButton = UIButton()
+        backButton!.frame = CGRectMake(10, 30, 30, 30)
+        //backButton?.backgroundColor = UIColor(red: 51, green: 170, blue: 255)
+        backButton?.setImage(UIImage(named: "Back"), forState: .Normal)
+        backButton!.addTarget(self, action:  #selector(buttonClicked), forControlEvents: .TouchUpInside)
+        self.navigationController?.navigationBar.addSubview(backButton!)
+        
+        //define subviews on navbar
+        let navBar = self.navigationController?.navigationBar
+        //logo frame
+        let imageFrame = CGRect(x: navBar!.frame.width/2 - 75, y: 30, width: 30, height: 30)
+        //title frame
+        let titleFrame = CGRect(x: navBar!.frame.width/2 - 35, y: 30, width: 120, height: 40)
+        
+        //create title
+        let title = UILabel(frame:titleFrame)
+        title.text = "Animal Profile"
+        title.font = UIFont (name: "Arial-BoldMT", size: 15)
+        title.textColor = UIColor.whiteColor()
+        
+        //crearte image view
+        let imageView = UIImageView(frame: imageFrame)
+        imageView.contentMode = .ScaleAspectFit
+        let image = UIImage(named: "BearFootprintWhite")
+        imageView.image = image
+        
+        //add views to navBar
+        navBar!.addSubview(title)
+        navBar!.addSubview(imageView)
+    }
+    
+    func buttonClicked(sender: AnyObject?) {
+        
+        
+        removeSubViewsFromNavBar()
+        navigationController!.popViewControllerAnimated(true)
+        loadNavBarViewsDelegate?.loadNavBarviews()
+    }
 
+    func removeSubViewsFromNavBar()
+    {
+        for view in (self.navigationController?.navigationBar.subviews)! {
+            if view != self.navigationItem.leftBarButtonItem{
+                view.removeFromSuperview()
+            }
+        }
+    }
+    
+    
 
 }

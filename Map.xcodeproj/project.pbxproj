@@ -55,6 +55,7 @@
 		2AD230D21D6C658B002B2220 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD230D11D6C658B002B2220 /* SearchView.swift */; };
 		2AD230D41D6D84F2002B2220 /* animalListForLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD230D31D6D84F2002B2220 /* animalListForLocationsView.swift */; };
 		2AD230D61D6DD51A002B2220 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD230D51D6DD51A002B2220 /* FilterView.swift */; };
+		2AD94A251DA9F9A90068B210 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD94A241DA9F9A90068B210 /* SearchViewCell.swift */; };
 		2ADD6BF31D8E34E500623F8D /* ReportList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD6BF21D8E34E500623F8D /* ReportList.swift */; };
 		2ADD6BF51D8E41AA00623F8D /* ReportListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD6BF41D8E41AA00623F8D /* ReportListCell.swift */; };
 		2ADD6BF71D8E5CE200623F8D /* DKDropMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD6BF61D8E5CE200623F8D /* DKDropMenu.swift */; };
@@ -129,6 +130,7 @@
 		2AD230D11D6C658B002B2220 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2AD230D31D6D84F2002B2220 /* animalListForLocationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = animalListForLocationsView.swift; path = ../animalListForLocationsView.swift; sourceTree = "<group>"; };
 		2AD230D51D6DD51A002B2220 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterView.swift; path = ../FilterView.swift; sourceTree = "<group>"; };
+		2AD94A241DA9F9A90068B210 /* SearchViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		2ADD6BF21D8E34E500623F8D /* ReportList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportList.swift; sourceTree = "<group>"; };
 		2ADD6BF41D8E41AA00623F8D /* ReportListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportListCell.swift; sourceTree = "<group>"; };
 		2ADD6BF61D8E5CE200623F8D /* DKDropMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKDropMenu.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				2A0B97231D69FED000CFE698 /* SearchFromDB.swift */,
 				2A0B971B1D64843E00CFE698 /* AnimalInfoCell.swift */,
 				2AE6083E1D6EA90100C87723 /* SearchLocationCell.swift */,
+				2AD94A241DA9F9A90068B210 /* SearchViewCell.swift */,
 			);
 			name = MapSearch;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				2ADD6BF51D8E41AA00623F8D /* ReportListCell.swift in Sources */,
 				2A0B97241D69FED000CFE698 /* SearchFromDB.swift in Sources */,
 				2A9C691B1D90139F00AF426D /* Report.swift in Sources */,
+				2AD94A251DA9F9A90068B210 /* SearchViewCell.swift in Sources */,
 				2A71DB231D8D69A7008C388D /* PhotoView.swift in Sources */,
 				2A9DA5571D71E6C600EC5FA6 /* TripDescView.swift in Sources */,
 				2A9DA5541D71E65D00EC5FA6 /* TripEmergencyContactView.swift in Sources */,
@@ -681,7 +685,6 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Map/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "monash-Map";
@@ -704,7 +707,6 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Map/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "monash-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";

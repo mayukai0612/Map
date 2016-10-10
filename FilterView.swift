@@ -135,14 +135,14 @@ class FilterView: UIViewController {
         
         //create title
         let title = UILabel(frame:titleFrame)
-        title.text = "Wild Danger"
-        title.font = UIFont (name: "AmericanTypewriter-Bold", size: 15)
+        title.text = "Wild Safety"
+        title.font = UIFont (name: "Arial-BoldMT", size: 15)
         title.textColor = UIColor.whiteColor()
         
         //crearte image view
         let imageView = UIImageView(frame: imageFrame)
         imageView.contentMode = .ScaleAspectFit
-        let image = UIImage(named: "Logo")
+        let image = UIImage(named: "BearFootprintWhite")
         imageView.image = image
         
         //create Done
