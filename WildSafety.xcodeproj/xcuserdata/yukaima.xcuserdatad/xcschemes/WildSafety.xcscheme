@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2A4E51721D52D6EE0061EA02"
-               BuildableName = "Map.app"
-               BlueprintName = "Map"
-               ReferencedContainer = "container:Map.xcodeproj">
+               BuildableName = "WildSafety.app"
+               BlueprintName = "WildSafety"
+               ReferencedContainer = "container:WildSafety.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2A4E51721D52D6EE0061EA02"
-            BuildableName = "Map.app"
-            BlueprintName = "Map"
-            ReferencedContainer = "container:Map.xcodeproj">
+            BuildableName = "WildSafety.app"
+            BlueprintName = "WildSafety"
+            ReferencedContainer = "container:WildSafety.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2A4E51721D52D6EE0061EA02"
-            BuildableName = "Map.app"
-            BlueprintName = "Map"
-            ReferencedContainer = "container:Map.xcodeproj">
+            BuildableName = "WildSafety.app"
+            BlueprintName = "WildSafety"
+            ReferencedContainer = "container:WildSafety.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2A4E51721D52D6EE0061EA02"
-            BuildableName = "Map.app"
-            BlueprintName = "Map"
-            ReferencedContainer = "container:Map.xcodeproj">
+            BuildableName = "WildSafety.app"
+            BlueprintName = "WildSafety"
+            ReferencedContainer = "container:WildSafety.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

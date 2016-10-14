@@ -45,6 +45,9 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         //load first views
         loadFirstViews()
         
+        //set status bar bg color
+        setStatusBarBackgroundColor()
+        
         //show current location
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -53,7 +56,8 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         self.locationManager.startUpdatingLocation()
         self.mapView!.showsUserLocation = true
 
-
+        //UIApplication.sharedApplication().statusBarHidden = true
+       
       
         
     }
@@ -66,6 +70,7 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
   
     func loadIconViews()
     {
@@ -128,7 +133,12 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         navBar!.addSubview(filterIcon)
         
     }
-    
+
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.init(rawValue: 100)!
+    }
+
+   
     func loadFirstViews()
     {
 //        //remove map view from view
@@ -148,19 +158,30 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width
         
-        //clear all subviews from navBar
+        let statusBarFrame = UIApplication.sharedApplication().statusBarFrame
+        
+       // clear all subviews from navBar
         for view in (self.navigationController?.navigationBar.subviews)! {
             UIView.animateWithDuration(1, animations: {
                 view.alpha = 0
             }) { _ in
+                
+                if(view.tag != 0){
                 view.removeFromSuperview()
+                }
+                print("tag")
+                print(view.tag)
             }
+            
+            print("test")
+            print(view.tag)
+
         }
         
         let navBarColor = UIColor(red: 86, green: 171, blue: 59)
         self.navigationController?.navigationBar.backgroundColor = navBarColor
         self.navigationController?.navigationBar.tintColor = navBarColor
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        self.navigationController?.navigationBar.barTintColor = navBarColor
         
 //        define subviews on navbar
         
@@ -180,7 +201,7 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         //create search bar
         let searchBar = UISearchBar(frame: searchBarFrame)
 
-        searchBar.placeholder  = "Enter the animal name or location                                          "
+        searchBar.placeholder  = "Enter the animal name or location                        "
         searchBar.delegate = self
         
         //create title
@@ -232,6 +253,17 @@ class MapSearch: UIViewController, UISearchBarDelegate ,MKMapViewDelegate,CLLoca
         searchFromDB.Map = self.mapView
         searchFromDB.Map!.delegate = self
 
+    }
+    
+    func setStatusBarBackgroundColor() {
+        
+        guard  let statusBar = UIApplication.sharedApplication().valueForKey("statusBarWindow")?.valueForKey("statusBar") as? UIView else {
+            return
+        }
+        
+        let color = UIColor(red: 86, green: 171, blue: 59)
+
+        statusBar.backgroundColor = color
     }
     
     func filter()

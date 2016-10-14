@@ -42,19 +42,14 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
 
       
         
-//         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-//        // Sets shadow (line below the bar) to a blank image
-//         self.navigationController?.navigationBar.shadowImage = UIImage()
-//        // Sets the translucent background color
-//         self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
-       // self.navigationController?.navigationBar.translucent = true
-       // let navBarColor = UIColor(red: 55, green: 155, blue: 50)
-       // self.navigationController?.navigationBar.backgroundColor = navBarColor
+ 
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         //get userid
-        userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")
-
+       // userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")
+        
+        //set user id
+         self.userid  = UIDevice.currentDevice().identifierForVendor!.UUIDString
         
         //load data
         
@@ -186,16 +181,7 @@ class TriplList: UIViewController,UITableViewDelegate,UITableViewDataSource,addT
         //when a cell selected, it turns grey.Using deselect to turn it back to normal
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-//        let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-//        let destination = storyboard.instantiateViewControllerWithIdentifier("addTrip") as! AddTrip
-//        destination.trip = selectedTrip
-//        destination.delegate = self
-//        destination.editOrCreateFlag = "edit"
-//        
-//        //when a cell selected, it turns grey.Using deselect to turn it back to normal
-//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//
-//        navigationController?.pushViewController(destination, animated: true)
+
       
     }
     

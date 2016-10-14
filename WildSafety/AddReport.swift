@@ -196,8 +196,11 @@ class AddReport: UIViewController ,UIActionSheetDelegate,UITextViewDelegate,UIIm
         else
         {
         //save report
-            //get userid
-            let userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")!
+//            //get userid
+//            let userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")!
+            
+            //set userid
+            let userid = UIDevice.currentDevice().identifierForVendor!.UUIDString
             //get time
             let date = NSDate()
             let dateFormatter = NSDateFormatter()

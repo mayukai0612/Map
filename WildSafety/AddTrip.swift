@@ -47,7 +47,12 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
     
     
     //get userid
-     self.userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")
+  //   self.userid = NSUserDefaults.standardUserDefaults().stringForKey("userid")
+        
+     //  self.userid = NSUUID().UUIDString
+        self.userid  = UIDevice.currentDevice().identifierForVendor!.UUIDString
+
+        print(self.userid)
     //set userid to trip
     self.trip?.userID = self.userid
 
@@ -89,7 +94,7 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         flowLayout.minimumInteritemSpacing = 0.5 //左右间隔
         //define screen height
         let screenHeight = (itemWidth * 2) + 0.5
-        self.collectionView = UICollectionView(frame: CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT),collectionViewLayout:flowLayout)
+        self.collectionView = UICollectionView(frame: CGRectMake(0,SCREEN_HEIGHT - 290,SCREEN_WIDTH,SCREEN_HEIGHT),collectionViewLayout:flowLayout)
         
         self.view.addSubview(self.collectionView!)
         self.collectionView!.backgroundColor = UIColor.clearColor()
@@ -254,6 +259,8 @@ class AddTrip: UIViewController,addChildViewDelegate,UIImagePickerControllerDele
         //set tripid to be maxid (in list) + 1
         setTripID(self.trip!)
         //save trip without images to DB
+        print(self.trip?.userID)
+
         tripDB.saveTrip(self.trip!)
             if(self.imagesToBeSaved.count != 0)
             {

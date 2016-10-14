@@ -81,11 +81,13 @@ class WildControl: UIViewController {
     {
         
         firstPhoneLabel.text = "0400854386"
-    
+        fisrtOrgLabel.text = ""
+        firstEmailLabel.text = ""
         firstLocLabel.text  = "Corryong: Biggara, Nariel, Lucyvale, Cudgewa, Tintaldra, Walwa, Burrowye, Shelley, Mt. Alfred"
         
         secPhoneLabel.text = "0409188465"
-        
+        secOrgLabel.text = ""
+        secEmailLabel.text = ""
         secLocLabel.text  = "Tallangatta: Koetong, Granya, Tallangatta Valley, Mitta Valley, Sandy Creek, Gundowring"
 //        
 //        

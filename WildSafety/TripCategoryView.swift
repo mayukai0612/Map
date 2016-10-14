@@ -60,7 +60,7 @@ class TripCategoryView: UIView ,updateTripParameterDelegate{
     {
         let imageFrame = CGRect(x:155/2 - 15, y: 20 , width: 30, height: 30)
         //title frame
-        let titleFrame = CGRect(x: 155/2 - 20, y: 50, width: 80, height: 40)
+        let titleFrame = CGRect(x: 155/2 - 30, y: 50, width: 80, height: 40)
         
         //crearte image view
         let imageView = UIImageView(frame: imageFrame)
@@ -70,7 +70,7 @@ class TripCategoryView: UIView ,updateTripParameterDelegate{
         
         //create title
         let title = UILabel(frame:titleFrame)
-        title.text = "Group"
+        title.text = "Category"
         title.font = UIFont (name: "AppleSDGothicNeo-SemiBold", size: 18)
         let textColor = UIColor(red: 89, green: 45, blue: 23)
         title.textColor = textColor
