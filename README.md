@@ -1,7 +1,7 @@
 # Map
 
-IE project. 
-This is an app used to 
+IE project. <br />
+This is an app used to <br />
 1.show animal data on map,<br />
 2.record trips(uploading photos to the cloud) <br />
 3.report and recevie warning to public.<br />
